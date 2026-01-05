@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Aygen</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Aygen</div>
+
+    <nav>
+        <a class="active" data-page="home">Hem</a>
+        <a data-page="skills">Kompetenser</a>
+        <a data-page="education">Utbildning</a>
+        <a data-page="experience">Erfarenhet</a>
+        <a data-page="projects">Projekt</a>
+        <a data-page="contact">Kontakt</a>
+    </nav>
+
+    <i class="fa-solid fa-bars" id="menu-icon" aria-label="Öppna meny" title="Öppna meny"></i>
+</header>
+
+<section id="home" class="Home active">
+    <div class="home-img">
+        <img src="images/cv.jpg" alt="Profilbild på Aygen">
+    </div>
+
+    <div class="home-content">
+        <h2>Hej, Välkommen till min
+ <span>portfolio</span></h2>
+        <h3>Junior systemutvecklare (.NET)</h3>
+
+        <p>
+            Jag studerar till systemutvecklare med inriktning .NET på
+            TUC Yrkeshögskola i Linköping och söker en LIA-plats där jag
+            kan utvecklas vidare i praktiskt arbete.
+        </p>
+
+        <a href="#" class="btn" data-page="contact" aria-label="Gå till kontaktsidan">
+            Kontakta mig
+        </a>
+     <div class="home-video-grid">
+    <video src="videos/gala-emporium-housetech.mp4" muted autoplay loop playsinline></video>
+    <video src="videos/dashboard.mp4" muted autoplay loop playsinline></video>
+    <video src="videos/cotton.mp4" muted autoplay loop playsinline></video>
+    <video src="videos/techvora.mp4" muted autoplay loop playsinline></video>
+</div>
+
+</div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <div class="content">
+        <h1>Kompetenser</h1>
+        <ul>
+            <li>C# / .NET</li>
+            <li>JavaScript, HTML, CSS</li>
+            <li>React och TypeScript</li>
+            <li>Tailwind CSS, Next.js</li>
+            <li>Grundläggande databasutveckling</li>
+            <li>Git och versionshantering</li>
+        </ul>
+    </div>
+</section>
+
+<section id="education">
+    <div class="content">
+        <h1>Utbildning</h1>
+
+        <p>
+            <strong>Systemutvecklare .NET – TUC Yrkeshögskola</strong><br>
+            Pågående utbildning inom system- och webbutveckling.
+        </p>
+
+        <p>
+            <strong>Systemutveckling – Lexicon (10 månader)</strong><br>
+            Utbildning med praktik inom frontend och backend.
+        </p>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="content">
+        <h1>Erfarenhet</h1>
+
+        <p>
+            Erfarenhet från utbildningsprojekt och praktik med fokus på
+            kodkvalitet, struktur och samarbete.
+        </p>
+
+        <p>
+            <strong>LIA-perioder:</strong><br>
+            30 mars – 5 juni 2026<br>
+            14 december 2026 – 28 maj 2027
+        </p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="content">
+        <h1>Projekt</h1>
+
+        <div class="projects-grid">
+
+           <article class="project-card" id="projects-overview">
+    <img src="images/projects/techvora2.png" alt="Projektöversikt">
+
+    <div class="project-content">
+        <h2>Projekt</h2>
+        <p>Klicka för att se alla projekt</p>
+    </div>
+</article>
+
+<div id="project-view" class="content"></div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="content">
+        <h1>Kontakt</h1>
+
+        <p>
+            Kontakta mig gärna för LIA, praktik eller framtida möjligheter.
+        </p>
+
+        <p>
+            📧
+            <a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
+               aria-label="Skicka e-post till Aygen"
+               title="Skicka e-post">
+               aygen.omur.mehmethan.syne25lin@edu.tucsweden.se
+            </a>
+        </p>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener"
+               aria-label="Besök min LinkedIn-profil"
+               title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/"
+               target="_blank"
+               rel="noopener"
+               aria-label="Besök min GitHub-profil"
+               title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
