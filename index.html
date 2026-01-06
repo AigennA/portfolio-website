@@ -7,6 +7,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -32,23 +36,49 @@
 
     <div class="home-content">
         <h2>Hej, Välkommen till min
- <span>portfolio</span></h2>
-        <h3>Junior systemutvecklare (.NET)</h3>
+ <span>portfolio</span></h2><br>
+       <!-- <h3>Systemutvecklare student</h3>-->
 
         <p>
-            Jag studerar till systemutvecklare med inriktning .NET på
-            TUC Yrkeshögskola i Linköping och söker en LIA-plats där jag
-            kan utvecklas vidare i praktiskt arbete.
+           Jag studerar till systemutvecklare med inriktning .NET på TUC Yrkeshögskola i Linköping och söker en LIA-plats där jag kan bidra, lära mig mer och utvecklas genom praktiskt arbete i en professionell miljö.
+
         </p>
 
-        <a href="#" class="btn" data-page="contact" aria-label="Gå till kontaktsidan">
-            Kontakta mig
-        </a>
+       <!--
+<a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
+   class="btn home-mail-btn">
+   Kontakta mig
+</a>
+-->
+
      <div class="home-video-grid">
-    <video src="videos/gala-emporium-housetech.mp4" muted autoplay loop playsinline></video>
-    <video src="videos/dashboard.mp4" muted autoplay loop playsinline></video>
-    <video src="videos/cotton.mp4" muted autoplay loop playsinline></video>
-    <video src="videos/techvora.mp4" muted autoplay loop playsinline></video>
+ <div class="home-video-grid">
+  <video
+    src="videos/gala-emporium-housetech.mp4"
+    muted autoplay loop webkit-playsinline mozallowfullscreen
+    data-project="gala-emporium">
+  </video>
+
+  <video
+    src="videos/techvora.mp4"
+    muted autoplay loop webkit-playsinline mozallowfullscreen
+    data-project="techvora">
+  </video>
+
+  <video
+    src="videos/dashboard.mp4"
+    muted autoplay loop webkit-playsinline mozallowfullscreen
+    data-project="dashboard">
+  </video>
+
+  <video
+    src="videos/cotton.mp4"
+    muted autoplay loop webkit-playsinline mozallowfullscreen
+    data-project="cotton">
+  </video>
+</div>
+
+
 </div>
 
 </div>
@@ -164,5 +194,11 @@
 </section>
 
 <script src="script.js"></script>
+<script>
+// Remove playsinline attribute for Firefox compatibility
+document.querySelectorAll('video[playsinline]').forEach(function(video) {
+    video.removeAttribute('playsinline');
+});
+</script>
 </body>
 </html>

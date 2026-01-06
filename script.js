@@ -7,25 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const overviewCard = document.getElementById("projects-overview");
     const projectView = document.getElementById("project-view");
-    
 
-    /* =====================
-       INITIAL STATE – HOME
-       ===================== */
     sections.forEach(s => s.classList.remove("active"));
     document.getElementById("home")?.classList.add("active");
 
-    /* =====================
-       MOBILE MENU
-       ===================== */
     menuIcon?.addEventListener("click", () => {
         nav.classList.toggle("active");
         menuIcon.classList.toggle("fa-xmark");
     });
 
-    /* =====================
-       SPA NAVIGATION
-       ===================== */
     links.forEach(link => {
         link.addEventListener("click", e => {
             e.preventDefault();
@@ -40,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.classList.remove("active");
             menuIcon.classList.remove("fa-xmark");
 
-            // Reset project view
             projectView.innerHTML = "";
             projectView.style.display = "none";
 
@@ -48,9 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* =====================
-       LOGO → HOME
-       ===================== */
     logo?.addEventListener("click", () => {
         sections.forEach(s => s.classList.remove("active"));
         document.getElementById("home")?.classList.add("active");
@@ -64,9 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     });
 
-    /* =====================
-       PROJECT DATA
-       ===================== */
     const projects = [
         {
             title: "Testprojekt",
@@ -89,17 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     src: "videos/dashboard.mp4",
                     description: "Responsive dashboard with focus on UX and component structure."
                 },
-               {
-    title: "E-Commerce TechVora",
-    type: "video",
-    src: "./videos/techvora.mp4",
-    description: "E-commerce project built with Lovable.",
-    links: {
-        live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
-        github: "https://github.com/AigennA/techvora"
-    }
-},
-
+                {
+                    title: "E-Commerce TechVora",
+                    type: "video",
+                    src: "videos/techvora.mp4",
+                    description: "E-commerce project built with Lovable.",
+                    links: {
+                        live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
+                        github: "https://github.com/AigennA/techvora"
+                    }
+                },
                 {
                     title: "E-Commerce Cotton",
                     type: "video",
@@ -125,10 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "API practice using C# and .NET."
         }
     ];
-
-    /* =====================
-       PROJECT RENDERING
-       ===================== */
 
     function showProjectsOverview() {
         projectView.style.display = "block";
@@ -192,6 +170,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelector(".back-btn").onclick = showProjectsOverview;
     }
+
+    document.querySelectorAll(".home-video-grid video").forEach(video => {
+        video.addEventListener("click", () => {
+            video.controls = true;
+            video.muted = false;
+            video.play();
+
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            }
+        });
+    });
 
     overviewCard?.addEventListener("click", showProjectsOverview);
 });

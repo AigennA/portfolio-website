@@ -87,6 +87,11 @@ nav a {
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease;
+  font-family: 'Caveat', cursive;
+    font-size: 1.7rem;
+    letter-spacing: 0.3px;
+
+    
 }
 
 nav a::after {
@@ -175,6 +180,8 @@ section h1 {
 .home-content h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
+    
+
 }
 
 .home-content h3 {
@@ -195,7 +202,11 @@ ul {
 
 span {
     color: #ec4899;
+   
+    font-style: italic;
 }
+
+    
 
 /* =========================
    BUTTON
