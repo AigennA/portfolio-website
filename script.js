@@ -89,16 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     src: "videos/dashboard.mp4",
                     description: "Responsive dashboard with focus on UX and component structure."
                 },
-                {
-                    title: "E-Commerce TechVora",
-                    type: "video",
-                    src: "videos/techvora.mp4",
-                    description: "E-commerce project built with Lovable.",
-                    links: {
-                        live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
-                        github: "https://github.com/AigennA/techvora"
-                    }
-                },
+               {
+    title: "E-Commerce TechVora",
+    type: "video",
+    src: "./videos/techvora.mp4",
+    description: "E-commerce project built with Lovable.",
+    links: {
+        live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
+        github: "https://github.com/AigennA/techvora"
+    }
+},
+
                 {
                     title: "E-Commerce Cotton",
                     type: "video",
