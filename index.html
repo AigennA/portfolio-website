@@ -7,9 +7,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wild-font.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -35,8 +36,7 @@
     </div>
 
     <div class="home-content">
-        <h2>Hej, Välkommen till min
- <span>portfolio</span></h2><br>
+        <h2><span class="hej-color">Hej,</span> Välkommen till min <span>portfolio</span></h2><br>
        <!-- <h3>Systemutvecklare student</h3>-->
 
         <p>
@@ -53,29 +53,29 @@
 
      <div class="home-video-grid">
  <div class="home-video-grid">
-  <video
-    src="videos/gala-emporium-housetech.mp4"
-    muted autoplay loop webkit-playsinline mozallowfullscreen
-    data-project="gala-emporium">
-  </video>
 
-  <video
-    src="videos/techvora.mp4"
-    muted autoplay loop webkit-playsinline mozallowfullscreen
-    data-project="techvora">
-  </video>
 
-  <video
-    src="videos/dashboard.mp4"
-    muted autoplay loop webkit-playsinline mozallowfullscreen
-    data-project="dashboard">
-  </video>
+<div class="video-card">
+    <div class="video-title">Techvora</div>
+    <video src="videos/techvora.mp4" muted autoplay loop webkit-playsinline mozallowfullscreen data-project="techvora"></video>
+</div>
 
-  <video
-    src="videos/cotton.mp4"
-    muted autoplay loop webkit-playsinline mozallowfullscreen
-    data-project="cotton">
-  </video>
+<div class="video-card">
+    <div class="video-title">Gala Emporium</div>
+    <video src="videos/gala-emporium-housetech.mp4" muted autoplay loop webkit-playsinline mozallowfullscreen data-project="gala-emporium"></video>
+</div>
+
+<div class="video-card">
+    <div class="video-title">Cotton</div>
+    <video src="videos/cotton.mp4" muted autoplay loop webkit-playsinline mozallowfullscreen data-project="cotton"></video>
+</div>
+
+<div class="video-card">
+    <div class="video-title">Dashboard</div>
+    <video src="videos/dashboard.mp4" muted autoplay loop webkit-playsinline mozallowfullscreen data-project="dashboard"></video>
+</div>
+
+  
 </div>
 
 
@@ -192,6 +192,16 @@
         </div>
     </div>
 </section>
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            &copy; 2026 
+           <br> Allt innehåll är skyddat och får inte användas utan tillstånd.
+        </div>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 <script>

@@ -1,3 +1,99 @@
+/* =========================
+   HEJ COLOR (MATCH PORTFOLIO)
+   ========================= */
+.hej-color {
+    background: linear-gradient(90deg, #ec4899, #8b5cf6, #49d942, #ec4899);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-family: inherit;
+    animation: logoFlow 6s ease-in-out infinite;
+}
+/* =========================
+   HOME VIDEO CARD TITLES
+   ========================= */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(2,6,23,0.85);
+    border-radius: 1.1rem;
+    box-shadow: 0 6px 24px rgba(236,72,153,0.08);
+    padding: 0.7rem 0.5rem 1rem 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.2s;
+}
+.video-card:hover {
+    box-shadow: 0 12px 32px rgba(236,72,153,0.18);
+}
+.video-title {
+    font-family: 'Syne', 'Manrope', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #ec4899;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 8px rgba(11,19,32,0.18);
+    text-align: center;
+}
+@media (max-width: 700px) {
+    .video-card {
+        padding: 0.5rem 0.2rem 0.7rem 0.2rem;
+    }
+    .video-title {
+        font-size: 1rem;
+        margin-bottom: 0.35rem;
+    }
+}
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+    width: 100%;
+    background: rgba(2,6,23,0.92);
+    color: #e5e7eb;
+    padding: 1.5rem 0 0.5rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(236,72,153,0.15);
+    font-family: 'Manrope', system-ui, sans-serif;
+}
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    gap: 1.5rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    font-family: 'Syne', 'Manrope', sans-serif;
+    letter-spacing: 0.01em;
+    opacity: 0.92;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+        gap: 0.7rem;
+    }
+    .footer-text {
+        font-size: 0.97rem;
+        text-align: center;
+    }
+}
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /* =========================
@@ -41,7 +137,7 @@ header {
    LOGO
    ========================= */
 .logo {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Monoton', 'Space Grotesk', sans-serif;
     font-size: 1.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -50,7 +146,7 @@ header {
         90deg,
         #ec4899,
         #8b5cf6,
-        #22d3ee,
+        #49d942,
         #ec4899
     );
     background-size: 300%;
