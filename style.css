@@ -1,4 +1,21 @@
 /* =========================
+   VIDEO CARD DESCRIPTION
+   ========================= */
+.video-desc {
+    font-size: 0.93rem;
+    color: #bdb7e5;
+    opacity: 0.85;
+    margin-bottom: 0.18rem;
+    font-family: 'Manrope', 'Syne', sans-serif;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+@media (max-width: 700px) {
+    .video-desc {
+        font-size: 0.89rem;
+    }
+}
+/* =========================
    HEJ COLOR (MATCH PORTFOLIO)
    ========================= */
 .hej-color {
