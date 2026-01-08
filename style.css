@@ -1,3 +1,169 @@
+/* LIA-perioder waving flag (right, subtle) */
+.lia-flag-right {
+    position: fixed;
+    top: 6.2rem;
+    right: 1.2rem;
+    z-index: 9999 !important;
+    display: flex;
+    align-items: flex-start;
+    pointer-events: none;
+}
+.lia-flag-pole {
+    width: 6px;
+    height: 68px;
+    background: linear-gradient(180deg, #444 60%, #222 100%);
+    border-radius: 4px;
+    margin-right: 0.18rem;
+    box-shadow: 1px 0 4px #0002;
+}
+.lia-flag-body {
+    min-width: 140px;
+    background: #fffbe8;
+    color: #18181b;
+    font-family: 'Syne', 'Manrope', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    border-radius: 0 1.1rem 1.1rem 0.2rem;
+    box-shadow: 0 4px 18px #0005, 0 2px 8px #fff2;
+    padding: 0.38rem 0.7rem 0.38rem 0.7rem;
+    border: 1.5px solid #fbbf24;
+    animation: flag-wave-slow 4.5s ease-in-out infinite;
+    transform-origin: left center;
+    position: relative;
+    opacity: 1;
+}
+@keyframes flag-wave-slow {
+    0% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
+    10% { transform: rotateZ(1.5deg) skewY(1.5deg) scaleY(1.04); }
+    20% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
+    30% { transform: rotateZ(1.5deg) skewY(1.5deg) scaleY(1.04); }
+    40% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
+    100% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
+}
+@media (max-width: 700px) {
+    .lia-flag-right {
+        top: 5.2rem;
+        right: 0.2rem;
+        z-index: 9999 !important;
+    }
+    .lia-flag-body {
+        min-width: 80px;
+        font-size: 0.78rem;
+        padding: 0.18rem 0.32rem 0.18rem 0.32rem;
+        border-radius: 0 0.7rem 0.7rem 0.1rem;
+    }
+    .lia-flag-pole {
+        height: 32px;
+        width: 4px;
+    }
+}
+/* Kommande kurser tablosu */
+.upcoming-courses {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+.upcoming-courses table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.01);
+    color: #e5e7eb;
+    font-size: 1.08rem;
+}
+.upcoming-courses th, .upcoming-courses td {
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid #262b3a;
+    text-align: left;
+}
+.upcoming-courses th {
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: none;
+}
+.upcoming-courses td {
+    color: #38a3f5;
+    font-weight: 500;
+    background: none;
+}
+.upcoming-courses tr:last-child td {
+    border-bottom: none;
+}
+#project-view {
+    margin-left: 2.5rem;
+}
+@media (max-width: 900px) {
+    #project-view {
+        margin-left: 0;
+    }
+}
+.project-group .video-card video {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* =========================
+   PROJECT GROUPS
+   ========================= */
+.project-group {
+    margin-bottom: 2.5rem;
+}
+.project-group-title {
+    font-size: 1.3rem;
+    color: #ec4899;
+    font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    letter-spacing: 0.02em;
+}
+/* =========================
+   PROJECTS OVERVIEW BUTTON
+   ========================= */
+.projects-overview-btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 2.2rem 0 0.5rem 0;
+}
+.projects-overview-btn {
+    font-size: 1.15rem;
+    font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6, #49d942, #ec4899);
+    background-size: 300%;
+    color: #18181b !important;
+    text-shadow: none !important;
+    border: none;
+    border-radius: 2.5rem;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 4px 18px rgba(236,72,153,0.10);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, color 0.2s;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    animation: logoFlow 6s ease-in-out infinite;
+}
+.projects-overview-btn:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(236,72,153,0.18);
+    color: #18181b !important;
+}
+@media (max-width: 700px) {
+    .projects-overview-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+    .projects-overview-btn-wrap {
+        margin: 1.2rem 0 0.3rem 0;
+    }
+}
+.experience-photo.small {
+    width: 56px;
+    height: 56px;
+    border-radius: 0.8rem;
+}
+.experience-card {
+    margin-bottom: 1.2rem;
+}
 /* =========================
    VIDEO CARD DESCRIPTION
    ========================= */
@@ -79,17 +245,21 @@
 
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
+    font-size: 1.15rem;
+    color: #ec4899;
+    margin-bottom: 0.3rem;
+    font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     justify-content: center;
     flex-wrap: wrap;
     padding: 0 2rem;
-    gap: 1.5rem;
-}
-
-.footer-text {
+    font-size: 1rem;
+    color: #e5e7eb;
+    opacity: 0.92;
+    margin: 0;
+    font-family: 'Manrope', 'Syne', 'Outfit', sans-serif;
+    letter-spacing: 0.01em;
     font-size: 1rem;
     font-family: 'Syne', 'Manrope', sans-serif;
     letter-spacing: 0.01em;
@@ -236,6 +406,22 @@ nav a.active::after {
     font-size: 2.4rem;
     color: #ec4899;
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.2em 0.6em;
+    border-radius: 1.2em;
+    transition: background 0.2s;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu-icon:active, #menu-icon:focus, #menu-icon:hover {
+    background: #fbeff7;
+}
+#menu-icon:active, #menu-icon:focus, #menu-icon:hover {
+    background: #fbeff7;
 }
 
 /* =========================
@@ -288,6 +474,8 @@ section h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2.2rem;
     margin-bottom: 1.4rem;
+    color: #ec4899;
+    letter-spacing: 0.01em;
 }
 
 .home-content h1 {
@@ -310,7 +498,54 @@ li {
 }
 
 ul {
-    padding-left: 1.8rem;
+    padding-left: 0;
+    list-style: none;
+    margin: 0 0 1.5rem 0;
+}
+
+/* Only for skills section: add custom bullet with ::before */
+#skills ul li {
+    position: relative;
+    padding-left: 1.1em;
+    margin-bottom: 0.3em;
+    display: flex;
+    align-items: flex-start;
+    min-height: 1.7em;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+}
+
+#skills ul li::before {
+    content: '•';
+    display: inline-block;
+    margin-right: 0.5em;
+    color: #ec4899;
+    font-size: 1.2em;
+    vertical-align: middle;
+    position: static;
+    line-height: 1.1;
+}
+@media (max-width: 700px) {
+    #contact .content {
+        padding: 1.5rem 0.5rem 2rem 0.5rem;
+        max-width: 100vw;
+        word-break: break-word;
+    }
+    #contact h1 {
+        font-size: 1.3rem;
+    }
+    #contact p, #contact a {
+        font-size: 1rem;
+        word-break: break-all;
+    }
+    #contact .social-icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.2rem;
+        margin-top: 1.2rem;
+    }
 }
 
 span {
@@ -345,8 +580,21 @@ span {
    ========================= */
 .social-icons a {
     margin-right: 1.2rem;
-    font-size: 1.8rem;
     color: #ec4899;
+    transition: color 0.2s;
+}
+.social-icons a i.fa-brands {
+    font-size: 2.7rem;
+    transition: font-size 0.2s, color 0.2s;
+}
+.social-icons a:hover i.fa-brands {
+    color: #8b5cf6;
+    font-size: 3.1rem;
+}
+
+.social-icons a:hover {
+    color: #8b5cf6;
+    font-size: 2.8rem;
 }
 
 /* =========================
@@ -514,6 +762,22 @@ span {
 @media (max-width: 900px) {
     #menu-icon {
         display: block;
+        font-size: 2.7rem;
+        position: absolute;
+        top: 1.2rem;
+        right: 2.5rem;
+        margin: 0;
+        color: #ec4899;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0.2em 0.7em;
+        border-radius: 1.5em;
+        transition: background 0.2s;
+        box-shadow: 0 2px 8px #ec489933;
+        line-height: 1.1;
+        text-align: center;
+        z-index: 1100;
     }
 
     nav {

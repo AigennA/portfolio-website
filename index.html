@@ -23,15 +23,22 @@
         <a data-page="skills">Kompetenser</a>
         <a data-page="education">Utbildning</a>
         <a data-page="experience">Erfarenhet</a>
-        <a data-page="projects">Projekt</a>
         <a data-page="contact">Kontakt</a>
     </nav>
 
-    <i class="fa-solid fa-bars" id="menu-icon" aria-label="Öppna meny" title="Öppna meny"></i>
+    <span id="menu-icon" aria-label="Öppna meny" title="Öppna meny">&#8230;</span>
 </header>
 
 <section id="home" class="Home active">
-    <div class="home-img">
+        <div class="lia-flag lia-flag-right">
+            <div class="lia-flag-pole"></div>
+            <div class="lia-flag-body">
+                <strong>LIA-perioder:</strong><br>
+                30 mars – 5 juni 2026<br>
+                14 december 2026 – 28 maj 2027
+            </div>
+        </div>
+        <div class="home-img">
         <img src="images/cv.jpg" alt="Profilbild på Aygen">
     </div>
 
@@ -59,6 +66,11 @@
     <div class="video-desc">Egenarbete E -Handel</div>
     <div class="video-title">Techvora</div>
     <video src="videos/techvora.mp4" muted autoplay loop webkit-playsinline mozallowfullscreen data-project="techvora"></video>
+
+</div>
+
+<div class="projects-overview-btn-wrap">
+    <button id="projects-overview-btn" class="btn projects-overview-btn">Klicka för att se alla projekt</button>
 </div>
 
 <div class="video-card">
@@ -100,12 +112,24 @@
     <div class="content">
         <h1>Kompetenser</h1>
         <ul>
-            <li>C# / .NET</li>
-            <li>JavaScript, HTML, CSS</li>
-            <li>React och TypeScript</li>
-            <li>Tailwind CSS, Next.js</li>
-            <li>Grundläggande databasutveckling</li>
+            <li>Kommunikation och yrkesintroduktion</li>
             <li>Git och versionshantering</li>
+            <li>Agile - med Azure Devops, GitHub, Trello</li>
+            <li>Git och versionshantering</li>
+            <li>Agile - med Azure Devops, GitHub, Trello</li>
+             <li>Informationsarkitektur databasutveckling</li>
+        </ul>
+        <h2>Kommande kurser</h2>
+        <ul>
+           
+            <li>Programmering fördjupning</li>
+            <li>LIA 1</li>
+            <li>IT-säkerhet för utvecklare</li>
+            <li>Webbapplikationer och mobil utveckling</li>
+            <li>Publiceringsverktyg och UX</li>
+            <li>Test, verifiering och certifiering</li>
+            <li>Examensarbete</li>
+            <li>LIA 2</li>
         </ul>
     </div>
 </section>
@@ -130,6 +154,34 @@
     <div class="content">
         <h1>Erfarenhet</h1>
 
+        <div class="experience-card">
+            <div class="experience-info">
+                <h2>Praktik – Lexicon, Linköping</h2>
+                <p>Jag gjorde 2 månaders praktik på Lexicon i Linköping, där jag fick arbeta praktiskt med frontend och backend-utveckling.</p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="experience-info">
+                <h2>Barnskötare – utbildning & deltidsarbete</h2>
+                <p>Jag har studerat till barnskötare i Sverige och arbetat deltid under en kort period.</p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <img src="images/lia.jpg" alt="Visual Merchandiser" class="experience-photo small">
+            <div class="experience-info">
+                <h2>Dekoratör / Butikskommunikatör</h2>
+                <p>Jag har tidigare arbetat som Visual Merchandiser. Denna erfarenhet har hjälpt mig mycket inom UI/UX, färgkoordination och visuell design. Kreativ presentation och användarcentrerat tänkande har utvecklat mina färdigheter och bidragit till mitt arbete med gränssnitt.</p>
+            </div>
+        </div>
+        <div class="experience-card">
+            <div class="experience-info">
+                <h2>Kvalificerad användare</h2>
+                <p>Jag är en mycket erfaren och noggrann användare, särskilt på mobila enheter. Jag kan snabbt identifiera brister och förbättringsområden i appar och webbsidor, och bedömer alltid produktens flyt, användarvänlighet och helhetsupplevelse – inte bara genom att scrolla, utan genom att testa alla funktioner och detaljer.</p>
+            </div>
+        </div>
+
         <p>
             Erfarenhet från utbildningsprojekt och praktik med fokus på
             kodkvalitet, struktur och samarbete.
@@ -145,18 +197,7 @@
 
 <section id="projects">
     <div class="content">
-        <h1>Projekt</h1>
-
         <div class="projects-grid">
-
-           <article class="project-card" id="projects-overview">
-    <img src="images/projects/techvora2.png" alt="Projektöversikt">
-
-    <div class="project-content">
-        <h2>Projekt</h2>
-        <p>Klicka för att se alla projekt</p>
-    </div>
-</article>
 
 <div id="project-view" class="content"></div>
 

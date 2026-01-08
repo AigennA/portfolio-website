@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("projects-overview-btn")?.addEventListener("click", function(e) {
+            e.preventDefault();
+            // Switch to projects section
+            sections.forEach(s => s.classList.remove("active"));
+            document.getElementById("projects")?.classList.add("active");
+            document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+            document.querySelector('nav a[data-page="projects"]')?.classList.add("active");
+            // Show projects overview
+            showProjectsOverview();
+            window.scrollTo(0, 0);
+        });
     const menuIcon = document.getElementById("menu-icon");
     const nav = document.querySelector("nav");
     const links = document.querySelectorAll("[data-page]");
@@ -11,9 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach(s => s.classList.remove("active"));
     document.getElementById("home")?.classList.add("active");
 
+
     menuIcon?.addEventListener("click", () => {
         nav.classList.toggle("active");
         menuIcon.classList.toggle("fa-xmark");
+        // Add overlay for mobile menu if opening
+        if (nav.classList.contains("active")) {
+            if (!document.getElementById("nav-overlay")) {
+                const overlay = document.createElement("div");
+                overlay.id = "nav-overlay";
+                overlay.style.position = "fixed";
+                overlay.style.top = 0;
+                overlay.style.left = 0;
+                overlay.style.width = "100vw";
+                overlay.style.height = "100vh";
+                overlay.style.zIndex = 9;
+                overlay.style.background = "rgba(0,0,0,0)";
+                overlay.addEventListener("click", () => {
+                    nav.classList.remove("active");
+                    menuIcon.classList.remove("fa-xmark");
+                    overlay.remove();
+                });
+                document.body.appendChild(overlay);
+            }
+        } else {
+            document.getElementById("nav-overlay")?.remove();
+        }
     });
 
     links.forEach(link => {
@@ -29,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             nav.classList.remove("active");
             menuIcon.classList.remove("fa-xmark");
+            document.getElementById("nav-overlay")?.remove();
 
             projectView.innerHTML = "";
             projectView.style.display = "none";
@@ -91,14 +126,25 @@ document.addEventListener("DOMContentLoaded", () => {
                         live: "https://agnes-nora-git-all-fixes-aomurm-gmailcoms-projects.vercel.app/",
                         github: "https://github.com/AigennA/agnes-nora"
                     }
+                },
+                {
+                    title: "Skolarbete",
+                    children: [
+                        {
+                            title: "Gala Emporium",
+                            type: "video",
+                            src: "videos/gala-emporium-housetech.mp4",
+                            description: "Ett Skolprojekt som byggdes med gruppen. Html,Css,Js och en SPA site."
+                        },
+                        {
+                            title: "Rocky",
+                            type: "video",
+                            src: "videos/rocky.mp4",
+                            description: "Skolarbete AI-Chatbot."
+                        }
+                    ]
                 }
             ]
-        },
-        {
-            title: "Web Application – Gala Emporium",
-            type: "video",
-            src: "videos/gala-emporium-housetech.mp4",
-            description: "Ett Skolprojekt som byggdes med gruppen. Html,Css,Js och en SPA site."
         },
         {
             title: "Backend API",
@@ -110,7 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showProjectsOverview() {
         projectView.style.display = "block";
+        let fromHome = window.location.hash === "#fromHome";
         projectView.innerHTML = `
+            <button class="back-btn" id="projects-back">← Tillbaka</button>
             <h1>Projekt</h1>
             <div class="project-list">
                 ${projects.map((p, i) =>
@@ -118,10 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 ).join("")}
             </div>
         `;
-
         document.querySelectorAll(".project-list button").forEach(btn => {
             btn.onclick = () => showProject(projects[btn.dataset.index]);
         });
+        document.getElementById("projects-back").onclick = () => {
+            sections.forEach(s => s.classList.remove("active"));
+            document.getElementById("home")?.classList.add("active");
+            document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+            document.querySelector('nav a[data-page="home"]')?.classList.add("active");
+            projectView.innerHTML = "";
+            projectView.style.display = "none";
+            window.scrollTo(0, 0);
+        };
     }
 
     function showProject(project) {
@@ -131,16 +187,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h1>${project.title}</h1>
                 <div class="project-list">
                     ${project.children.map((c, i) =>
-                        `<button data-child-index="${i}">${c.title}</button>`
+                        c.children
+                        ? `<button data-child-index="${i}" class="project-group-btn">${c.title}</button>`
+                        : `<button data-child-index="${i}">${c.title}</button>`
                     ).join("")}
                 </div>
+                <div class="project-group-view"></div>
             `;
 
             document.querySelector(".back-btn").onclick = showProjectsOverview;
 
+            let openGroup = null;
             document.querySelectorAll(".project-list button").forEach(btn => {
-                btn.onclick = () =>
-                    showProjectDetail(project.children[btn.dataset.childIndex]);
+                const idx = btn.dataset.childIndex;
+                const child = project.children[idx];
+                if (child.children) {
+                    btn.onclick = () => {
+                        const groupView = document.querySelector('.project-group-view');
+                        if (openGroup === idx) {
+                            groupView.innerHTML = "";
+                            openGroup = null;
+                        } else {
+                            groupView.innerHTML = `
+                                <h2>${child.title}</h2>
+                                <div class="project-group-videos">
+                                    ${child.children.map(videoProj =>
+                                        `<div class="video-card">
+                                            <div class="video-title">${videoProj.title}</div>
+                                            <video src="${videoProj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>
+                                            <p>${videoProj.description}</p>
+                                        </div>`
+                                    ).join("")}
+                                </div>
+                            `;
+                            openGroup = idx;
+                        }
+                    };
+                } else {
+                    btn.onclick = () => showProjectDetail(child);
+                }
             });
         } else {
             showProjectDetail(project);
@@ -186,4 +271,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     overviewCard?.addEventListener("click", showProjectsOverview);
+    document.getElementById("projects-overview-link")?.addEventListener("click", function(e) {
+        e.preventDefault();
+        // Switch to projects section
+        sections.forEach(s => s.classList.remove("active"));
+        document.getElementById("projects")?.classList.add("active");
+        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+        document.querySelector('nav a[data-page="projects"]')?.classList.add("active");
+        // Show projects overview
+        window.location.hash = "#fromHome";
+        showProjectsOverview();
+        window.scrollTo(0, 0);
+    });
 });
