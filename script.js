@@ -256,20 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".back-btn").onclick = showProjectsOverview;
     }
 
-    document.querySelectorAll(".home-video-grid video").forEach(video => {
-        video.addEventListener("click", () => {
-            video.controls = true;
-            video.muted = false;
-            video.play();
-
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) {
-                video.webkitRequestFullscreen();
-            }
-        });
-    });
-
     overviewCard?.addEventListener("click", showProjectsOverview);
     document.getElementById("projects-overview-link")?.addEventListener("click", function(e) {
         e.preventDefault();
