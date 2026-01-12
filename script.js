@@ -269,4 +269,22 @@ document.addEventListener("DOMContentLoaded", () => {
         showProjectsOverview();
         window.scrollTo(0, 0);
     });
+
+    // Ana sayfadaki iframe videolara tıklayınca fullscreen aç
+    document.querySelectorAll(".home-video-grid iframe").forEach(iframe => {
+        iframe.addEventListener("click", () => {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                // Safari desteği
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                // Firefox desteği
+                iframe.mozRequestFullScreen();
+            } else if (iframe.msRequestFullscreen) {
+                // IE/Edge desteği
+                iframe.msRequestFullscreen();
+            }
+        });
+    });
 });
