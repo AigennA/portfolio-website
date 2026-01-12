@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     ${child.children.map(videoProj =>
                                         `<div class="video-card">
                                             <div class="video-title">${videoProj.title}</div>
-                                            <video src="${videoProj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>
+                                            <iframe src="${videoProj.src}" width="100%" style="aspect-ratio: 16/9; max-width:320px; border-radius: 1rem; border: none; margin:0.5rem 0;" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen frameborder="0"></iframe>
                                             <p>${videoProj.description}</p>
                                         </div>`
                                     ).join("")}
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${
                     project.type === "image"
                         ? `<img src="${project.src}" alt="${project.title}">`
-                        : `<video controls src="${project.src}"></video>`
+                        : `<iframe src="${project.src}" width="100%" style="aspect-ratio: 16/9; border-radius: 1rem; border: none;" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen frameborder="0"></iframe>`
                 }
                 <p>${project.description}</p>
 
