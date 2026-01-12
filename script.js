@@ -279,18 +279,12 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Karta tıklayınca iframe'i fullscreen yap
             card.addEventListener("click", (e) => {
-                // Eğer doğrudan iframe'e tıklanmışsa, eventi durdur
-                if (e.target === iframe) return;
-                
                 // Fullscreen API - tüm tarayıcı uyumluluğu
                 if (iframe.requestFullscreen) {
                     iframe.requestFullscreen();
                 } else if (iframe.webkitRequestFullscreen) {
                     // Safari
                     iframe.webkitRequestFullscreen();
-                } else if (iframe.mozRequestFullScreen) {
-                    // Firefox
-                    iframe.mozRequestFullScreen();
                 } else if (iframe.msRequestFullscreen) {
                     // IE/Edge
                     iframe.msRequestFullscreen();
