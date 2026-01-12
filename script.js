@@ -104,13 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     title: "Dashboard UI",
                     type: "video",
-                    src: "videos/dashboard.mp4",
+                    src: "https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=dashboard_hg1wut&profile=cld-default",
                     description: "Responsive dashboard with focus on UX and component structure."
                 },
                 {
                     title: "E-Commerce TechVora",
                     type: "video",
-                    src: "videos/techvora.mp4",
+                    src: "https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=techvora_dagryt&profile=cld-default",
                     description: "E-commerce project built with Lovable.",
                     links: {
                         live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     title: "E-Commerce Cotton",
                     type: "video",
-                    src: "videos/cotton.mp4",
+                    src: "https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=cotton_axej1w&profile=cld-default",
                     description: "E-commerce project.",
                     links: {
                         live: "https://agnes-nora-git-all-fixes-aomurm-gmailcoms-projects.vercel.app/",
@@ -133,13 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         {
                             title: "Gala Emporium",
                             type: "video",
-                            src: "videos/gala-emporium-housetech.mp4",
+                            src: "https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=gala-emporium-housetech_tz8aqe&profile=cld-default",
                             description: "Ett Skolprojekt som byggdes med gruppen. Html,Css,Js och en SPA site."
                         },
                         {
                             title: "Rocky",
                             type: "video",
-                            src: "videos/rocky.mp4",
+                            src: "https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=rocky_ukwwnt&profile=cld-default",
                             description: "Skolarbete AI-Chatbot."
                         }
                     ]
