@@ -270,23 +270,71 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     });
 
-    // Ana sayfadaki iframe videolarını tıklayınca fullscreen aç
+    // Mobil responsive düzeltmesi
+    const videoGrid = document.querySelector('.home-video-grid');
+    if (videoGrid) {
+        videoGrid.style.maxWidth = '100%';
+        videoGrid.style.overflowX = 'hidden';
+        videoGrid.style.boxSizing = 'border-box';
+        videoGrid.style.paddingLeft = '1rem';
+        videoGrid.style.paddingRight = '1rem';
+    }
+
+    // Tüm video kartlarına
+    document.querySelectorAll('.video-card').forEach(card => {
+        card.style.maxWidth = '100%';
+        card.style.boxSizing = 'border-box';
+    });
+
+    // Ana sayfadaki iframe videolara fullscreen özelliği ekle ve responsive styles uygula
     document.querySelectorAll(".home-video-grid iframe").forEach(iframe => {
-        iframe.style.cursor = "pointer";
-        iframe.addEventListener("click", () => {
-            // Desktop ve mobil fullscreen API
+        // iframe responsive styles
+        iframe.style.maxWidth = '100%';
+        iframe.style.width = '100%';
+        iframe.style.boxSizing = 'border-box';
+        
+        // Wrapper div oluştur
+        const wrapper = document.createElement('div');
+        wrapper.style.position = 'relative';
+        wrapper.style.cursor = 'pointer';
+        
+        // iframe'i wrapper'a al
+        iframe.parentNode.insertBefore(wrapper, iframe);
+        wrapper.appendChild(iframe);
+        
+        // Overlay ekle (tıklama için)
+        const overlay = document.createElement('div');
+        overlay.style.position = 'absolute';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.zIndex = '10';
+        overlay.style.cursor = 'pointer';
+        overlay.style.backgroundColor = 'transparent';
+        
+        wrapper.appendChild(overlay);
+        
+        // Overlay'e tıklanınca fullscreen aç
+        overlay.addEventListener('click', () => {
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
             } else if (iframe.webkitRequestFullscreen) {
-                // Safari
                 iframe.webkitRequestFullscreen();
-            } else if (iframe.webkitEnterFullscreen) {
-                // iOS Safari
-                iframe.webkitEnterFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
             } else if (iframe.msRequestFullscreen) {
-                // IE/Edge
                 iframe.msRequestFullscreen();
             }
+        });
+        
+        // Mouse enter/leave için görsel feedback
+        overlay.addEventListener('mouseenter', () => {
+            overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+        });
+        
+        overlay.addEventListener('mouseleave', () => {
+            overlay.style.backgroundColor = 'transparent';
         });
     });
 });
