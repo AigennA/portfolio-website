@@ -270,21 +270,20 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     });
 
-    // Ana sayfadaki iframe videolarını tıklayınca fullscreen aç
+    // Ana sayfadaki iframe videolara tıklayınca fullscreen aç
     document.querySelectorAll(".home-video-grid iframe").forEach(iframe => {
         iframe.style.cursor = "pointer";
         iframe.addEventListener("click", () => {
-            // Desktop ve mobil fullscreen API
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
             } else if (iframe.webkitRequestFullscreen) {
-                // Safari
+                // Safari desteği
                 iframe.webkitRequestFullscreen();
-            } else if (iframe.webkitEnterFullscreen) {
-                // iOS Safari
-                iframe.webkitEnterFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                // Firefox desteği
+                iframe.mozRequestFullScreen();
             } else if (iframe.msRequestFullscreen) {
-                // IE/Edge
+                // IE/Edge desteği
                 iframe.msRequestFullscreen();
             }
         });
