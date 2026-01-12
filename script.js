@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.cursor = "pointer";
             
             // Karta tıklayınca iframe'i fullscreen yap
-            card.addEventListener("click", (e) => {
+            card.addEventListener("click", () => {
                 // Fullscreen API - tüm tarayıcı uyumluluğu
                 if (iframe.requestFullscreen) {
                     iframe.requestFullscreen();
