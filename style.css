@@ -757,6 +757,28 @@ span {
 }
 
 /* =========================
+   MOBILE VIDEO FIX
+   ========================= */
+@media (max-width: 768px) {
+    .home-video-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .home-video-grid iframe {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .video-card {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 @media (max-width: 900px) {

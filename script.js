@@ -270,23 +270,32 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     });
 
-    // Ana sayfadaki iframe videolarını tıklayınca fullscreen aç
-    document.querySelectorAll(".home-video-grid iframe").forEach(iframe => {
-        iframe.style.cursor = "pointer";
-        iframe.addEventListener("click", () => {
-            // Desktop ve mobil fullscreen API
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.webkitRequestFullscreen) {
-                // Safari
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.webkitEnterFullscreen) {
-                // iOS Safari
-                iframe.webkitEnterFullscreen();
-            } else if (iframe.msRequestFullscreen) {
-                // IE/Edge
-                iframe.msRequestFullscreen();
-            }
-        });
+    // Ana sayfadaki video kartlarına click event ekle (iframe yerine parent'a)
+    document.querySelectorAll(".home-video-grid .video-card").forEach(card => {
+        const iframe = card.querySelector("iframe");
+        if (iframe) {
+            // Kartın kendisine tıklanabilir işaret ekle
+            card.style.cursor = "pointer";
+            
+            // Karta tıklayınca iframe'i fullscreen yap
+            card.addEventListener("click", (e) => {
+                // Eğer doğrudan iframe'e tıklanmışsa, eventi durdur
+                if (e.target === iframe) return;
+                
+                // Fullscreen API - tüm tarayıcı uyumluluğu
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    // Safari
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.mozRequestFullScreen) {
+                    // Firefox
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.msRequestFullscreen) {
+                    // IE/Edge
+                    iframe.msRequestFullscreen();
+                }
+            });
+        }
     });
 });
