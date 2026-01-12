@@ -270,8 +270,29 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     });
 
-    // Ana sayfadaki iframe videolara fullscreen özelliği ekle
+    // Mobil responsive düzeltmesi
+    const videoGrid = document.querySelector('.home-video-grid');
+    if (videoGrid) {
+        videoGrid.style.maxWidth = '100%';
+        videoGrid.style.overflowX = 'hidden';
+        videoGrid.style.boxSizing = 'border-box';
+        videoGrid.style.paddingLeft = '1rem';
+        videoGrid.style.paddingRight = '1rem';
+    }
+
+    // Tüm video kartlarına
+    document.querySelectorAll('.video-card').forEach(card => {
+        card.style.maxWidth = '100%';
+        card.style.boxSizing = 'border-box';
+    });
+
+    // Ana sayfadaki iframe videolara fullscreen özelliği ekle ve responsive styles uygula
     document.querySelectorAll(".home-video-grid iframe").forEach(iframe => {
+        // iframe responsive styles
+        iframe.style.maxWidth = '100%';
+        iframe.style.width = '100%';
+        iframe.style.boxSizing = 'border-box';
+        
         // Wrapper div oluştur
         const wrapper = document.createElement('div');
         wrapper.style.position = 'relative';
@@ -315,28 +336,5 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.addEventListener('mouseleave', () => {
             overlay.style.backgroundColor = 'transparent';
         });
-    });
-
-    // Mobil responsive düzeltmesi
-    const videoGrid = document.querySelector('.home-video-grid');
-    if (videoGrid) {
-        videoGrid.style.maxWidth = '100%';
-        videoGrid.style.overflowX = 'hidden';
-        videoGrid.style.boxSizing = 'border-box';
-        videoGrid.style.paddingLeft = '1rem';
-        videoGrid.style.paddingRight = '1rem';
-    }
-
-    // Tüm video kartlarına
-    document.querySelectorAll('.video-card').forEach(card => {
-        card.style.maxWidth = '100%';
-        card.style.boxSizing = 'border-box';
-    });
-
-    // Tüm iframe'lere
-    document.querySelectorAll('.home-video-grid iframe').forEach(iframe => {
-        iframe.style.maxWidth = '100%';
-        iframe.style.width = '100%';
-        iframe.style.boxSizing = 'border-box';
     });
 });
