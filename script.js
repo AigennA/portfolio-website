@@ -270,71 +270,45 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     });
 
-    // Mobil responsive düzeltmesi
+    // Mobil responsiv fix för videogrid
     const videoGrid = document.querySelector('.home-video-grid');
     if (videoGrid) {
         videoGrid.style.maxWidth = '100%';
         videoGrid.style.overflowX = 'hidden';
-        videoGrid.style.boxSizing = 'border-box';
-        videoGrid.style.paddingLeft = '1rem';
-        videoGrid.style.paddingRight = '1rem';
     }
 
-    // Tüm video kartlarına
-    document.querySelectorAll('.video-card').forEach(card => {
-        card.style.maxWidth = '100%';
-        card.style.boxSizing = 'border-box';
-    });
-
-    // Ana sayfadaki iframe videolara fullscreen özelliği ekle ve responsive styles uygula
-    document.querySelectorAll(".home-video-grid iframe").forEach(iframe => {
-        // iframe responsive styles
-        iframe.style.maxWidth = '100%';
-        iframe.style.width = '100%';
-        iframe.style.boxSizing = 'border-box';
-        
-        // Wrapper div oluştur
-        const wrapper = document.createElement('div');
-        wrapper.style.position = 'relative';
-        wrapper.style.cursor = 'pointer';
-        
-        // iframe'i wrapper'a al
-        iframe.parentNode.insertBefore(wrapper, iframe);
-        wrapper.appendChild(iframe);
-        
-        // Overlay ekle (tıklama için)
-        const overlay = document.createElement('div');
-        overlay.style.position = 'absolute';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.zIndex = '10';
-        overlay.style.cursor = 'pointer';
-        overlay.style.backgroundColor = 'transparent';
-        
-        wrapper.appendChild(overlay);
-        
-        // Overlay'e tıklanınca fullscreen aç
-        overlay.addEventListener('click', () => {
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.webkitRequestFullscreen) {
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.mozRequestFullScreen) {
-                iframe.mozRequestFullScreen();
-            } else if (iframe.msRequestFullscreen) {
-                iframe.msRequestFullscreen();
-            }
-        });
-        
-        // Mouse enter/leave için görsel feedback
-        overlay.addEventListener('mouseenter', () => {
-            overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-        });
-        
-        overlay.addEventListener('mouseleave', () => {
-            overlay.style.backgroundColor = 'transparent';
-        });
+    // Lägg till fullscreen-funktion för startsidans videor
+    document.querySelectorAll(".home-video-grid .video-card").forEach(card => {
+        const iframe = card.querySelector("iframe");
+        if (iframe) {
+            // Gör kortet klickbart
+            card.style.cursor = "pointer";
+            
+            // Klickhändelse på kortet (inte iframen)
+            card.addEventListener("click", (e) => {
+                // Om användaren klickar direkt på iframen, låt Cloudinary-spelaren hantera det
+                if (e.target === iframe) return;
+                
+                // Öppna fullscreen med cross-browser-stöd
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    // Safari-stöd
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    // IE/Edge-stöd
+                    iframe.msRequestFullscreen();
+                }
+            });
+            
+            // Visuell feedback vid hover (valfritt men rekommenderat)
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "scale(1.02)";
+            });
+            
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "scale(1)";
+            });
+        }
     });
 });
