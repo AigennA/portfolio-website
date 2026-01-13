@@ -147,9 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
-            title: "Backend API",
+            title: "Backend API -Programmering",
             type: "image",
-            src: "images/projects/project-3.jpg",
+            src: "images/data.jpg",
             description: "API practice using C# and .NET."
         }
     ];
