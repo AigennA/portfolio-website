@@ -38,6 +38,10 @@
                 14 december 2026 – 28 maj 2027
             </div>
         </div>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i>
+            <span id="visitor-count">0</span> ziyaret
+        </div>
         <div class="home-img">
         <img src="images/cv.jpg" alt="Profilbild på Aygen">
     </div>
@@ -262,6 +266,67 @@
                aygen.omur.mehmethan.syne25lin@edu.tucsweden.se
             </a>
         </p>
+
+        <div class="contact-form-wrapper">
+            <div class="form-header">
+                <h2 class="form-title">Mesaj Gönder</h2>
+                <p class="form-subtitle">Benimle iletişime geçin, size en kısa sürede dönüş yapacağım.</p>
+            </div>
+            
+            <form id="contact-form" class="premium-contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="7869b5a3-2df8-43d8-84bd-dd07ce83b460">
+                <input type="hidden" name="subject" value="Yeni Mesaj - Portfolio Website">
+                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name">
+                            <i class="fa-solid fa-user"></i>
+                            İsim Soyisim
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız ve soyadınız" autocomplete="name">
+                        <span class="field-focus-border"></span>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            E-posta
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="ornek@email.com" autocomplete="email">
+                        <span class="field-focus-border"></span>
+                    </div>
+                </div>
+                
+                <div class="form-field">
+                    <label for="subject">
+                        <i class="fa-solid fa-tag"></i>
+                        Konu
+                    </label>
+                    <input type="text" id="subject" name="message_subject" placeholder="LIA, İş Teklifi, Soru vb.">
+                    <span class="field-focus-border"></span>
+                </div>
+                
+                <div class="form-field">
+                    <label for="message">
+                        <i class="fa-solid fa-message"></i>
+                        Mesajınız
+                    </label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Mesajınızı buraya yazın..."></textarea>
+                    <span class="field-focus-border"></span>
+                </div>
+                
+                <button type="submit" class="premium-submit-btn">
+                    <span class="btn-text">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Mesajı Gönder
+                    </span>
+                    <span class="btn-glow"></span>
+                </button>
+                
+                <div id="form-status" class="form-status"></div>
+            </form>
+        </div>
 
         <div class="social-icons">
             <a href="https://www.linkedin.com/"

@@ -311,4 +311,143 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+
+    // =========================
+    // VISITOR COUNTER
+    // =========================
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    visitCount = parseInt(visitCount) + 1;
+    localStorage.setItem('visitCount', visitCount);
+    const visitorCountElement = document.getElementById('visitor-count');
+    if (visitorCountElement) {
+        visitorCountElement.textContent = visitCount;
+    }
+
+    // =========================
+    // PREMIUM CONTACT FORM
+    // =========================
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = contactForm?.querySelector('.premium-submit-btn');
+    
+    const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+    
+    // Form validation
+    function validateForm(formData) {
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        
+        if (!name || name.trim().length < 2) {
+            return { valid: false, message: 'Lütfen geçerli bir isim girin (en az 2 karakter)' };
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            return { valid: false, message: 'Lütfen geçerli bir e-posta adresi girin' };
+        }
+        
+        if (!message || message.trim().length < 10) {
+            return { valid: false, message: 'Mesajınız en az 10 karakter olmalıdır' };
+        }
+        
+        return { valid: true };
+    }
+    
+    // Set loading state
+    function setLoadingState(isLoading) {
+        if (!submitBtn) return;
+        
+        if (isLoading) {
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            submitBtn.querySelector('.btn-text i').style.display = 'none';
+        } else {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('loading');
+            submitBtn.querySelector('.btn-text i').style.display = 'inline-block';
+        }
+    }
+    
+    // Show form status message
+    function showFormStatus(type, message) {
+        if (!formStatus) return;
+        
+        formStatus.className = 'form-status';
+        formStatus.classList.add(type, 'show');
+        formStatus.textContent = message;
+        
+        // Auto-hide after 6 seconds
+        setTimeout(() => {
+            hideFormStatus();
+        }, 6000);
+    }
+    
+    // Hide form status message
+    function hideFormStatus() {
+        if (!formStatus) return;
+        formStatus.classList.remove('show');
+    }
+    
+    // Submit form handler
+    async function submitForm(e) {
+        e.preventDefault();
+        
+        if (!contactForm) return;
+        
+        const formData = new FormData(contactForm);
+        
+        // Validate form
+        const validation = validateForm(formData);
+        if (!validation.valid) {
+            showFormStatus('error', validation.message);
+            return;
+        }
+        
+        // Set loading state
+        setLoadingState(true);
+        hideFormStatus();
+        
+        try {
+            const response = await fetch(WEB3FORMS_ENDPOINT, {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok && data.success) {
+                showFormStatus('success', 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağım.');
+                contactForm.reset();
+            } else {
+                showFormStatus('error', data.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
+        } catch (error) {
+            showFormStatus('error', 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.');
+        } finally {
+            setLoadingState(false);
+        }
+    }
+    
+    // Attach submit handler
+    if (contactForm) {
+        contactForm.addEventListener('submit', submitForm);
+        
+        // Add focus effects to inputs
+        const formInputs = contactForm.querySelectorAll('input, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focused');
+                if (input.value) {
+                    input.parentElement.classList.add('has-value');
+                } else {
+                    input.parentElement.classList.remove('has-value');
+                }
+            });
+        });
+    }
 });
