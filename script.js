@@ -312,3 +312,168 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// ============================================
+// PREMIUM KONTAKTFORMULÄR MED WEB3FORMS
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = contactForm?.querySelector('.premium-submit-btn');
+    const formStatus = document.getElementById('form-status');
+    const btnText = submitBtn?.querySelector('.btn-text');
+    const originalBtnText = btnText?.innerHTML;
+    
+    if (!contactForm) return;
+    
+    // Form input-animationer
+    const formInputs = contactForm.querySelectorAll('input, textarea');
+    formInputs.forEach(input => {
+        if (input.value) {
+            input.parentElement.classList.add('has-value');
+        }
+        
+        input.addEventListener('input', function() {
+            if (this.value) {
+                this.parentElement.classList.add('has-value');
+            } else {
+                this.parentElement.classList.remove('has-value');
+            }
+        });
+        
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('is-focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.classList.remove('is-focused');
+        });
+    });
+    
+    // Formulärinlämning
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Hämta formulärdata
+        const formData = new FormData(contactForm);
+        
+        // Validering
+        if (!validateForm(formData)) {
+            return;
+        }
+        
+        // Laddar tillstånd
+        setLoadingState(true);
+        
+        try {
+            // Skicka till Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                // Framgång
+                showFormStatus('success', '✨ Ditt meddelande har skickats! Jag återkommer så snart som möjligt.');
+                contactForm.reset();
+                
+                // Ta bort has-value-klasser
+                formInputs.forEach(input => {
+                    input.parentElement.classList.remove('has-value');
+                });
+                
+                // Dölj meddelande efter 6 sekunder
+                setTimeout(() => {
+                    hideFormStatus();
+                }, 6000);
+                
+            } else {
+                // Fel
+                showFormStatus('error', '⚠️ Ett fel uppstod. Försök igen eller skicka e-post direkt.');
+            }
+            
+        } catch (error) {
+            console.error('Formulärfel:', error);
+            showFormStatus('error', '⚠️ Anslutningsfel. Kontrollera din internetanslutning.');
+        } finally {
+            setLoadingState(false);
+        }
+    });
+    
+    // Valideringsfunktion
+    function validateForm(formData) {
+        const name = formData.get('name')?.trim();
+        const email = formData.get('email')?.trim();
+        const message = formData.get('message')?.trim();
+        
+        // Namnvalidering
+        if (!name || name.length < 2) {
+            showFormStatus('error', '⚠️ Ange ett giltigt namn.');
+            document.getElementById('name').focus();
+            return false;
+        }
+        
+        // E-postvalidering
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            showFormStatus('error', '⚠️ Ange en giltig e-postadress.');
+            document.getElementById('email').focus();
+            return false;
+        }
+        
+        // Meddelandevalidering
+        if (!message || message.length < 10) {
+            showFormStatus('error', '⚠️ Ditt meddelande måste vara minst 10 tecken.');
+            document.getElementById('message').focus();
+            return false;
+        }
+        
+        return true;
+    }
+    
+    // Laddar tillståndshantering
+    function setLoadingState(isLoading) {
+        if (isLoading) {
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            btnText.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Skickar...';
+        } else {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('loading');
+            btnText.innerHTML = originalBtnText;
+        }
+    }
+    
+    // Visa formulärstatus
+    function showFormStatus(type, message) {
+        formStatus.className = `form-status ${type}`;
+        formStatus.textContent = message;
+        formStatus.style.display = 'flex';
+        
+        setTimeout(() => {
+            formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+    }
+    
+    // Dölj formulärstatus
+    function hideFormStatus() {
+        formStatus.style.display = 'none';
+    }
+});
+
+// ============================================
+// BESÖKSRÄKNARE (LOCALSTORAGE)
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const visitorCountElement = document.getElementById('visitor-count');
+    
+    if (visitorCountElement) {
+        let visitCount = localStorage.getItem('visitCount') || 0;
+        visitCount = parseInt(visitCount) + 1;
+        localStorage.setItem('visitCount', visitCount);
+        visitorCountElement.textContent = visitCount;
+    }
+});
