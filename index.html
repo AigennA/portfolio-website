@@ -145,6 +145,11 @@
 </div>
 
     </div>
+    
+    <div class="visitor-counter">
+    <i class="fa-solid fa-eye"></i>
+    <span id="visitor-count">0</span> besökare
+</div>
 </section>
 
 <section id="skills">
@@ -262,6 +267,67 @@
                aygen.omur.mehmethan.syne25lin@edu.tucsweden.se
             </a>
         </p>
+
+        <div class="contact-form-wrapper">
+    <div class="form-header">
+        <h2 class="form-title">Skicka meddelande</h2>
+        <p class="form-subtitle">Kontakta mig gärna, jag återkommer så snart som möjligt.</p>
+    </div>
+    
+    <form id="contact-form" class="premium-contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="7869b5a3-2df8-43d8-84bd-dd07ce83b460">
+        <input type="hidden" name="subject" value="Nytt meddelande - Portfolio Website">
+        <input type="hidden" name="from_name" value="Portfolio Kontaktformulär">
+        
+        <div class="form-row">
+            <div class="form-field">
+                <label for="name">
+                    <i class="fa-solid fa-user"></i>
+                    Namn
+                </label>
+                <input type="text" id="name" name="name" required placeholder="Ditt namn" autocomplete="name">
+                <span class="field-focus-border"></span>
+            </div>
+            
+            <div class="form-field">
+                <label for="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    E-post
+                </label>
+                <input type="email" id="email" name="email" required placeholder="din@email.se" autocomplete="email">
+                <span class="field-focus-border"></span>
+            </div>
+        </div>
+        
+        <div class="form-field">
+            <label for="subject">
+                <i class="fa-solid fa-tag"></i>
+                Ämne
+            </label>
+            <input type="text" id="subject" name="message_subject" placeholder="LIA, Jobbförslag, Fråga etc.">
+            <span class="field-focus-border"></span>
+        </div>
+        
+        <div class="form-field">
+            <label for="message">
+                <i class="fa-solid fa-message"></i>
+                Ditt meddelande
+            </label>
+            <textarea id="message" name="message" rows="6" required placeholder="Skriv ditt meddelande här..."></textarea>
+            <span class="field-focus-border"></span>
+        </div>
+        
+        <button type="submit" class="premium-submit-btn">
+            <span class="btn-text">
+                <i class="fa-solid fa-paper-plane"></i>
+                Skicka meddelande
+            </span>
+            <span class="btn-glow"></span>
+        </button>
+        
+        <div id="form-status" class="form-status"></div>
+    </form>
+</div>
 
         <div class="social-icons">
             <a href="https://www.linkedin.com/"
