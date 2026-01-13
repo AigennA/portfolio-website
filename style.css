@@ -823,7 +823,7 @@ span {
     font-family: 'Syne', 'Manrope', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #ec4899, #f472b6, #ec4899);
+    background: linear-gradient(135deg, #ec4899, #4ade80, #ec4899);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -976,7 +976,7 @@ span {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 1.3rem 2rem;
-    background: linear-gradient(135deg, #ec4899, #d946a6);
+    background: linear-gradient(135deg, #ec4899, #4ade80);
     color: #fff;
     border: none;
     border-radius: 1rem;
@@ -1192,12 +1192,12 @@ span {
     bottom: 2rem;
     right: 2rem;
     background: rgba(236, 72, 153, 0.15);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     padding: 0.8rem 1.5rem;
     border-radius: 2rem;
     border: 1px solid rgba(236, 72, 153, 0.3);
-    color: #ec4899;
+    color: #14d01d;
     font-family: 'Manrope', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
