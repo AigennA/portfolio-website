@@ -339,16 +339,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const message = formData.get('message');
         
         if (!name || name.trim().length < 2) {
-            return { valid: false, message: 'Lütfen geçerli bir isim girin (en az 2 karakter)' };
+            return { valid: false, message: 'Vänligen ange ett giltigt namn (minst 2 tecken)' };
         }
         
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
-            return { valid: false, message: 'Lütfen geçerli bir e-posta adresi girin' };
+            return { valid: false, message: 'Vänligen ange en giltig e-postadress' };
         }
         
         if (!message || message.trim().length < 10) {
-            return { valid: false, message: 'Mesajınız en az 10 karakter olmalıdır' };
+            return { valid: false, message: 'Meddelandet måste vara minst 10 tecken långt' };
         }
         
         return { valid: true };
@@ -417,13 +417,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             
             if (response.ok && data.success) {
-                showFormStatus('success', 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağım.');
+                showFormStatus('success', 'Ditt meddelande har skickats! Jag återkommer så snart som möjligt.');
                 contactForm.reset();
             } else {
-                showFormStatus('error', data.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
+                showFormStatus('error', data.message || 'Ett fel uppstod. Vänligen försök igen.');
             }
         } catch (error) {
-            showFormStatus('error', 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.');
+            showFormStatus('error', 'Anslutningsfel. Kontrollera din internetanslutning.');
         } finally {
             setLoadingState(false);
         }
