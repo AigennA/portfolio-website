@@ -447,6 +447,13 @@ section.active {
     gap: 4rem;
 }
 
+@media (min-width: 900px) {
+    .home-img {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+    }
+}
+
 .home-img img {
     width: 220px;
     border-radius: 50%;
