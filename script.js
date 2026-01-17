@@ -52,6 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     links.forEach(link => {
         link.addEventListener("click", e => {
+            document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
+window.scrollTo({ top: 0, behavior: "instant" });
+
             e.preventDefault();
             const target = link.dataset.page;
 

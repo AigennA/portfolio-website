@@ -855,8 +855,8 @@ span {
 
 .premium-contact-form {
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(236, 72, 153, 0.15);
     border-radius: 1.5rem;
     padding: 2.5rem;
@@ -1233,3 +1233,45 @@ span {
         padding: 0.6rem 1.2rem;
     }
 }
+
+/* Center ONLY contact page content on desktop */
+@media (min-width: 900px) {
+    #contact.active {
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact.active .content {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #contact.active .contact-form-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    #contact.active .social-icons {
+        justify-content: center;
+    }
+}
+/* Space between form wrapper and social icons */
+#contact.active .social-icons {
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+/* Only hide the pink portfolio box – NOT the footer */
+.portfolio-info {
+    display: none;
+}
+
+/* Show portfolio info ONLY when home page is active */
+#home.active ~ .portfolio-info {
+    display: block;
+}
+
+
