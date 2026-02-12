@@ -106,6 +106,12 @@ window.scrollTo({ top: 0, behavior: "instant" });
                     description: "Modern web application built with React, Vite and Tailwind CSS."
                 },
                 {
+                    title: "Car-Dealer Bil galleri App",
+                    type: "image",
+                    src: "images/projects/car-dealer1.png",
+                    description: "Car Dealer web project screenshot."
+                },
+                {
                     title: "Dashboard UI",
                     type: "video",
                     src: "https://res.cloudinary.com/dciixwu6v/video/upload/dashboard_hg1wut.mp4",
