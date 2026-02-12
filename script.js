@@ -107,9 +107,21 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 },
                 {
                     title: "Car-Dealer Bil galleri App",
-                    type: "image",
-                    src: "images/projects/car-dealer1.png",
-                    description: "Car Dealer web project screenshot."
+                    type: "group",
+                    children: [
+                        {
+                            title: "Car Dealer",
+                            type: "image",
+                            src: "images/projects/car-dealer1.png",
+                            description: "Car Dealer web project screenshot."
+                        },
+                        {
+                            title: "Våra Bilar",
+                            type: "image",
+                            src: "images/projects/varabilar1.png",
+                            description: "Våra Bilar gallery screenshot."
+                        }
+                    ]
                 },
                 {
                     title: "Dashboard UI",
