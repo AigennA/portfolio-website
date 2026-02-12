@@ -233,11 +233,11 @@ window.scrollTo({ top: 0, behavior: "instant" });
                             groupView.innerHTML = `
                                 <h2>${child.title}</h2>
                                 <div class="project-group-videos">
-                                    ${child.children.map(videoProj =>
+                                    ${child.children.map(proj =>
                                         `<div class="video-card">
-                                            <div class="video-title">${videoProj.title}</div>
-                                            <video src="${videoProj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>
-                                            <p>${videoProj.description}</p>
+                                            <div class="video-title">${proj.title}</div>
+                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" style="max-width:320px;width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
+                                            <p>${proj.description}</p>
                                         </div>`
                                     ).join("")}
                                 </div>
