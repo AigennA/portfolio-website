@@ -1263,9 +1263,31 @@ span {
 
 /* Show portfolio info ONLY when home page is active */
 #home.active ~ .portfolio-info {
-    display: block;
-    background-color: fuchsia;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+}
+
+#home.active ~ .portfolio-info .portfolio-info-code {
+    background-color: #ec4899;
+    color: #020617;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.75rem;
+    font-family: 'Manrope', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    #home.active ~ .portfolio-info .portfolio-info-code {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
 }
 
 
