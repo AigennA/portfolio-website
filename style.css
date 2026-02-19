@@ -1272,6 +1272,8 @@ span {
 /* Show portfolio info ONLY when home page is active */
 #home.active ~ .portfolio-info {
     display: block;
+    background-color: fuchsia;
+    text-align: center;
 }
 
 
