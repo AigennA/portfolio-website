@@ -128,17 +128,19 @@
 .projects-overview-btn {
     font-size: 1.15rem;
     font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
-    background: #00c853;
-    color: #020617 !important;
+    background: linear-gradient(90deg, #00c853, #0d2847, #00c853);
+    background-size: 300%;
+    color: #ffffff !important;
     text-shadow: none !important;
     border: none;
     border-radius: 2.5rem;
     padding: 1rem 2.5rem;
     box-shadow: 0 4px 18px rgba(0,200,83,0.15);
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s, color 0.2s;
+    transition: transform 0.2s;
     font-weight: 600;
     letter-spacing: 0.02em;
+    animation: logoFlow 10s ease-in-out infinite;
 }
 .projects-overview-btn:hover {
     transform: translateY(-2px) scale(1.04);
@@ -183,10 +185,14 @@
    HEJ COLOR (MATCH PORTFOLIO)
    ========================= */
 .hej-color {
-    color: #00c853;
-    -webkit-text-fill-color: #00c853;
+    background: linear-gradient(90deg, #00c853, #e0e0e0, #00c853);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 600;
     font-family: inherit;
+    animation: logoFlow 10s ease-in-out infinite;
 }
 /* =========================
    HOME VIDEO CARD TITLES
@@ -314,8 +320,12 @@ header {
     font-size: 1.9rem;
     font-weight: 600;
     cursor: pointer;
-    color: #00c853;
-    transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+    background: linear-gradient(90deg, #00c853, #e0e0e0, #00c853);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logoFlow 10s ease-in-out infinite;
 }
 
 .logo:hover {
@@ -509,6 +519,16 @@ ul {
     position: static;
     line-height: 1.1;
 }
+.contact-email {
+    color: #00c853;
+    text-decoration: none;
+    font-style: normal;
+    transition: color 0.3s ease;
+}
+.contact-email:hover {
+    color: #ffffff;
+}
+
 @media (max-width: 700px) {
     #contact .content {
         padding: 1.5rem 0.5rem 2rem 0.5rem;
@@ -805,12 +825,14 @@ span {
     font-family: 'Syne', 'Manrope', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #00c853, #ffffff);
+    background: linear-gradient(90deg, #00c853, #e0e0e0, #00c853);
+    background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.8rem;
     letter-spacing: 0.02em;
+    animation: logoFlow 10s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
@@ -978,6 +1000,9 @@ span {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
+    color: #020617;
+    -webkit-text-fill-color: #020617;
+    font-style: normal;
 }
 
 .btn-text i {
