@@ -18,7 +18,7 @@
 }
 .lia-flag-body {
     min-width: 140px;
-    background: #fffbe8;
+    background: #ffffff;
     color: #18181b;
     font-family: 'Syne', 'Manrope', sans-serif;
     font-size: 0.98rem;
@@ -26,7 +26,7 @@
     border-radius: 0 1.1rem 1.1rem 0.2rem;
     box-shadow: 0 4px 18px #0005, 0 2px 8px #fff2;
     padding: 0.38rem 0.7rem 0.38rem 0.7rem;
-    border: 1.5px solid #fbbf24;
+    border: 1.5px solid #0d2847;
     animation: flag-wave-slow 4.5s ease-in-out infinite;
     transform-origin: left center;
     position: relative;
@@ -75,13 +75,13 @@
     text-align: left;
 }
 .upcoming-courses th {
-    color: #3b82f6;
+    color: #00c853;
     font-weight: 700;
     font-size: 1.1rem;
     background: none;
 }
 .upcoming-courses td {
-    color: #38a3f5;
+    color: #e0e0e0;
     font-weight: 500;
     background: none;
 }
@@ -111,7 +111,7 @@
 }
 .project-group-title {
     font-size: 1.3rem;
-    color: #ec4899;
+    color: #00c853;
     font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
     font-weight: 700;
     margin-bottom: 1.1rem;
@@ -128,23 +128,21 @@
 .projects-overview-btn {
     font-size: 1.15rem;
     font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
-    background: linear-gradient(90deg, #ec4899, #8b5cf6, #49d942, #ec4899);
-    background-size: 300%;
-    color: #18181b !important;
+    background: #00c853;
+    color: #020617 !important;
     text-shadow: none !important;
     border: none;
     border-radius: 2.5rem;
     padding: 1rem 2.5rem;
-    box-shadow: 0 4px 18px rgba(236,72,153,0.10);
+    box-shadow: 0 4px 18px rgba(0,200,83,0.15);
     cursor: pointer;
     transition: background 0.3s, transform 0.2s, color 0.2s;
     font-weight: 600;
     letter-spacing: 0.02em;
-    animation: logoFlow 6s ease-in-out infinite;
 }
 .projects-overview-btn:hover {
     transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 8px 24px rgba(236,72,153,0.18);
+    box-shadow: 0 8px 24px rgba(0,200,83,0.18);
     color: #18181b !important;
 }
 @media (max-width: 700px) {
@@ -169,7 +167,7 @@
    ========================= */
 .video-desc {
     font-size: 0.93rem;
-    color: #bdb7e5;
+    color: #8899aa;
     opacity: 0.85;
     margin-bottom: 0.18rem;
     font-family: 'Manrope', 'Syne', sans-serif;
@@ -185,14 +183,10 @@
    HEJ COLOR (MATCH PORTFOLIO)
    ========================= */
 .hej-color {
-    background: linear-gradient(90deg, #ec4899, #8b5cf6, #49d942, #ec4899);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #00c853;
+    -webkit-text-fill-color: #00c853;
     font-weight: 600;
     font-family: inherit;
-    animation: logoFlow 6s ease-in-out infinite;
 }
 /* =========================
    HOME VIDEO CARD TITLES
@@ -203,19 +197,19 @@
     align-items: center;
     background: rgba(2,6,23,0.85);
     border-radius: 1.1rem;
-    box-shadow: 0 6px 24px rgba(236,72,153,0.08);
+    box-shadow: 0 6px 24px rgba(0,200,83,0.08);
     padding: 0.7rem 0.5rem 1rem 0.5rem;
     margin-bottom: 0.5rem;
     transition: box-shadow 0.2s;
 }
 .video-card:hover {
-    box-shadow: 0 12px 32px rgba(236,72,153,0.18);
+    box-shadow: 0 12px 32px rgba(0,200,83,0.18);
 }
 .video-title {
     font-family: 'Syne', 'Manrope', sans-serif;
     font-size: 1.08rem;
     font-weight: 600;
-    color: #ec4899;
+    color: #00c853;
     margin-bottom: 0.5rem;
     letter-spacing: 0.02em;
     text-shadow: 0 2px 8px rgba(11,19,32,0.18);
@@ -238,7 +232,7 @@
     background: rgba(2,6,23,0.92);
     padding: 1.5rem 0 0.5rem 0;
     margin-top: 3rem;
-    border-top: 1px solid rgba(236,72,153,0.15);
+    border-top: 1px solid rgba(0,200,83,0.15);
     font-family: 'Manrope', system-ui, sans-serif;
 }
 
@@ -252,7 +246,7 @@
 
 .footer-text {
     font-size: 1rem;
-    color: #ec4899;
+    color: #00c853;
     font-family: 'Syne', 'Manrope', sans-serif;
     font-weight: 600;
     letter-spacing: 0.01em;
@@ -320,23 +314,12 @@ header {
     font-size: 1.9rem;
     font-weight: 600;
     cursor: pointer;
-
-    background: linear-gradient(
-        90deg,
-        #ec4899,
-        #8b5cf6,
-        #49d942,
-        #ec4899
-    );
-    background-size: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: logoFlow 6s ease-in-out infinite;
+    color: #00c853;
+    transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
 }
 
 .logo:hover {
-    filter: drop-shadow(0 0 12px rgba(236,72,153,0.6));
+    filter: drop-shadow(0 0 12px rgba(0,200,83,0.6));
     transform: scale(1.03);
     transition: 0.3s ease;
 }
@@ -376,13 +359,13 @@ nav a::after {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background-color: #ec4899;
+    background-color: #00c853;
     transition: width 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    color: #ec4899;
+    color: #00c853;
 }
 
 nav a:hover::after,
@@ -396,7 +379,7 @@ nav a.active::after {
 #menu-icon {
     display: none;
     font-size: 2.4rem;
-    color: #ec4899;
+    color: #00c853;
     cursor: pointer;
     background: none;
     border: none;
@@ -410,10 +393,10 @@ nav a.active::after {
 }
 
 #menu-icon:active, #menu-icon:focus, #menu-icon:hover {
-    background: #fbeff7;
+    background: rgba(0, 200, 83, 0.1);
 }
 #menu-icon:active, #menu-icon:focus, #menu-icon:hover {
-    background: #fbeff7;
+    background: rgba(0, 200, 83, 0.1);
 }
 
 /* =========================
@@ -449,7 +432,7 @@ section.active {
 .home-img img {
     width: 220px;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgba(236,72,153,0.35);
+    box-shadow: 0 0 25px rgba(0,200,83,0.35);
 }
 
 .home-content,
@@ -473,7 +456,7 @@ section h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2.2rem;
     margin-bottom: 1.4rem;
-    color: #ec4899;
+    color: #00c853;
     letter-spacing: 0.01em;
 }
 
@@ -520,7 +503,7 @@ ul {
     content: '•';
     display: inline-block;
     margin-right: 0.5em;
-    color: #ec4899;
+    color: #00c853;
     font-size: 1.2em;
     vertical-align: middle;
     position: static;
@@ -548,7 +531,7 @@ ul {
 }
 
 span {
-    color: #ec4899;
+    color: #00c853;
    
     font-style: italic;
 }
@@ -562,15 +545,15 @@ span {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.9rem 2.5rem;
-    border: 1px solid #ec4899;
+    border: 1px solid #00c853;
     border-radius: 3rem;
-    color: #ec4899;
+    color: #00c853;
     text-decoration: none;
     transition: 0.3s ease;
 }
 
 .btn:hover {
-    background: #ec4899;
+    background: #00c853;
     color: #020617;
 }
 
@@ -579,7 +562,7 @@ span {
    ========================= */
 .social-icons a {
     margin-right: 1.2rem;
-    color: #ec4899;
+    color: #00c853;
     transition: color 0.2s;
 }
 .social-icons a i.fa-brands {
@@ -587,12 +570,12 @@ span {
     transition: font-size 0.2s, color 0.2s;
 }
 .social-icons a:hover i.fa-brands {
-    color: #8b5cf6;
+    color: #ffffff;
     font-size: 3.1rem;
 }
 
 .social-icons a:hover {
-    color: #8b5cf6;
+    color: #ffffff;
     font-size: 2.8rem;
 }
 
@@ -622,7 +605,7 @@ span {
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(236,72,153,0.15);
+    box-shadow: 0 12px 30px rgba(0,200,83,0.15);
 }
 
 .project-card img {
@@ -650,7 +633,7 @@ span {
 
 .project-content p {
     font-size: 1.25rem;
-    color: #cbd5f5;
+    color: #b0bec5;
     line-height: 1.7;
     opacity: 0.9;
 }
@@ -709,7 +692,7 @@ span {
 }
 
 #project-view .project-list button:hover {
-    background: rgba(236,72,153,0.15);
+    background: rgba(0,200,83,0.15);
     transform: translateX(4px);
 }
 
@@ -726,7 +709,7 @@ span {
     margin-bottom: 1.2rem;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #ec4899;
+    color: #00c853;
     cursor: pointer;
 }
 
@@ -752,7 +735,7 @@ span {
 
 .home-video-grid video:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 45px rgba(236,72,153,0.25);
+    box-shadow: 0 18px 45px rgba(0,200,83,0.25);
 }
 
 /* =========================
@@ -766,14 +749,14 @@ span {
         top: 1.2rem;
         right: 2.5rem;
         margin: 0;
-        color: #ec4899;
+        color: #00c853;
         background: none;
         border: none;
         outline: none;
         padding: 0.2em 0.7em;
         border-radius: 1.5em;
         transition: background 0.2s;
-        box-shadow: 0 2px 8px #ec489933;
+        box-shadow: 0 2px 8px #00c85333;
         line-height: 1.1;
         text-align: center;
         z-index: 1100;
@@ -822,14 +805,12 @@ span {
     font-family: 'Syne', 'Manrope', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #ec4899, #4ade80, #ec4899);
-    background-size: 200% 200%;
+    background: linear-gradient(135deg, #00c853, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0.8rem;
     letter-spacing: 0.02em;
-    animation: gradientShift 4s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -840,7 +821,7 @@ span {
 .form-subtitle {
     font-family: 'Manrope', sans-serif;
     font-size: 1.1rem;
-    color: #cbd5f5;
+    color: #b0bec5;
     opacity: 0.85;
     line-height: 1.6;
 }
@@ -849,12 +830,12 @@ span {
     background: rgba(255, 255, 255, 0.03);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(236, 72, 153, 0.15);
+    border: 1px solid rgba(0, 200, 83, 0.15);
     border-radius: 1.5rem;
     padding: 2.5rem;
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(236, 72, 153, 0.05) inset;
+        0 0 0 1px rgba(0, 200, 83, 0.05) inset;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -867,7 +848,7 @@ span {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(135deg, #ec4899, transparent, #ec4899);
+    background: linear-gradient(135deg, #00c853, transparent, #00c853);
     border-radius: 1.5rem;
     opacity: 0;
     z-index: -1;
@@ -879,10 +860,10 @@ span {
 }
 
 .premium-contact-form:hover {
-    border-color: rgba(236, 72, 153, 0.3);
+    border-color: rgba(0, 200, 83, 0.3);
     box-shadow: 
         0 12px 40px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(236, 72, 153, 0.15);
+        0 0 30px rgba(0, 200, 83, 0.15);
 }
 
 .form-row {
@@ -912,7 +893,7 @@ span {
 }
 
 .form-field label i {
-    color: #ec4899;
+    color: #00c853;
     font-size: 1.1rem;
 }
 
@@ -922,7 +903,7 @@ span {
     font-size: 1.05rem;
     padding: 1.1rem 1.4rem;
     background: rgba(255, 255, 255, 0.04);
-    border: 2px solid rgba(236, 72, 153, 0.15);
+    border: 2px solid rgba(0, 200, 83, 0.15);
     border-radius: 1rem;
     color: #e5e7eb;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -939,11 +920,11 @@ span {
 .form-field input:focus,
 .form-field textarea:focus {
     outline: none;
-    border-color: #ec4899;
+    border-color: #00c853;
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 
-        0 0 0 4px rgba(236, 72, 153, 0.1),
-        0 8px 24px rgba(236, 72, 153, 0.2);
+        0 0 0 4px rgba(0, 200, 83, 0.1),
+        0 8px 24px rgba(0, 200, 83, 0.2);
     transform: translateY(-1px);
 }
 
@@ -953,7 +934,7 @@ span {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #ec4899, #f472b6);
+    background: linear-gradient(90deg, #00c853, #00e676);
     transition: width 0.4s ease;
     border-radius: 1rem;
 }
@@ -975,8 +956,8 @@ span {
     font-size: 1.2rem;
     font-weight: 700;
     padding: 1.3rem 2rem;
-    background: linear-gradient(135deg, #ec4899, #4ade80);
-    color: #fff;
+    background: #00c853;
+    color: #020617;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
@@ -986,7 +967,7 @@ span {
     margin-top: 1rem;
     letter-spacing: 0.02em;
     box-shadow: 
-        0 8px 24px rgba(236, 72, 153, 0.35),
+        0 8px 24px rgba(0, 200, 83, 0.35),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
@@ -1020,9 +1001,9 @@ span {
 .premium-submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 
-        0 12px 36px rgba(236, 72, 153, 0.5),
-        0 0 40px rgba(236, 72, 153, 0.3);
-    background: linear-gradient(135deg, #f472b6, #ec4899);
+        0 12px 36px rgba(0, 200, 83, 0.5),
+        0 0 40px rgba(0, 200, 83, 0.3);
+    background: linear-gradient(135deg, #00e676, #00c853);
 }
 
 .premium-submit-btn:hover .btn-glow {
@@ -1035,7 +1016,7 @@ span {
 
 .premium-submit-btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 200, 83, 0.4);
 }
 
 .premium-submit-btn:disabled {
@@ -1075,7 +1056,7 @@ span {
     justify-content: center;
     gap: 0.8rem;
     background: rgba(34, 197, 94, 0.15);
-    color: #4ade80;
+    color: #00c853;
     border: 2px solid rgba(34, 197, 94, 0.3);
     box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
 }
@@ -1179,7 +1160,7 @@ span {
 .form-field input:focus-visible,
 .form-field textarea:focus-visible,
 .premium-submit-btn:focus-visible {
-    outline: 3px solid rgba(236, 72, 153, 0.5);
+    outline: 3px solid rgba(0, 200, 83, 0.5);
     outline-offset: 2px;
 }
 
@@ -1190,13 +1171,13 @@ span {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: rgba(236, 72, 153, 0.15);
+    background: rgba(0, 200, 83, 0.15);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 0.8rem 1.5rem;
     border-radius: 2rem;
-    border: 1px solid rgba(236, 72, 153, 0.3);
-    color: #14d01d;
+    border: 1px solid rgba(0, 200, 83, 0.3);
+    color: #00c853;
     font-family: 'Manrope', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
@@ -1204,13 +1185,13 @@ span {
     align-items: center;
     gap: 0.5rem;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 200, 83, 0.2);
     transition: all 0.3s ease;
 }
 
 .visitor-counter:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(236, 72, 153, 0.3);
+    box-shadow: 0 6px 25px rgba(0, 200, 83, 0.3);
 }
 
 .visitor-counter i {
@@ -1256,7 +1237,7 @@ span {
     padding-top: 1rem;
 }
 
-/* Only hide the pink portfolio box – NOT the footer */
+/* Only hide the portfolio info box – NOT the footer */
 .portfolio-info {
     display: none;
 }
@@ -1269,8 +1250,8 @@ span {
 }
 
 #home.active ~ .portfolio-info .portfolio-info-code {
-    background-color: #ec4899;
-    color: #020617;
+    background-color: #0d2847;
+    color: #ffffff;
     padding: 1.2rem 1.5rem;
     border-radius: 0.75rem;
     font-family: 'Manrope', monospace;
