@@ -210,6 +210,15 @@ window.scrollTo({ top: 0, behavior: "instant" });
         }
     ];
 
+    document.getElementById("moverot-home-card")?.addEventListener("click", function() {
+        sections.forEach(s => s.classList.remove("active"));
+        document.getElementById("projects")?.classList.add("active");
+        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+        const liaProject = projects.find(p => p.title === "LIA Fullstack");
+        if (liaProject) showProject(liaProject);
+        window.scrollTo(0, 0);
+    });
+
     function showProjectsOverview() {
         projectView.style.display = "block";
         let fromHome = window.location.hash === "#fromHome";
