@@ -218,6 +218,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
         sections.forEach(s => s.classList.remove("active"));
         document.getElementById("projects")?.classList.add("active");
         document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+        projectView.style.display = "block";
         const liaProject = projects.find(p => p.title === "LIA Fullstack");
         if (liaProject) showProject(liaProject);
         window.scrollTo(0, 0);
