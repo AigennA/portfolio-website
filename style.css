@@ -444,6 +444,12 @@ section.active {
     align-items: center;
 }
 
+#contact.active {
+    align-items: flex-start;
+    min-height: auto;
+    padding-bottom: 3rem;
+}
+
 /* =========================
    HOME
    ========================= */
