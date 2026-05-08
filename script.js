@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const expand = document.getElementById("lia-expand");
         expand.classList.toggle("open");
         this.classList.toggle("active");
-        this.textContent = expand.classList.contains("open") ? "✕ Stäng" : "👇 Läs om min LIA";
+        this.innerHTML = expand.classList.contains("open") ? "✕ Stäng" : '<span class="lia-btn-icon">👉</span> Läs om min LIA';
     });
 
     const menuIcon = document.getElementById("menu-icon");
@@ -89,7 +89,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
             const liaExpand = document.getElementById("lia-expand");
             const liaBtn = document.getElementById("lia-toggle-btn");
             if (liaExpand) { liaExpand.classList.remove("open"); }
-            if (liaBtn) { liaBtn.classList.remove("active"); liaBtn.textContent = "👇 Läs om min LIA"; }
+            if (liaBtn) { liaBtn.classList.remove("active"); liaBtn.innerHTML = '<span class="lia-btn-icon">👉</span> Läs om min LIA'; }
 
             projectView.innerHTML = "";
             projectView.style.display = "none";
