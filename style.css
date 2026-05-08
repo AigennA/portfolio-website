@@ -523,8 +523,8 @@ ul {
 /* Only for skills section: add custom bullet with ::before */
 #skills h2 {
     padding-top: 1.5rem;
-    margin-top: 1rem;
-    border-top: 1px solid rgba(0,200,83,0.15);
+    margin-top: 1.5rem;
+    border-top: 1.5px solid rgba(0,200,83,0.4);
 }
 #skills h2:first-of-type {
     border-top: none;
