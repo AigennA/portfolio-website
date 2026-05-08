@@ -171,7 +171,12 @@
     box-shadow: none;
 }
 .experience-card {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,200,83,0.15);
+}
+.experience-card:last-of-type {
+    border-bottom: none;
 }
 /* =========================
    VIDEO CARD DESCRIPTION

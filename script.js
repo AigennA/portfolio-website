@@ -187,8 +187,8 @@ window.scrollTo({ top: 0, behavior: "instant" });
             description: "Under min LIA hos Activator arbetar jag som fullstack-utvecklare med projektet Moverot – en hälso- och aktivitetsapp för iOS, Android och webb. Jag jobbar med MongoDB, ABP Framework, frontend och backend i en agil miljö med Scrum och DevOps.",
             links: {
                 live: "https://moverot.se",
-                android: "https://play.google.com/store/apps/details?id=com.activator.moverot",
-                ios: "https://apps.apple.com/app/moverot/id6670164498"
+                android: "https://play.google.com/store/apps/details?id=se.morotsverige.app",
+                ios: "https://apps.apple.com/se/app/moverot/id6479749564"
             }
         },
         {
