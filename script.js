@@ -106,6 +106,10 @@ window.scrollTo({ top: 0, behavior: "instant" });
         document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
         document.querySelector('nav a[data-page="home"]')?.classList.add("active");
 
+        nav.classList.remove("active");
+        menuIcon.classList.remove("fa-xmark");
+        document.getElementById("nav-overlay")?.remove();
+
         projectView.innerHTML = "";
         projectView.style.display = "none";
 
