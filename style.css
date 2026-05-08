@@ -358,8 +358,12 @@ header {
     height: 2px;
     background: linear-gradient(90deg, #00c853, #e0e0e0, #00c853);
     background-size: 300%;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-text-fill-color: initial;
     animation: logoFlow 10s ease-in-out infinite;
     border-radius: 1px;
+    display: block;
 }
 
 .logo:hover {
