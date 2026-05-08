@@ -670,6 +670,13 @@ span {
     object-fit: cover;
 }
 
+#moverot-home-card {
+    cursor: pointer;
+}
+#moverot-home-card * {
+    pointer-events: none;
+}
+
 .project-card * {
     pointer-events: none;
 }
