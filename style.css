@@ -206,6 +206,11 @@
 /* =========================
    HOME VIDEO CARD TITLES
    ========================= */
+.home-project-img {
+    width: 100%;
+    border-radius: 0.8rem;
+    object-fit: cover;
+}
 .video-card {
     display: flex;
     flex-direction: column;
