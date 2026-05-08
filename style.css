@@ -1294,8 +1294,9 @@ span {
     box-shadow: 0 4px 18px rgba(0,200,83,0.25);
 }
 .lia-toggle-btn.active {
-    background: rgba(0,200,83,0.1);
+    background: #00c853;
     border-color: #00c853;
+    color: #ffffff;
 }
 .lia-expand {
     max-height: 0;
