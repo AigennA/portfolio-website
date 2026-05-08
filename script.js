@@ -181,7 +181,9 @@ window.scrollTo({ top: 0, behavior: "instant" });
             src: "images/activator.png",
             description: "Under min LIA hos Activator arbetar jag som fullstack-utvecklare med projektet Moverot – en hälso- och aktivitetsapp för iOS, Android och webb. Jag jobbar med MongoDB, ABP Framework, frontend och backend i en agil miljö med Scrum och DevOps.",
             links: {
-                live: "https://moverot.se"
+                live: "https://moverot.se",
+                android: "https://play.google.com/store/apps/details?id=com.activator.moverot",
+                ios: "https://apps.apple.com/app/moverot/id6670164498"
             }
         },
         {
@@ -285,6 +287,8 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 ${project.links ? `
                 <div class="project-links">
                     ${project.links.live ? `<a href="${project.links.live}" target="_blank" class="btn">Live Demo</a>` : ""}
+                    ${project.links.android ? `<a href="${project.links.android}" target="_blank" class="btn"><i class="fa-brands fa-google-play"></i> Android</a>` : ""}
+                    ${project.links.ios ? `<a href="${project.links.ios}" target="_blank" class="btn"><i class="fa-brands fa-apple"></i> iOS</a>` : ""}
                     ${project.links.github ? `<a href="${project.links.github}" target="_blank" class="btn">GitHub</a>` : ""}
                 </div>
                 ` : ""}
