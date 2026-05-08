@@ -284,8 +284,8 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
                 ${project.links ? `
                 <div class="project-links">
-                    <a href="${project.links.live}" target="_blank" class="btn">Live Demo</a>
-                    <a href="${project.links.github}" target="_blank" class="btn">GitHub</a>
+                    ${project.links.live ? `<a href="${project.links.live}" target="_blank" class="btn">Live Demo</a>` : ""}
+                    ${project.links.github ? `<a href="${project.links.github}" target="_blank" class="btn">GitHub</a>` : ""}
                 </div>
                 ` : ""}
             </div>
