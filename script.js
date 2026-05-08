@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
             showProjectsOverview();
             window.scrollTo(0, 0);
         });
+    document.getElementById("lia-toggle-btn")?.addEventListener("click", function() {
+        const expand = document.getElementById("lia-expand");
+        expand.classList.toggle("open");
+        this.classList.toggle("active");
+        this.textContent = expand.classList.contains("open") ? "Stäng" : "Läs om min LIA";
+    });
+
     const menuIcon = document.getElementById("menu-icon");
     const nav = document.querySelector("nav");
     const links = document.querySelectorAll("[data-page]");
