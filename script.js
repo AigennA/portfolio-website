@@ -27,7 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectView = document.getElementById("project-view");
 
     sections.forEach(s => s.classList.remove("active"));
-    document.getElementById("home")?.classList.add("active");
+    const initialPage = window.location.hash.replace("#", "") || "home";
+    const initialSection = document.getElementById(initialPage);
+    if (initialSection) {
+        initialSection.classList.add("active");
+        document.querySelectorAll("nav a").forEach(a => {
+            a.classList.toggle("active", a.dataset.page === initialPage);
+        });
+    } else {
+        document.getElementById("home")?.classList.add("active");
+    }
 
 
     menuIcon?.addEventListener("click", () => {
@@ -68,6 +77,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
             sections.forEach(s => s.classList.remove("active"));
             document.getElementById(target)?.classList.add("active");
+            window.location.hash = target === "home" ? "" : target;
 
             document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
             link.classList.add("active");
@@ -91,6 +101,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
     logo?.addEventListener("click", () => {
         sections.forEach(s => s.classList.remove("active"));
         document.getElementById("home")?.classList.add("active");
+        window.location.hash = "";
 
         document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
         document.querySelector('nav a[data-page="home"]')?.classList.add("active");
