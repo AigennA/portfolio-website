@@ -76,6 +76,11 @@ window.scrollTo({ top: 0, behavior: "instant" });
             menuIcon.classList.remove("fa-xmark");
             document.getElementById("nav-overlay")?.remove();
 
+            const liaExpand = document.getElementById("lia-expand");
+            const liaBtn = document.getElementById("lia-toggle-btn");
+            if (liaExpand) { liaExpand.classList.remove("open"); }
+            if (liaBtn) { liaBtn.classList.remove("active"); liaBtn.textContent = "Läs om min LIA"; }
+
             projectView.innerHTML = "";
             projectView.style.display = "none";
 
