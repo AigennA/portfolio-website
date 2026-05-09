@@ -118,7 +118,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
     const projects = [
         {
-            title: "AI-Projekt",
+            title: "Mobilappar",
             children: [
                 {
                     title: "Car Dealer",
