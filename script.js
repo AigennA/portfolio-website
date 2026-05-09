@@ -118,6 +118,32 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
     const projects = [
         {
+            title: "AI-Projekt",
+            children: [
+                {
+                    title: "Car Dealer",
+                    type: "group",
+                    children: [
+                        {
+                            title: "Car Dealer – Hemsida",
+                            type: "image",
+                            src: "images/projects/car-dealer1.png",
+                            description: "Modern bilförsäljningssida byggd med Next.js 16, React 19, TypeScript och Tailwind CSS 4. Inkluderar avancerad sökning och filtrering efter märke, modell och plats. Responsiv design med admin-panel för CRUD-hantering och RESTful API.",
+                            links: {
+                                github: "https://github.com/AigennA/Car-Dealer"
+                            }
+                        },
+                        {
+                            title: "Våra Bilar – Galleri",
+                            type: "image",
+                            src: "images/projects/varabilar1.png",
+                            description: "Bilgalleri med filtrering och sökfunktion. Användaren kan bläddra bland premium-fordon och se detaljer."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             title: "Testprojekt",
             children: [
                 {
@@ -131,24 +157,6 @@ window.scrollTo({ top: 0, behavior: "instant" });
                     type: "image",
                     src: "images/projects/projekt2.png",
                     description: "Modern web application built with React, Vite and Tailwind CSS."
-                },
-                {
-                    title: "Car-Dealer Bil galleri App",
-                    type: "group",
-                    children: [
-                        {
-                            title: "Car Dealer",
-                            type: "image",
-                            src: "images/projects/car-dealer1.png",
-                            description: "Car Dealer web project screenshot."
-                        },
-                        {
-                            title: "Våra Bilar",
-                            type: "image",
-                            src: "images/projects/varabilar1.png",
-                            description: "Våra Bilar gallery screenshot."
-                        }
-                    ]
                 },
                 {
                     title: "Dashboard UI",
