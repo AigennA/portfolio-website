@@ -140,6 +140,12 @@ window.scrollTo({ top: 0, behavior: "instant" });
                             description: "Bilgalleri med filtrering och sökfunktion. Användaren kan bläddra bland premium-fordon och se detaljer."
                         }
                     ]
+                },
+                {
+                    title: "Daily Affirmations",
+                    type: "image",
+                    src: "images/projects/projekt2.png",
+                    description: "Mobil app byggd med Expo och React Native som visar dagliga positiva affirmationer med animationer. Appen är under testning och planeras för publicering på Google Play. TypeScript-baserad med fokus på användarvänlighet och välmående."
                 }
             ]
         },
