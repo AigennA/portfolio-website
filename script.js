@@ -129,7 +129,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
             ]
         },
         {
-            title: "AI API",
+            title: "AI-Projekt",
             children: [
                 {
                     title: "Car Dealer",
@@ -225,12 +225,6 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 ios: "https://apps.apple.com/se/app/moverot/id6479749564"
             }
         },
-        {
-            title: "Backend API -Programmering",
-            type: "image",
-            src: "images/data.jpg",
-            description: "API practice using C# and .NET."
-        }
     ];
 
     document.getElementById("moverot-home-card")?.addEventListener("click", function() {
