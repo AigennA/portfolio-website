@@ -467,7 +467,7 @@ section.active {
     align-items: flex-start;
     justify-content: center;
     min-height: auto;
-    padding-top: 7rem;
+    padding-top: 8.5rem;
     padding-bottom: 2rem;
 }
 
@@ -1277,7 +1277,7 @@ span {
 
 @media (max-width: 768px) {
     #contact.active {
-        padding-top: 6rem;
+        padding-top: 5.5rem;
     }
     #contact .content {
         padding: 0 0.5rem 0.6rem 0.5rem;
@@ -1442,7 +1442,7 @@ span {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding-top: 6rem;
+        padding-top: 8rem;
         padding-bottom: 1.5rem;
     }
 
