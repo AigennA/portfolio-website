@@ -464,10 +464,10 @@ section.active {
 }
 
 #contact.active {
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    min-height: 100vh;
-    padding-top: 5rem;
+    min-height: auto;
+    padding-top: 7rem;
     padding-bottom: 2rem;
 }
 
@@ -1277,7 +1277,7 @@ span {
 
 @media (max-width: 768px) {
     #contact.active {
-        padding-top: 4.5rem;
+        padding-top: 6rem;
     }
     #contact .content {
         padding: 0 0.5rem 0.6rem 0.5rem;
@@ -1440,9 +1440,9 @@ span {
 @media (min-width: 900px) {
     #contact.active {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        padding-top: 5rem;
+        padding-top: 7rem;
         padding-bottom: 2rem;
     }
 
