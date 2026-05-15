@@ -1444,4 +1444,58 @@ button.lia-toggle-btn.active {
     }
 }
 
+.course-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.course-table th,
+.course-table td {
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+.course-table th {
+    color: #00ff88;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.course-table td:first-child {
+    white-space: normal;
+    min-width: 180px;
+}
+
+.course-table td:last-child {
+    text-align: center;
+}
+
+.course-table th:last-child {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .course-table {
+        font-size: 0.82rem;
+    }
+    .course-table th,
+    .course-table td {
+        padding: 0.5rem 0.5rem;
+    }
+    .course-table td:first-child {
+        min-width: 140px;
+    }
+}
+
 
