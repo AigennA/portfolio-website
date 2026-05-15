@@ -1244,6 +1244,51 @@ span {
     }
 }
 
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        margin-top: 1rem;
+    }
+    .form-header {
+        margin-bottom: 0.9rem;
+    }
+    .form-header p {
+        font-size: 0.85rem;
+        line-height: 1.35;
+        margin: 0.25rem 0;
+    }
+    .form-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+    .premium-contact-form {
+        padding: 0.9rem 0.9rem;
+        border-radius: 1rem;
+    }
+    .form-row {
+        margin-bottom: 0;
+    }
+    .form-field {
+        margin-bottom: 0.65rem;
+    }
+    .form-field label {
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+    }
+    .form-field input,
+    .form-field textarea {
+        font-size: 0.92rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .form-field textarea {
+        min-height: 70px;
+    }
+    .premium-submit-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        margin-top: 0.3rem;
+    }
+}
+
 .form-field input:focus-visible,
 .form-field textarea:focus-visible,
 .premium-submit-btn:focus-visible {
@@ -1486,15 +1531,52 @@ button.lia-toggle-btn.active {
 }
 
 @media (max-width: 600px) {
-    .course-table {
-        font-size: 0.82rem;
+    .course-table-wrap {
+        overflow-x: visible;
     }
+    .course-table,
+    .course-table thead,
+    .course-table tbody,
+    .course-table tr,
     .course-table th,
     .course-table td {
-        padding: 0.5rem 0.5rem;
+        display: block;
+        width: 100%;
+    }
+    .course-table thead {
+        display: none;
+    }
+    .course-table tr {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        padding: 0.75rem 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    .course-table td {
+        border: none;
+        padding: 0.15rem 0;
+        white-space: normal;
+        font-size: 0.88rem;
+        text-align: left;
     }
     .course-table td:first-child {
-        min-width: 140px;
+        color: #00ff88;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+        min-width: 0;
+    }
+    .course-table td:nth-child(2)::before {
+        content: "Löptid: ";
+        color: rgba(255, 255, 255, 0.55);
+    }
+    .course-table td:last-child {
+        text-align: left;
+    }
+    .course-table td:last-child::before {
+        content: "Poäng: ";
+        color: rgba(255, 255, 255, 0.55);
     }
 }
 
