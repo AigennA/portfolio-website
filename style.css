@@ -1244,6 +1244,52 @@ span {
     }
 }
 
+@media (max-width: 600px) {
+    .contact-form-wrapper {
+        margin-top: 1rem;
+    }
+    .form-header {
+        margin-bottom: 0.9rem;
+    }
+    .form-header p {
+        font-size: 0.85rem;
+        line-height: 1.35;
+        margin: 0.25rem 0;
+    }
+    .form-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+    .premium-contact-form {
+        padding: 0.9rem 0.9rem;
+        border-radius: 1rem;
+    }
+    .form-row {
+        margin-bottom: 0;
+    }
+    .form-field {
+        margin-bottom: 0.65rem;
+    }
+    .form-field label {
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+    }
+    .form-field input,
+    .form-field textarea {
+        font-size: 0.92rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .form-field textarea {
+        min-height: 70px;
+        rows: 3;
+    }
+    .premium-submit-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        margin-top: 0.3rem;
+    }
+}
+
 .form-field input:focus-visible,
 .form-field textarea:focus-visible,
 .premium-submit-btn:focus-visible {
