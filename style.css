@@ -466,7 +466,8 @@ section.active {
 #contact.active {
     align-items: flex-start;
     min-height: auto;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
 }
 
 /* =========================
@@ -512,6 +513,11 @@ section h1 {
     margin-bottom: 1.4rem;
     color: #00c853;
     letter-spacing: 0.01em;
+}
+
+#contact h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
 }
 
 .home-content h1 {
@@ -1435,8 +1441,8 @@ span {
 }
 /* Space between form wrapper and social icons */
 #contact.active .social-icons {
-    margin-top: 2rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 /* =========================
