@@ -1447,7 +1447,7 @@ span {
     }
 
     #contact.active .content {
-        max-width: 560px;
+        max-width: 460px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
@@ -1456,50 +1456,70 @@ span {
     #contact.active .contact-form-wrapper {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 0.5rem;
-        max-width: 560px;
+        margin-top: 0.3rem;
+        max-width: 460px;
     }
 
     #contact h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.4rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.3rem;
+    }
+
+    #contact p {
+        font-size: 0.85rem;
     }
 
     .form-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .form-header {
+        margin-bottom: 0.5rem;
     }
 
     .premium-contact-form {
-        padding: 1.2rem 1.5rem;
+        padding: 0.9rem 1.1rem;
+        border-radius: 1rem;
     }
 
     .form-field {
-        margin-bottom: 0.6rem;
-        gap: 0.3rem;
+        margin-bottom: 0.45rem;
+        gap: 0.2rem;
     }
 
     .form-row {
-        gap: 0.8rem;
-        margin-bottom: 0.6rem;
+        gap: 0.6rem;
+        margin-bottom: 0.45rem;
     }
 
     .form-field label {
+        font-size: 0.78rem;
+    }
+
+    .form-field label i {
         font-size: 0.85rem;
     }
 
     .form-field input,
     .form-field textarea {
-        font-size: 0.9rem;
-        padding: 0.55rem 0.85rem;
+        font-size: 0.82rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.7rem;
     }
 
     .form-field textarea {
-        min-height: 70px;
+        min-height: 55px;
     }
 
     .premium-submit-btn {
-        font-size: 0.95rem;
-        padding: 0.65rem 1.2rem;
+        font-size: 0.88rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #contact.active .social-icons {
+        margin-top: 0.6rem;
+        padding-top: 0.3rem;
     }
 
     #contact.active .social-icons {
