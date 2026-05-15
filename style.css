@@ -1244,7 +1244,7 @@ span {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .contact-form-wrapper {
         margin-top: 1rem;
     }
@@ -1281,7 +1281,6 @@ span {
     }
     .form-field textarea {
         min-height: 70px;
-        rows: 3;
     }
     .premium-submit-btn {
         font-size: 1rem;
