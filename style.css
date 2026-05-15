@@ -579,6 +579,9 @@ ul {
     text-decoration: none;
     font-style: normal;
     transition: color 0.3s ease;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    white-space: nowrap;
 }
 .contact-email:hover {
     color: #ffffff;
@@ -874,20 +877,20 @@ span {
    PREMIUM KONTAKTFORMULÄR
    ========================= */
 .contact-form-wrapper {
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
     max-width: 650px;
     width: 100%;
     position: relative;
 }
 
 .form-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.2rem;
     text-align: center;
 }
 
 .form-title {
     font-family: 'Syne', 'Manrope', sans-serif;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     background: linear-gradient(90deg, #00c853, #e0e0e0, #00c853);
     background-size: 300%;
@@ -918,7 +921,7 @@ span {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 200, 83, 0.15);
     border-radius: 1.5rem;
-    padding: 2.5rem;
+    padding: 1.5rem 2rem;
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(0, 200, 83, 0.05) inset;
@@ -1246,6 +1249,12 @@ span {
     }
 }
 
+@media (max-width: 1024px) {
+    .contact-email-line {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     #contact .content {
         padding: 0.4rem 0.5rem 0.6rem 0.5rem;
@@ -1257,9 +1266,6 @@ span {
     #contact p, #contact a {
         font-size: 0.78rem;
         line-height: 1.25;
-    }
-    .contact-email-line {
-        display: none;
     }
     .contact-form-wrapper {
         margin-top: 0.2rem;
