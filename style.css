@@ -1261,6 +1261,9 @@ span {
 .email-full {
     display: inline;
 }
+.contact-email-mobile {
+    display: none;
+}
 
 @media (max-width: 1024px) {
     .email-full {
@@ -1272,12 +1275,29 @@ span {
 }
 
 @media (max-width: 768px) {
+    #contact.active {
+        padding-top: 4.5rem;
+    }
     #contact .content {
-        padding: 0.4rem 0.5rem 0.6rem 0.5rem;
+        padding: 0 0.5rem 0.6rem 0.5rem;
     }
     #contact h1 {
         font-size: 1rem;
         margin: 0 0 0.25rem 0;
+    }
+    .contact-email-mobile {
+        display: block;
+        text-align: center;
+        margin-top: 0.6rem;
+        font-size: 0.72rem;
+        line-height: 1.3;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+    }
+    .contact-email-mobile .contact-email {
+        white-space: normal;
+        word-break: break-all;
+        overflow-wrap: anywhere;
     }
     #contact p, #contact a {
         font-size: 0.78rem;
