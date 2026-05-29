@@ -207,7 +207,7 @@
    VIDEO CARD DESCRIPTION
    ========================= */
 .video-desc {
-    font-size: 0.93rem;
+    font-size: 0.8rem;
     color: #8899aa;
     opacity: 0.85;
     margin-bottom: 0.18rem;
@@ -247,11 +247,11 @@
     align-items: center;
     background: rgba(30, 24, 16, 0.65);
     border: 1px solid rgba(212, 168, 71, 0.12);
-    border-radius: 0.8rem;
-    box-shadow: 0 6px 24px rgba(212,168,71,0.08);
-    padding: 0.7rem 0.5rem 1rem 0.5rem;
-    margin-bottom: 0.5rem;
-    transition: box-shadow 0.2s;
+    border-radius: 0.6rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    padding: 0.5rem 0.4rem 0.7rem 0.4rem;
+    margin-bottom: 0.4rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .video-card:hover {
     box-shadow: 0 12px 32px rgba(212,168,71,0.12);
@@ -259,7 +259,7 @@
 }
 .video-title {
     font-family: 'Playfair Display', 'DM Sans', serif;
-    font-size: 1.08rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #d4a847;
     margin-bottom: 0.5rem;
@@ -269,11 +269,11 @@
 }
 @media (max-width: 700px) {
     .video-card {
-        padding: 0.5rem 0.2rem 0.7rem 0.2rem;
+        padding: 0.35rem 0.2rem 0.5rem 0.2rem;
     }
     .video-title {
-        font-size: 1rem;
-        margin-bottom: 0.35rem;
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
     }
 }
 /* =========================
@@ -445,7 +445,10 @@ nav a.active {
     color: #d4a847;
 }
 
-nav a:hover::after,
+nav a:hover::after {
+    width: 100%;
+    background-color: #c4868c;
+}
 nav a.active::after {
     width: 100%;
 }
@@ -469,9 +472,6 @@ nav a.active::after {
     vertical-align: middle;
 }
 
-#menu-icon:active, #menu-icon:focus, #menu-icon:hover {
-    background: rgba(212, 168, 71, 0.1);
-}
 #menu-icon:active, #menu-icon:focus, #menu-icon:hover {
     background: rgba(212, 168, 71, 0.1);
 }
@@ -561,7 +561,7 @@ section h1 {
 
 .home-content h3 {
     font-size: 1.6rem;
-    color: #9ca3af;
+    color: #b0a48e;
     margin-bottom: 1.4rem;
 }
 
@@ -569,7 +569,7 @@ p,
 li {
     font-size: 1.05rem;
     line-height: 1.75;
-    color: #d1d5db;
+    color: #cdc5b4;
 }
 
 ul {
@@ -612,11 +612,11 @@ section h2 {
 }
 
 #skills ul li::before {
-    content: '•';
+    content: '—';
     display: inline-block;
     margin-right: 0.5em;
     color: #d4a847;
-    font-size: 1.2em;
+    font-size: 0.9em;
     vertical-align: middle;
     position: static;
     line-height: 1.1;
@@ -892,11 +892,11 @@ span {
 }
 
 .home-video-grid {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
-    max-width: 640px;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
 }
 
 .home-video-grid video {
