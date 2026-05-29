@@ -1447,54 +1447,94 @@ button.lia-toggle-btn.active {
 .course-table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.03), rgba(0, 100, 80, 0.06));
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 255, 136, 0.03);
 }
 
 .course-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
 }
 
-.course-table th,
-.course-table td {
-    text-align: left;
-    padding: 0.6rem 0.8rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    white-space: nowrap;
+.course-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .course-table th {
+    text-align: left;
+    padding: 0.9rem 1rem;
     color: #00ff88;
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 700;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+}
+
+.course-table td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.88);
+    transition: background 0.2s;
+}
+
+.course-table tbody tr:hover {
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.course-table tbody tr:last-child td {
+    border-bottom: none;
 }
 
 .course-table td:first-child {
-    white-space: normal;
+    font-weight: 500;
+    color: #fff;
     min-width: 180px;
 }
 
-.course-table td:last-child {
+.course-table td:nth-child(2) {
+    font-family: 'Outfit', monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+}
+
+.course-table td:last-child,
+.course-table th:last-child {
     text-align: center;
+    font-weight: 600;
+    color: #00ff88;
 }
 
 .course-table th:last-child {
-    text-align: center;
+    color: #00ff88;
 }
 
 @media (max-width: 600px) {
     .course-table {
         font-size: 0.82rem;
     }
-    .course-table th,
+    .course-table th {
+        padding: 0.7rem 0.6rem;
+        font-size: 0.7rem;
+    }
     .course-table td {
-        padding: 0.5rem 0.5rem;
+        padding: 0.6rem 0.6rem;
     }
     .course-table td:first-child {
-        min-width: 140px;
+        min-width: 130px;
+    }
+    .course-table td:nth-child(2) {
+        font-size: 0.78rem;
     }
 }
 
