@@ -1,75 +1,74 @@
 /* LIA-perioder waving flag (right, subtle) */
 .lia-flag-right {
     position: fixed;
-    top: 6.2rem;
-    right: 1.2rem;
-    z-index: 9999 !important;
+    top: 5rem;
+    right: 0.8rem;
+    z-index: 999;
     display: flex;
     align-items: flex-start;
     pointer-events: none;
 }
 .lia-flag-pole {
-    width: 3px;
-    height: 50px;
+    width: 4px;
+    height: 55px;
     background: linear-gradient(180deg, #d4a847 0%, #8b6914 100%);
     border-radius: 2px;
-    margin-right: 0.12rem;
+    margin-right: 0.15rem;
 }
 .lia-flag-body {
-    min-width: 120px;
-    background: rgba(30, 24, 16, 0.92);
+    min-width: 155px;
+    background: rgba(30, 24, 16, 0.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     color: #ede8df;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     font-weight: 500;
-    line-height: 1.35;
-    border-radius: 0 0.5rem 0.5rem 0.1rem;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
-    padding: 0.35rem 0.55rem;
-    border: 1px solid rgba(212, 168, 71, 0.2);
-    animation: flag-wave-slow 4.5s ease-in-out infinite;
-    transform-origin: left top;
+    line-height: 1.45;
+    border-radius: 0 0.5rem 0.5rem 0.15rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    padding: 0.5rem 0.7rem;
+    border: 1px solid rgba(212, 168, 71, 0.25);
+    animation: flag-wave-slow 5s ease-in-out infinite;
+    transform-origin: left center;
     position: relative;
-    opacity: 1;
 }
 .lia-flag-body strong {
     color: #d4a847;
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     display: inline-block;
-    margin-top: 0.15rem;
+    margin-top: 0.2rem;
 }
 .lia-flag-body strong:first-child {
     margin-top: 0;
 }
 @keyframes flag-wave-slow {
-    0%   { transform: rotateZ(-1deg) skewY(-0.5deg); }
-    15%  { transform: rotateZ(1.2deg) skewY(0.5deg); }
-    30%  { transform: rotateZ(-1deg) skewY(-0.5deg); }
-    45%  { transform: rotateZ(0.8deg) skewY(0.3deg); }
-    60%  { transform: rotateZ(-0.5deg) skewY(-0.2deg); }
-    100% { transform: rotateZ(-1deg) skewY(-0.5deg); }
+    0%   { transform: rotateZ(-0.5deg); }
+    25%  { transform: rotateZ(0.8deg); }
+    50%  { transform: rotateZ(-0.5deg); }
+    75%  { transform: rotateZ(0.6deg); }
+    100% { transform: rotateZ(-0.5deg); }
 }
 @media (max-width: 700px) {
     .lia-flag-right {
-        top: 5.2rem;
+        top: 4.2rem;
         right: 0.2rem;
-        z-index: 9999 !important;
     }
     .lia-flag-body {
-        min-width: 70px;
-        font-size: 0.58rem;
-        padding: 0.2rem 0.3rem;
+        min-width: 110px;
+        font-size: 0.7rem;
+        padding: 0.35rem 0.5rem;
         border-radius: 0 0.4rem 0.4rem 0.1rem;
-        line-height: 1.3;
+        line-height: 1.4;
     }
     .lia-flag-body strong {
-        font-size: 0.55rem;
+        font-size: 0.62rem;
     }
     .lia-flag-pole {
-        height: 32px;
-        width: 4px;
+        height: 38px;
+        width: 3px;
     }
 }
 /* Kommande kurser tablosu */
