@@ -316,8 +316,6 @@
         text-align: center;
     }
 }
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 /* =========================
    RESET
    ========================= */
@@ -331,7 +329,7 @@
    BASE
    ========================= */
 body {
-    font-family: 'DM Sans', 'Manrope', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     color: #ede8df;
     background-color: #12100d;
     background-image: linear-gradient(rgba(18,16,13,0.92), rgba(26,20,14,0.93)), url('images/lia.jpg');
@@ -363,7 +361,7 @@ header {
    LOGO
    ========================= */
 .logo {
-    font-family: 'Monoton', 'Space Grotesk', sans-serif;
+    font-family: 'Monoton', sans-serif;
     font-size: 1.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -794,7 +792,7 @@ span {
 
 .project-content p {
     font-size: 1.25rem;
-    color: #b0bec5;
+    color: #cdc5b4;
     line-height: 1.7;
     opacity: 0.9;
 }
@@ -998,7 +996,7 @@ span {
 .form-subtitle {
     font-family: 'DM Sans', sans-serif;
     font-size: 1.1rem;
-    color: #b0bec5;
+    color: #cdc5b4;
     opacity: 0.85;
     line-height: 1.6;
 }
@@ -1724,7 +1722,7 @@ button.lia-toggle-btn.active {
     color: #ffffff;
     padding: 1.2rem 1.5rem;
     border-radius: 0.75rem;
-    font-family: 'Manrope', monospace;
+    font-family: 'DM Sans', monospace;
     font-size: 1rem;
     font-weight: 600;
     white-space: pre-wrap;
@@ -1810,7 +1808,7 @@ button.lia-toggle-btn.active {
 }
 
 .course-table td:nth-child(2) {
-    font-family: 'Outfit', monospace;
+    font-family: 'DM Sans', monospace;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     white-space: nowrap;
