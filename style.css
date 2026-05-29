@@ -174,8 +174,15 @@
 }
 .experience-card {
     margin-bottom: 1.5rem;
+    padding: 1.2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(201,162,39,0.15);
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid rgba(201, 162, 39, 0.08);
+    border-radius: 0.8rem;
+    transition: border-color 0.3s ease;
+}
+.experience-card:hover {
+    border-color: rgba(201, 162, 39, 0.2);
 }
 .experience-card:last-of-type {
     border-bottom: none;
@@ -222,8 +229,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(2,6,23,0.85);
-    border-radius: 1.1rem;
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid rgba(201, 162, 39, 0.08);
+    border-radius: 0.8rem;
     box-shadow: 0 6px 24px rgba(201,162,39,0.08);
     padding: 0.7rem 0.5rem 1rem 0.5rem;
     margin-bottom: 0.5rem;
@@ -488,8 +496,9 @@ section.active {
 
 .home-img img {
     width: 220px;
-    border-radius: 50%;
-    box-shadow: 0 0 25px rgba(201,162,39,0.35);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(201,162,39,0.1);
+    border: 2px solid rgba(201, 162, 39, 0.15);
 }
 
 .home-content,
@@ -538,8 +547,9 @@ section h1 {
 
 p,
 li {
-    font-size: 1.45rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #d1d5db;
 }
 
 ul {
@@ -548,7 +558,15 @@ ul {
     margin: 0 0 1.5rem 0;
 }
 
-/* Only for skills section: add custom bullet with ::before */
+section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: #f5f0e8;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+}
+
 #skills h2 {
     padding-top: 1.5rem;
     margin-top: 1.5rem;
@@ -621,8 +639,6 @@ ul {
 
 span {
     color: #c9a227;
-   
-    font-style: italic;
 }
 
     
@@ -710,9 +726,9 @@ span {
    PROJECT CARD
    ========================= */
 .project-card {
-    background: rgba(2,6,23,0.65);
-    border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 1.2rem;
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid rgba(201, 162, 39, 0.08);
+    border-radius: 0.8rem;
     overflow: hidden;
     cursor: pointer;
     -webkit-backdrop-filter: blur(8px);
@@ -831,15 +847,27 @@ span {
     all: unset;
     display: inline-block;
     margin-bottom: 1.2rem;
-    font-size: 1.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
     font-weight: 500;
     color: #c9a227;
     cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.back-btn:hover {
+    color: #f5f0e8;
+    transform: translateX(-3px);
 }
 
 /* =========================
    HOME VIDEO GRID
    ========================= */
+.video-embed {
+    border-radius: 0.6rem;
+    border: 1px solid rgba(201, 162, 39, 0.08);
+}
+
 .home-video-grid {
     margin-top: 2.5rem;
     display: grid;
@@ -956,8 +984,8 @@ span {
     background: rgba(255, 255, 255, 0.03);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(201, 162, 39, 0.15);
-    border-radius: 1.5rem;
+    border: 1px solid rgba(201, 162, 39, 0.12);
+    border-radius: 0.8rem;
     padding: 1.5rem 2rem;
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
@@ -975,7 +1003,7 @@ span {
     right: -2px;
     bottom: -2px;
     background: linear-gradient(135deg, #c9a227, transparent, #c9a227);
-    border-radius: 1.5rem;
+    border-radius: 0.8rem;
     opacity: 0;
     z-index: -1;
     transition: opacity 0.4s ease;
@@ -1029,8 +1057,8 @@ span {
     font-size: 0.95rem;
     padding: 0.7rem 1rem;
     background: rgba(255, 255, 255, 0.04);
-    border: 2px solid rgba(201, 162, 39, 0.15);
-    border-radius: 1rem;
+    border: 1px solid rgba(201, 162, 39, 0.12);
+    border-radius: 0.5rem;
     color: #e5e7eb;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -1432,12 +1460,12 @@ span {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: rgba(201, 162, 39, 0.15);
+    background: rgba(10, 10, 10, 0.7);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 0.8rem 1.5rem;
-    border-radius: 2rem;
-    border: 1px solid rgba(201, 162, 39, 0.3);
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(201, 162, 39, 0.1);
     color: #c9a227;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
