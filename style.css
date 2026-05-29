@@ -1751,8 +1751,13 @@ button.lia-toggle-btn.active {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
+.course-table-ongoing {
+    border-color: rgba(212, 168, 71, 0.3);
+    box-shadow: 0 4px 24px rgba(212, 168, 71, 0.08);
+}
+
 .course-table-upcoming {
-    opacity: 0.7;
+    opacity: 0.65;
     border-style: dashed;
 }
 
