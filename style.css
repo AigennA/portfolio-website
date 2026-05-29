@@ -9,36 +9,42 @@
     pointer-events: none;
 }
 .lia-flag-pole {
-    width: 6px;
-    height: 68px;
-    background: linear-gradient(180deg, #444 60%, #222 100%);
-    border-radius: 4px;
-    margin-right: 0.18rem;
-    box-shadow: 1px 0 4px #0002;
+    width: 3px;
+    height: 50px;
+    background: linear-gradient(180deg, #d4a847 0%, #8b6914 100%);
+    border-radius: 2px;
+    margin-right: 0.12rem;
 }
 .lia-flag-body {
     min-width: 140px;
-    background: #ffffff;
-    color: #18181b;
-    font-family: 'Playfair Display', 'DM Sans', serif;
-    font-size: 0.98rem;
-    font-weight: 600;
-    border-radius: 0 1.1rem 1.1rem 0.2rem;
-    box-shadow: 0 4px 18px #0005, 0 2px 8px #fff2;
-    padding: 0.38rem 0.7rem 0.38rem 0.7rem;
-    border: 1.5px solid #1a1209;
+    background: rgba(30, 24, 16, 0.92);
+    color: #ede8df;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 0 0.6rem 0.6rem 0.15rem;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+    padding: 0.5rem 0.7rem;
+    border: 1px solid rgba(212, 168, 71, 0.2);
     animation: flag-wave-slow 4.5s ease-in-out infinite;
-    transform-origin: left center;
+    transform-origin: left top;
     position: relative;
     opacity: 1;
 }
+.lia-flag-body strong {
+    color: #d4a847;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
 @keyframes flag-wave-slow {
-    0% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
-    10% { transform: rotateZ(1.5deg) skewY(1.5deg) scaleY(1.04); }
-    20% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
-    30% { transform: rotateZ(1.5deg) skewY(1.5deg) scaleY(1.04); }
-    40% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
-    100% { transform: rotateZ(-1.5deg) skewY(-1.5deg) scaleY(1.01); }
+    0%   { transform: rotateZ(-1deg) skewY(-0.5deg); }
+    15%  { transform: rotateZ(1.2deg) skewY(0.5deg); }
+    30%  { transform: rotateZ(-1deg) skewY(-0.5deg); }
+    45%  { transform: rotateZ(0.8deg) skewY(0.3deg); }
+    60%  { transform: rotateZ(-0.5deg) skewY(-0.2deg); }
+    100% { transform: rotateZ(-1deg) skewY(-0.5deg); }
 }
 @media (max-width: 700px) {
     .lia-flag-right {
@@ -48,9 +54,12 @@
     }
     .lia-flag-body {
         min-width: 80px;
-        font-size: 0.78rem;
-        padding: 0.18rem 0.32rem 0.18rem 0.32rem;
-        border-radius: 0 0.7rem 0.7rem 0.1rem;
+        font-size: 0.68rem;
+        padding: 0.3rem 0.4rem;
+        border-radius: 0 0.5rem 0.5rem 0.1rem;
+    }
+    .lia-flag-body strong {
+        font-size: 0.65rem;
     }
     .lia-flag-pole {
         height: 32px;
