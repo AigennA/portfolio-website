@@ -53,24 +53,24 @@
 }
 @media (max-width: 700px) {
     .lia-flag-right {
-        top: 4rem;
-        right: 0;
-        max-width: 45vw;
+        top: 5.5rem;
+        right: 0.3rem;
+        max-width: 50vw;
     }
     .lia-flag-body {
         min-width: 0;
-        max-width: 42vw;
-        font-size: 0.65rem;
-        padding: 0.3rem 0.4rem;
+        max-width: 48vw;
+        font-size: 0.72rem;
+        padding: 0.4rem 0.5rem;
         border-radius: 0 0.4rem 0.4rem 0.1rem;
-        line-height: 1.35;
+        line-height: 1.4;
         word-break: break-word;
     }
     .lia-flag-body strong {
-        font-size: 0.58rem;
+        font-size: 0.65rem;
     }
     .lia-flag-pole {
-        height: 30px;
+        height: 35px;
         width: 3px;
     }
 }
@@ -963,37 +963,47 @@ span {
     section.active {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     section {
-        padding: 7rem 5% 4rem;
+        padding: 6rem 4% 3rem;
     }
 
     .home-img img {
-        width: 160px;
+        width: 150px;
     }
 
     .Home {
-        gap: 2rem;
+        gap: 1.5rem;
+        padding-top: 7rem;
     }
 
     .home-content h2 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         word-break: break-word;
+        padding: 0 0.5rem;
     }
 
     section h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
     }
 
     p, li {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        padding: 0 0.3rem;
     }
 
     .home-content,
     .content {
         max-width: 100%;
         width: 100%;
+        padding: 0 0.5rem;
     }
 }
 
