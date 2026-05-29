@@ -20,7 +20,7 @@
     min-width: 140px;
     background: #ffffff;
     color: #18181b;
-    font-family: 'Syne', 'Manrope', sans-serif;
+    font-family: 'Playfair Display', 'DM Sans', serif;
     font-size: 0.98rem;
     font-weight: 600;
     border-radius: 0 1.1rem 1.1rem 0.2rem;
@@ -112,7 +112,7 @@
 .project-group-title {
     font-size: 1.3rem;
     color: #c9a227;
-    font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
+    font-family: 'DM Sans', 'Playfair Display', sans-serif;
     font-weight: 700;
     margin-bottom: 1.1rem;
     letter-spacing: 0.02em;
@@ -126,26 +126,28 @@
     margin: 2.2rem 0 0.5rem 0;
 }
 .projects-overview-btn {
-    font-size: 1.15rem;
-    font-family: 'Syne', 'Manrope', 'Outfit', sans-serif;
-    background: linear-gradient(90deg, #c9a227, #1a1209, #c9a227);
-    background-size: 300%;
-    color: #ffffff !important;
+    font-size: 1.05rem;
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(135deg, #c9a227, #8b6914);
+    color: #0a0a0a !important;
     text-shadow: none !important;
     border: none;
-    border-radius: 2.5rem;
+    border-radius: 0.6rem;
     padding: 1rem 2.5rem;
-    box-shadow: 0 4px 18px rgba(201,162,39,0.15);
+    box-shadow: 0 2px 12px rgba(201,162,39,0.2);
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 600;
-    letter-spacing: 0.02em;
-    animation: logoFlow 10s ease-in-out infinite;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
 }
 .projects-overview-btn:hover {
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 8px 24px rgba(201,162,39,0.18);
-    color: #18181b !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(201,162,39,0.35);
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a0a0a !important;
 }
 @media (max-width: 700px) {
     .projects-overview-btn {
@@ -186,7 +188,7 @@
     color: #8899aa;
     opacity: 0.85;
     margin-bottom: 0.18rem;
-    font-family: 'Manrope', 'Syne', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     letter-spacing: 0.01em;
     text-align: center;
 }
@@ -231,7 +233,7 @@
     box-shadow: 0 12px 32px rgba(201,162,39,0.18);
 }
 .video-title {
-    font-family: 'Syne', 'Manrope', sans-serif;
+    font-family: 'Playfair Display', 'DM Sans', serif;
     font-size: 1.08rem;
     font-weight: 600;
     color: #c9a227;
@@ -258,7 +260,7 @@
     padding: 1.5rem 0 0.5rem 0;
     margin-top: 3rem;
     border-top: 1px solid rgba(201,162,39,0.15);
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 .footer-content {
@@ -272,7 +274,7 @@
 .footer-text {
     font-size: 1rem;
     color: #c9a227;
-    font-family: 'Syne', 'Manrope', sans-serif;
+    font-family: 'Playfair Display', 'DM Sans', serif;
     font-weight: 600;
     letter-spacing: 0.01em;
     text-align: center;
@@ -304,7 +306,7 @@
    BASE
    ========================= */
 body {
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'DM Sans', 'Manrope', system-ui, sans-serif;
     color: #e5e7eb;
     background-color: #0a0a0a;
     background-image: linear-gradient(rgba(2,6,23,0.88), rgba(11,19,32,0.9)), url('images/lia.jpg');
@@ -388,16 +390,15 @@ nav {
 nav a {
     position: relative;
     margin-left: 2.5rem;
-    font-size: 1.4rem;
+    font-size: 1.05rem;
     color: #9ca3af;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease;
-  font-family: 'Caveat', cursive;
-    font-size: 1.7rem;
-    letter-spacing: 0.3px;
-
-    
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 nav a::after {
@@ -509,11 +510,12 @@ section.active {
    TYPOGRAPHY
    ========================= */
 section h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.2rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.4rem;
     margin-bottom: 1.4rem;
     color: #c9a227;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
+    font-weight: 600;
 }
 
 #contact h1 {
@@ -632,16 +634,44 @@ span {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.9rem 2.5rem;
-    border: 1px solid #c9a227;
-    border-radius: 3rem;
-    color: #c9a227;
+    background: linear-gradient(135deg, #c9a227, #8b6914);
+    border: none;
+    border-radius: 0.6rem;
+    color: #0a0a0a;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     text-decoration: none;
-    transition: 0.3s ease;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 12px rgba(201, 162, 39, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
 }
 
 .btn:hover {
-    background: #c9a227;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(201, 162, 39, 0.35);
+    background: linear-gradient(135deg, #d4af37, #c9a227);
     color: #0a0a0a;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(201, 162, 39, 0.25);
 }
 
 /* =========================
@@ -717,7 +747,7 @@ span {
 }
 
 .project-content h2 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.4px;
@@ -773,7 +803,7 @@ span {
     padding: 0.8rem 1rem;
     margin: 0.4rem 0;
 
-    font-family: 'Manrope', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
 
@@ -896,7 +926,7 @@ span {
 }
 
 .form-title {
-    font-family: 'Syne', 'Manrope', sans-serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.6rem;
     font-weight: 700;
     background: linear-gradient(90deg, #c9a227, #f5f0e8, #c9a227);
@@ -915,7 +945,7 @@ span {
 }
 
 .form-subtitle {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.1rem;
     color: #b0bec5;
     opacity: 0.85;
@@ -978,7 +1008,7 @@ span {
 }
 
 .form-field label {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: #f9fafb;
@@ -995,7 +1025,7 @@ span {
 
 .form-field input,
 .form-field textarea {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     padding: 0.7rem 1rem;
     background: rgba(255, 255, 255, 0.04);
@@ -1048,14 +1078,16 @@ span {
 
 .premium-submit-btn {
     width: 100%;
-    font-family: 'Syne', 'Manrope', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
     padding: 0.8rem 1.5rem;
-    background: #c9a227;
+    background: linear-gradient(135deg, #c9a227, #8b6914);
     color: #0a0a0a;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -1074,8 +1106,8 @@ span {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    color: #020617;
-    -webkit-text-fill-color: #020617;
+    color: #0a0a0a;
+    -webkit-text-fill-color: #0a0a0a;
     font-style: normal;
 }
 
@@ -1099,10 +1131,10 @@ span {
 
 .premium-submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 
-        0 12px 36px rgba(0, 200, 83, 0.5),
-        0 0 40px rgba(0, 200, 83, 0.3);
-    background: linear-gradient(135deg, #00e676, #00c853);
+    box-shadow:
+        0 12px 36px rgba(201, 162, 39, 0.5),
+        0 0 40px rgba(201, 162, 39, 0.3);
+    background: linear-gradient(135deg, #d4af37, #c9a227);
 }
 
 .premium-submit-btn:hover .btn-glow {
@@ -1115,7 +1147,7 @@ span {
 
 .premium-submit-btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(0, 200, 83, 0.4);
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
 }
 
 .premium-submit-btn:disabled {
@@ -1125,7 +1157,7 @@ span {
 }
 
 .form-status {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.05rem;
     font-weight: 500;
     padding: 1.2rem 1.5rem;
@@ -1154,10 +1186,10 @@ span {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    background: rgba(34, 197, 94, 0.15);
-    color: #00c853;
-    border: 2px solid rgba(34, 197, 94, 0.3);
-    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+    background: rgba(201, 162, 39, 0.15);
+    color: #c9a227;
+    border: 2px solid rgba(201, 162, 39, 0.3);
+    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.2);
 }
 
 .form-status.success::before {
@@ -1389,7 +1421,7 @@ span {
 .form-field input:focus-visible,
 .form-field textarea:focus-visible,
 .premium-submit-btn:focus-visible {
-    outline: 3px solid rgba(0, 200, 83, 0.5);
+    outline: 3px solid rgba(201, 162, 39, 0.5);
     outline-offset: 2px;
 }
 
@@ -1400,27 +1432,27 @@ span {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: rgba(0, 200, 83, 0.15);
+    background: rgba(201, 162, 39, 0.15);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 0.8rem 1.5rem;
     border-radius: 2rem;
-    border: 1px solid rgba(0, 200, 83, 0.3);
-    color: #00c853;
-    font-family: 'Manrope', sans-serif;
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    color: #c9a227;
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 200, 83, 0.2);
+    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.2);
     transition: all 0.3s ease;
 }
 
 .visitor-counter:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(0, 200, 83, 0.3);
+    box-shadow: 0 6px 25px rgba(201, 162, 39, 0.3);
 }
 
 .visitor-counter i {
@@ -1541,28 +1573,30 @@ span {
    ========================= */
 .lia-toggle-btn {
     margin-top: 1.2rem;
-    font-family: 'Syne', 'Manrope', sans-serif;
-    font-size: 1.05rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
     font-weight: 600;
     padding: 0.7rem 2rem;
-    border: 1.5px solid #00c853;
-    border-radius: 2.5rem;
-    color: #00c853;
-    background: transparent;
+    border: none;
+    border-radius: 0.6rem;
+    color: #0a0a0a;
+    background: linear-gradient(135deg, #c9a227, #8b6914);
     cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.02em;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 12px rgba(201,162,39,0.2);
 }
 .lia-toggle-btn:hover {
-    background: #00c853;
-    color: #020617;
-    box-shadow: 0 4px 18px rgba(0,200,83,0.25);
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a0a0a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(201,162,39,0.35);
 }
 button.lia-toggle-btn.active {
-    background: #00c853;
-    border-color: #00c853;
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff;
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a0a0a !important;
+    -webkit-text-fill-color: #0a0a0a;
 }
 .lia-expand {
     max-height: 0;
@@ -1577,8 +1611,8 @@ button.lia-toggle-btn.active {
     margin-top: 1.5rem;
 }
 .lia-expand-inner {
-    background: rgba(13, 40, 71, 0.35);
-    border: 1px solid rgba(0,200,83,0.2);
+    background: rgba(26, 18, 9, 0.35);
+    border: 1px solid rgba(201,162,39,0.2);
     border-radius: 1.2rem;
     padding: 1.5rem;
     backdrop-filter: blur(12px);
@@ -1586,10 +1620,10 @@ button.lia-toggle-btn.active {
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 .lia-expand-inner h3 {
-    font-family: 'Syne', 'Manrope', sans-serif;
+    font-family: 'Playfair Display', 'DM Sans', serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #00c853;
+    color: #c9a227;
     margin-bottom: 0.8rem;
     font-style: normal;
 }
@@ -1635,7 +1669,7 @@ button.lia-toggle-btn.active {
 }
 
 #home.active ~ .portfolio-info .portfolio-info-code {
-    background-color: #0d2847;
+    background-color: #1a1209;
     color: #ffffff;
     padding: 1.2rem 1.5rem;
     border-radius: 0.75rem;
@@ -1661,9 +1695,9 @@ button.lia-toggle-btn.active {
     -webkit-overflow-scrolling: touch;
     margin: 1.5rem 0;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(0, 255, 136, 0.03), rgba(0, 100, 80, 0.06));
-    border: 1px solid rgba(0, 255, 136, 0.1);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 255, 136, 0.03);
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.03), rgba(139, 105, 20, 0.06));
+    border: 1px solid rgba(201, 162, 39, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(201, 162, 39, 0.03);
 }
 
 .course-table {
@@ -1688,7 +1722,7 @@ button.lia-toggle-btn.active {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     background: rgba(0, 0, 0, 0.4);
-    border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+    border-bottom: 2px solid rgba(201, 162, 39, 0.2);
 }
 
 .course-table td {
@@ -1700,7 +1734,7 @@ button.lia-toggle-btn.active {
 }
 
 .course-table tbody tr:hover {
-    background: rgba(0, 255, 136, 0.05);
+    background: rgba(201, 162, 39, 0.05);
 }
 
 .course-table tbody tr:last-child td {
