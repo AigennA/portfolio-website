@@ -1744,11 +1744,16 @@ button.lia-toggle-btn.active {
 .course-table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     border-radius: 0.8rem;
     background: rgba(30, 24, 16, 0.45);
     border: 1px solid rgba(212, 168, 71, 0.12);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.course-table-upcoming {
+    opacity: 0.7;
+    border-style: dashed;
 }
 
 .course-table {
