@@ -490,11 +490,14 @@ section {
     display: none;
     position: relative;
     z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 section.active {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #contact.active {
@@ -528,7 +531,8 @@ section.active {
 
 .home-content,
 .content {
-    max-width: 600px;
+    max-width: 700px;
+    width: 100%;
 }
 
 .Home.active .home-content {
