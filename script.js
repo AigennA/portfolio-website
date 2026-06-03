@@ -121,6 +121,12 @@ window.scrollTo({ top: 0, behavior: "instant" });
             title: "Mobilappar",
             children: [
                 {
+                    title: "LisTo",
+                    type: "image",
+                    src: "images/projects/listo.png",
+                    description: "Offline inköpslista för Android byggd med Kotlin och Jetpack Compose. Ingen backend – all data sparas lokalt med Room. Funktioner: listor med kategorier, budget, kalender med påminnelser, historik, delning och stöd för tre språk."
+                },
+                {
                     title: "Daily Affirmations",
                     type: "image",
                     src: "images/data.jpg",
