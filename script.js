@@ -579,3 +579,83 @@ document.addEventListener('DOMContentLoaded', function() {
         visitorCountElement.textContent = visitCount;
     }
 });
+
+// ============================================
+// KURSTABELLER – FLYTTAS AUTOMATISKT EFTER DATUM
+// ============================================
+// Lägg till nya kurser här. Varje kurs hamnar själv under
+// Färdiga / Pågående / Kommande utifrån dagens datum – inget
+// behöver flyttas för hand när en kurs startar eller slutar.
+// Datumformat: "ÅÅÅÅ-MM-DD" (både start och slut räknas in).
+
+const COURSES = [
+    { namn: "Kommunikation och yrkesintroduktion",        start: "2025-08-18", slut: "2025-09-05", poang: 15 },
+    { namn: "Programmering, grund",                       start: "2025-09-08", slut: "2025-10-03", poang: 20 },
+    { namn: "JavaScript, HTML och CSS",                   start: "2025-10-06", slut: "2025-11-14", poang: 30 },
+    { namn: "Utvecklingsmetoder",                         start: "2025-11-17", slut: "2025-12-12", poang: 20 },
+    { namn: "Informationsarkitektur och databasutveckling", start: "2025-12-15", slut: "2026-01-16", poang: 25 },
+    { namn: "Programmering fördjupning",                  start: "2026-01-19", slut: "2026-03-27", poang: 50 },
+    { namn: "LIA 1",                                      start: "2026-03-30", slut: "2026-06-05", poang: 50 },
+    { namn: "IT-säkerhet för utvecklare",                 start: "2026-08-10", slut: "2026-09-04", poang: 20 },
+    { namn: "Webbapplikationer och mobil utveckling",     start: "2026-09-07", slut: "2026-10-02", poang: 20 },
+    { namn: "Publiceringsverktyg och UX",                 start: "2026-10-05", slut: "2026-11-13", poang: 30 },
+    { namn: "Test, verifiering och certifiering",         start: "2026-11-16", slut: "2026-12-11", poang: 20 },
+    { namn: "Examensarbete",                              start: "2026-12-14", slut: "2027-04-30", poang: 50 },
+    { namn: "LIA 2",                                      start: "2026-12-14", slut: "2027-05-28", poang: 70 }
+];
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tbodyDone = document.getElementById("courses-done");
+    const tbodyOngoing = document.getElementById("courses-ongoing");
+    const tbodyUpcoming = document.getElementById("courses-upcoming");
+
+    // Kurssektionen finns inte på alla sidor – avbryt tyst i så fall.
+    if (!tbodyDone || !tbodyOngoing || !tbodyUpcoming) return;
+
+    // Lokalt midnattsdatum, så jämförelsen inte påverkas av tidszon.
+    function tillDatum(text) {
+        const [ar, manad, dag] = text.split("-").map(Number);
+        return new Date(ar, manad - 1, dag);
+    }
+
+    const idag = new Date();
+    idag.setHours(0, 0, 0, 0);
+
+    const grupper = { done: [], ongoing: [], upcoming: [] };
+
+    COURSES.forEach(kurs => {
+        const start = tillDatum(kurs.start);
+        const slut = tillDatum(kurs.slut);
+
+        if (idag < start) {
+            grupper.upcoming.push(kurs);
+        } else if (idag > slut) {
+            grupper.done.push(kurs);
+        } else {
+            grupper.ongoing.push(kurs);
+        }
+    });
+
+    function ritaRader(tbody, kurser) {
+        kurser
+            .slice()
+            .sort((a, b) => a.start.localeCompare(b.start))
+            .forEach(kurs => {
+                const rad = document.createElement("tr");
+                [kurs.namn, `${kurs.start} – ${kurs.slut}`, `${kurs.poang} p`].forEach(text => {
+                    const cell = document.createElement("td");
+                    cell.textContent = text;
+                    rad.appendChild(cell);
+                });
+                tbody.appendChild(rad);
+            });
+
+        // Dölj hela rubriken + tabellen när gruppen är tom.
+        const grupp = tbody.closest(".course-group");
+        if (grupp) grupp.hidden = kurser.length === 0;
+    }
+
+    ritaRader(tbodyDone, grupper.done);
+    ritaRader(tbodyOngoing, grupper.ongoing);
+    ritaRader(tbodyUpcoming, grupper.upcoming);
+});

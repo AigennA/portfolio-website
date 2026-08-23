@@ -177,53 +177,49 @@
             <li>Claude Code 101 – Anthropic (2026)</li>
         </ul>
 
+        <!--
+            Kurstabellerna nedan fylls automatiskt av script.js utifrån dagens datum.
+            Lägg till eller ändra kurser i listan COURSES i script.js – varje kurs
+            flyttas själv mellan Färdiga / Pågående / Kommande när datumet passeras.
+        -->
+
         <!-- Färdiga kurser -->
-        <h2>Färdiga kurser</h2>
-        <div class="course-table-wrap">
-            <table class="course-table">
-                <thead>
-                    <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Kommunikation och yrkesintroduktion</td><td>2025-08-18 – 2025-09-05</td><td>15 p</td></tr>
-                    <tr><td>Programmering, grund</td><td>2025-09-08 – 2025-10-03</td><td>20 p</td></tr>
-                    <tr><td>JavaScript, HTML och CSS</td><td>2025-10-06 – 2025-11-14</td><td>30 p</td></tr>
-                    <tr><td>Utvecklingsmetoder</td><td>2025-11-17 – 2025-12-12</td><td>20 p</td></tr>
-                    <tr><td>Informationsarkitektur och databasutveckling</td><td>2025-12-15 – 2026-01-16</td><td>25 p</td></tr>
-                    <tr><td>Programmering fördjupning</td><td>2026-01-19 – 2026-03-27</td><td>50 p</td></tr>
-                    <tr><td>LIA 1</td><td>2026-03-30 – 2026-06-05</td><td>50 p</td></tr>
-                </tbody>
-            </table>
+        <div class="course-group" id="course-group-done" hidden>
+            <h2>Färdiga kurser</h2>
+            <div class="course-table-wrap">
+                <table class="course-table">
+                    <thead>
+                        <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
+                    </thead>
+                    <tbody id="courses-done"></tbody>
+                </table>
+            </div>
         </div>
 
         <!-- Pågående kurser -->
-        <h2>Pågående kurser</h2>
-        <div class="course-table-wrap course-table-ongoing">
-            <table class="course-table">
-                <thead>
-                    <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>IT-säkerhet för utvecklare</td><td>2026-08-10 – 2026-09-04</td><td>20 p</td></tr>
-                </tbody>
-            </table>
+        <div class="course-group" id="course-group-ongoing" hidden>
+            <h2>Pågående kurser</h2>
+            <div class="course-table-wrap course-table-ongoing">
+                <table class="course-table">
+                    <thead>
+                        <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
+                    </thead>
+                    <tbody id="courses-ongoing"></tbody>
+                </table>
+            </div>
         </div>
 
         <!-- Kommande kurser -->
-        <h2>Kommande kurser</h2>
-        <div class="course-table-wrap course-table-upcoming">
-            <table class="course-table">
-                <thead>
-                    <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Webbapplikationer och mobil utveckling</td><td>2026-09-07 – 2026-10-02</td><td>20 p</td></tr>
-                    <tr><td>Publiceringsverktyg och UX</td><td>2026-10-05 – 2026-11-13</td><td>30 p</td></tr>
-                    <tr><td>Test, verifiering och certifiering</td><td>2026-11-16 – 2026-12-11</td><td>20 p</td></tr>
-                    <tr><td>Examensarbete</td><td>2026-12-14 – 2027-04-30</td><td>50 p</td></tr>
-                    <tr><td>LIA 2</td><td>2026-12-14 – 2027-05-28</td><td>70 p</td></tr>
-                </tbody>
-            </table>
+        <div class="course-group" id="course-group-upcoming" hidden>
+            <h2>Kommande kurser</h2>
+            <div class="course-table-wrap course-table-upcoming">
+                <table class="course-table">
+                    <thead>
+                        <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
+                    </thead>
+                    <tbody id="courses-upcoming"></tbody>
+                </table>
+            </div>
         </div>
 
         <!-- Språk som används i studier och arbete -->
