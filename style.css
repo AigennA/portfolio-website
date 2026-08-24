@@ -1807,6 +1807,10 @@ button.lia-toggle-btn.active {
     }
 }
 
+.course-group[hidden] {
+    display: none;
+}
+
 .course-table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
