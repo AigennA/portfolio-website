@@ -122,9 +122,39 @@ window.scrollTo({ top: 0, behavior: "instant" });
             children: [
                 {
                     title: "Prenumerationskollen",
-                    type: "image",
-                    src: "images/projects/prenumerationskollen.png",
-                    description: "Mobilapp byggd med React Native och Expo i kursen React och mobilappar, kopplad till ett eget REST-API. Håll koll på dina prenumerationer: lägg till tjänster, sök, se status (aktiv, kommande, avslutad), månadskostnad, betyg och hur mycket du har betalat totalt."
+                    type: "group",
+                    children: [
+                        {
+                            title: "Översikt",
+                            type: "image",
+                            src: "images/projects/prenumerationskollen.png",
+                            description: "Mobilapp byggd med React Native och Expo i kursen React och mobilappar, kopplad till ett eget REST-API. Håll koll på dina prenumerationer: lägg till tjänster, se status (aktiv, kommande, avslutad), månadskostnad och hur mycket du har betalat totalt."
+                        },
+                        {
+                            title: "Startskärm",
+                            type: "image",
+                            src: "images/projects/prenumerationskollen-start.png",
+                            description: "Egen appikon och startskärm."
+                        },
+                        {
+                            title: "Sök",
+                            type: "image",
+                            src: "images/projects/prenumerationskollen-sok.png",
+                            description: "Sök och filtrera bland dina prenumerationer direkt i listan."
+                        },
+                        {
+                            title: "Detaljvy",
+                            type: "image",
+                            src: "images/projects/prenumerationskollen-detalj.png",
+                            description: "Redigera namn, anteckning och pris, aktivera eller avsluta prenumerationen och sätt betyg med stjärnor."
+                        },
+                        {
+                            title: "Datum & dokument",
+                            type: "image",
+                            src: "images/projects/prenumerationskollen-dokument.png",
+                            description: "Välj start- och slutdatum och ladda upp dokument, till exempel kvitton eller avtal."
+                        }
+                    ]
                 },
                 {
                     title: "LisTo",
