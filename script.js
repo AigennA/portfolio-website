@@ -116,10 +116,48 @@ window.scrollTo({ top: 0, behavior: "instant" });
         window.scrollTo(0, 0);
     });
 
+    const prenumerationskollen = {
+        title: "Prenumerationskollen",
+        type: "group",
+        children: [
+            {
+                title: "Översikt",
+                type: "image",
+                src: "images/projects/prenumerationskollen.png",
+                description: "Mobilapp byggd med React Native och Expo i kursen React och mobilappar, kopplad till ett eget REST-API. Håll koll på dina prenumerationer: lägg till tjänster, se status (aktiv, kommande, avslutad), månadskostnad och hur mycket du har betalat totalt."
+            },
+            {
+                title: "Startskärm",
+                type: "image",
+                src: "images/projects/prenumerationskollen-start.png",
+                description: "Egen appikon och startskärm."
+            },
+            {
+                title: "Sök",
+                type: "image",
+                src: "images/projects/prenumerationskollen-sok.png",
+                description: "Sök och filtrera bland dina prenumerationer direkt i listan."
+            },
+            {
+                title: "Detaljvy",
+                type: "image",
+                src: "images/projects/prenumerationskollen-detalj.png",
+                description: "Redigera namn, anteckning och pris, aktivera eller avsluta prenumerationen och sätt betyg med stjärnor."
+            },
+            {
+                title: "Datum & dokument",
+                type: "image",
+                src: "images/projects/prenumerationskollen-dokument.png",
+                description: "Välj start- och slutdatum och ladda upp dokument, till exempel kvitton eller avtal."
+            }
+        ]
+    };
+
     const projects = [
         {
             title: "Mobilappar",
             children: [
+                prenumerationskollen,
                 {
                     title: "LisTo",
                     type: "image",
@@ -211,23 +249,23 @@ window.scrollTo({ top: 0, behavior: "instant" });
                         live: "https://agnes-nora-git-all-fixes-aomurm-gmailcoms-projects.vercel.app/",
                         github: "https://github.com/AigennA/agnes-nora"
                     }
+                }
+            ]
+        },
+        {
+            title: "Skolarbete",
+            children: [
+                {
+                    title: "Gala Emporium",
+                    type: "video",
+                    src: "https://res.cloudinary.com/dciixwu6v/video/upload/gala-emporium-housetech_tz8aqe.mp4",
+                    description: "Ett Skolprojekt som byggdes med gruppen. Html,Css,Js och en SPA site."
                 },
                 {
-                    title: "Skolarbete",
-                    children: [
-                        {
-                            title: "Gala Emporium",
-                            type: "video",
-                            src: "https://res.cloudinary.com/dciixwu6v/video/upload/gala-emporium-housetech_tz8aqe.mp4",
-                            description: "Ett Skolprojekt som byggdes med gruppen. Html,Css,Js och en SPA site."
-                        },
-                        {
-                            title: "Rocky",
-                            type: "video",
-                            src: "https://res.cloudinary.com/dciixwu6v/video/upload/rocky_ukwwnt.mp4",
-                            description: "Skolarbete AI-Chatbot."
-                        }
-                    ]
+                    title: "Rocky",
+                    type: "video",
+                    src: "https://res.cloudinary.com/dciixwu6v/video/upload/rocky_ukwwnt.mp4",
+                    description: "Skolarbete AI-Chatbot."
                 }
             ]
         },
@@ -251,6 +289,20 @@ window.scrollTo({ top: 0, behavior: "instant" });
         projectView.style.display = "block";
         const liaProject = projects.find(p => p.title === "LIA Fullstack");
         if (liaProject) showProject(liaProject);
+        window.scrollTo(0, 0);
+    });
+
+    document.getElementById("prenumerationskollen-home-card")?.addEventListener("click", function() {
+        sections.forEach(s => s.classList.remove("active"));
+        document.getElementById("projects")?.classList.add("active");
+        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+        projectView.style.display = "block";
+        const mobilappar = projects.find(p => p.title === "Mobilappar");
+        if (mobilappar) {
+            showProject(mobilappar);
+            const idx = mobilappar.children.indexOf(prenumerationskollen);
+            document.querySelector(`.project-list button[data-child-index="${idx}"]`)?.click();
+        }
         window.scrollTo(0, 0);
     });
 
