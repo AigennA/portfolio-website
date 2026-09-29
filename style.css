@@ -1566,49 +1566,6 @@ span {
     outline-offset: 2px;
 }
 
-/* =========================
-   BESÖKSRÄKNARE
-   ========================= */
-.visitor-counter {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: rgba(30, 24, 16, 0.7);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(212, 168, 71, 0.1);
-    color: #d4a847;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(212, 168, 71, 0.2);
-    transition: all 0.3s ease;
-}
-
-.visitor-counter:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(212, 168, 71, 0.3);
-}
-
-.visitor-counter i {
-    font-size: 1.1rem;
-}
-
-@media (max-width: 700px) {
-    .visitor-counter {
-        bottom: 1rem;
-        right: 1rem;
-        font-size: 0.85rem;
-        padding: 0.6rem 1.2rem;
-    }
-}
-
 /* Center ONLY contact page content on desktop */
 @media (min-width: 900px) {
     #contact.active {
