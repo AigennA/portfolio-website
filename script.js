@@ -618,21 +618,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// BESÖKSRÄKNARE (LOCALSTORAGE)
-// ============================================
-
-document.addEventListener('DOMContentLoaded', function() {
-    const visitorCountElement = document.getElementById('visitor-count');
-    
-    if (visitorCountElement) {
-        let visitCount = localStorage.getItem('visitCount') || 0;
-        visitCount = parseInt(visitCount) + 1;
-        localStorage.setItem('visitCount', visitCount);
-        visitorCountElement.textContent = visitCount;
-    }
-});
-
-// ============================================
 // KURSTABELLER – FLYTTAS AUTOMATISKT EFTER DATUM
 // ============================================
 // Lägg till nya kurser här. Varje kurs hamnar själv under
