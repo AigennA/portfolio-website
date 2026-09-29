@@ -924,8 +924,14 @@ span {
 }
 
 .home-video-grid .home-project-img {
+    object-fit: contain;
+    object-position: center;
+    background: #0e0c0a;
+}
+
+/* Moverot's wide promo image fills its card better */
+#moverot-home-card .home-project-img {
     object-fit: cover;
-    object-position: top center;
 }
 
 .home-video-grid .video-title {
