@@ -255,7 +255,6 @@ window.scrollTo({ top: 0, behavior: "instant" });
         {
             title: "Skolarbete",
             children: [
-                prenumerationskollen,
                 {
                     title: "Gala Emporium",
                     type: "video",
