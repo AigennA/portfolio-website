@@ -121,6 +121,12 @@ window.scrollTo({ top: 0, behavior: "instant" });
             title: "Mobilappar",
             children: [
                 {
+                    title: "Prenumerationskollen",
+                    type: "image",
+                    src: "images/projects/prenumerationskollen.png",
+                    description: "Mobilapp byggd med React Native och Expo i kursen React och mobilappar, kopplad till ett eget REST-API. Håll koll på dina prenumerationer: lägg till tjänster, sök, se status (aktiv, kommande, avslutad), månadskostnad, betyg och hur mycket du har betalat totalt."
+                },
+                {
                     title: "LisTo",
                     type: "image",
                     src: "images/projects/listo.png",
