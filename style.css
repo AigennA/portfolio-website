@@ -903,9 +903,43 @@ span {
 .home-video-grid {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     max-width: 600px;
+}
+
+.home-video-grid .video-card {
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+/* Same size for every image and video on the home cards */
+.home-video-grid .video-embed {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    margin-top: auto;
+}
+
+.home-video-grid .home-project-img {
+    object-fit: cover;
+    object-position: top center;
+}
+
+.home-video-grid .video-title {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .home-video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
 }
 
 .home-video-grid video {
