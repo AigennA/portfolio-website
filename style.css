@@ -1711,6 +1711,32 @@ span {
     transform: translateY(-2px);
     box-shadow: 0 6px 24px rgba(212,168,71,0.35);
 }
+/* Claude-orange variant av knappen, används för certifikaten på startsidan */
+.claude-cert-btn {
+    margin-left: 0.6rem;
+    margin-top: 1.2rem;
+    line-height: normal;
+    vertical-align: top;
+    background: linear-gradient(135deg, #e08a6b, #c15f3c);
+    animation: claude-btn-pulse 3s ease-in-out infinite;
+}
+@keyframes claude-btn-pulse {
+    0%   { opacity: 0.7; box-shadow: 0 2px 12px rgba(217,119,87,0.15); }
+    50%  { opacity: 1; box-shadow: 0 4px 20px rgba(217,119,87,0.45); }
+    100% { opacity: 0.7; box-shadow: 0 2px 12px rgba(217,119,87,0.15); }
+}
+.home-content .lia-toggle-btn {
+    vertical-align: top;
+}
+@media (max-width: 600px) {
+    .claude-cert-btn {
+        margin-left: 0;
+    }
+}
+.claude-cert-btn:hover {
+    background: linear-gradient(135deg, #e9a084, #d97757);
+    box-shadow: 0 6px 24px rgba(217,119,87,0.4);
+}
 button.lia-toggle-btn.active {
     background: linear-gradient(135deg, #d4af37, #d4a847);
     color: #0a0a0a !important;
