@@ -80,7 +80,8 @@ window.scrollTo({ top: 0, behavior: "instant" });
             window.location.hash = target === "home" ? "" : target;
 
             document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
-            link.classList.add("active");
+            const navTarget = link.dataset.nav || target;
+            document.querySelector(`nav a[data-page="${navTarget}"]`)?.classList.add("active");
 
             nav.classList.remove("active");
             menuIcon.classList.remove("fa-xmark");

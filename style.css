@@ -596,18 +596,21 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-#skills h2 {
+#skills h2,
+#certificates h2 {
     padding-top: 1.5rem;
     margin-top: 1.5rem;
     border-top: 1.5px solid rgba(212,168,71,0.4);
 }
-#skills h2:first-of-type {
+#skills h2:first-of-type,
+#certificates h2:first-of-type {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
 }
 
-#skills ul li {
+#skills ul li,
+#certificates ul li {
     position: relative;
     padding-left: 1.1em;
     margin-bottom: 0.3em;
@@ -620,7 +623,8 @@ section h2 {
     word-break: break-word;
 }
 
-#skills ul li::before {
+#skills ul li::before,
+#certificates ul li::before {
     content: '—';
     display: inline-block;
     margin-right: 0.5em;
