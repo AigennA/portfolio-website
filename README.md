@@ -32,7 +32,7 @@ The portfolio includes several projects such as:
 
 - **E-commerce projects** (with video demos)
 - **Frontend UI concepts**
-- **Dashboard UI**
+- **Mobile apps** (React Native, Kotlin)
 - **Backend API practice projects**
 
 Each project contains a short description and, where relevant, links to live demos or external repositories.
