@@ -207,48 +207,15 @@ window.scrollTo({ top: 0, behavior: "instant" });
                             description: "Bilgalleri med filtrering och sökfunktion. Användaren kan bläddra bland premium-fordon och se detaljer."
                         }
                     ]
-                }
-            ]
-        },
-        {
-            title: "Testprojekt",
-            children: [
-                {
-                    title: "Neonmeny",
-                    type: "image",
-                    src: "images/projects/fabuloso1.png",
-                    description: "Modern menu UI with neon and glass effects built using HTML, CSS and JavaScript."
-                },
-                {
-                    title: "AI-Chatbot AskBee",
-                    type: "image",
-                    src: "images/projects/projekt2.png",
-                    description: "Modern web application built with React, Vite and Tailwind CSS."
-                },
-                {
-                    title: "Dashboard UI",
-                    type: "video",
-                    src: "https://res.cloudinary.com/dciixwu6v/video/upload/dashboard_hg1wut.mp4",
-                    description: "Responsive dashboard with focus on UX and component structure."
                 },
                 {
                     title: "E-Commerce TechVora",
                     type: "video",
                     src: "https://res.cloudinary.com/dciixwu6v/video/upload/techvora_dagryt.mp4",
-                    description: "E-commerce project built with Lovable.",
+                    description: "E-handelsprojekt byggt med AI-verktyget Lovable.",
                     links: {
                         live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
                         github: "https://github.com/AigennA/techvora"
-                    }
-                },
-                {
-                    title: "E-Commerce Cotton",
-                    type: "video",
-                    src: "https://res.cloudinary.com/dciixwu6v/video/upload/cotton_axej1w.mp4",
-                    description: "E-commerce project.",
-                    links: {
-                        live: "https://agnes-nora-git-all-fixes-aomurm-gmailcoms-projects.vercel.app/",
-                        github: "https://github.com/AigennA/agnes-nora"
                     }
                 }
             ]
