@@ -441,7 +441,6 @@ window.scrollTo({ top: 0, behavior: "instant" });
     const videoGrid = document.querySelector('.home-video-grid');
     if (videoGrid) {
         videoGrid.style.maxWidth = '100%';
-        videoGrid.style.overflowX = 'hidden';
     }
 
     // Lägg till fullscreen-funktion för startsidans videor
