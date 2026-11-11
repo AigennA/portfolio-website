@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const initialSection = document.getElementById(initialPage);
     if (initialSection) {
         initialSection.classList.add("active");
+        if (initialPage === "projects") setTimeout(() => showProjectsOverview(), 0);
         document.querySelectorAll("nav a").forEach(a => {
             a.classList.toggle("active", a.dataset.page === initialPage);
         });
@@ -94,6 +95,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
             projectView.innerHTML = "";
             projectView.style.display = "none";
+            if (target === "projects") showProjectsOverview();
 
             window.scrollTo(0, 0);
         });
