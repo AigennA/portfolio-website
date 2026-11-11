@@ -102,7 +102,8 @@ window.scrollTo({ top: 0, behavior: "instant" });
         });
     });
 
-    logo?.addEventListener("click", () => {
+    logo?.addEventListener("click", (e) => {
+        e.preventDefault();
         sections.forEach(s => s.classList.remove("active"));
         document.getElementById("home")?.classList.add("active");
         window.location.hash = "";

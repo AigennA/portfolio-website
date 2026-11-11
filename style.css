@@ -2790,3 +2790,70 @@ button#menu-icon:focus-visible {
         min-width: 220px;
     }
 }
+
+
+/* =========================================================
+   Logo: signature-style AÖM on the orange badge
+   Font: Mrs Saint Delafield (SIL Open Font License 1.1), self-hosted
+   ========================================================= */
+@font-face {
+    font-family: 'AOM Signature';
+    src: url('fonts/mrs-saint-delafield-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+.logo {
+    font-family: 'AOM Signature', 'Brush Script MT', cursive;
+    font-size: 2.6rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1;
+    color: #FFF8F3;
+    text-decoration: none;
+    padding: 0.55rem 1.4rem 0.2rem 1.1rem;
+    display: inline-flex;
+    align-items: center;
+}
+.logo:hover,
+.logo:focus-visible {
+    color: #FFF8F3;
+    background: #A8361F;
+}
+.logo:focus-visible {
+    outline: 3px solid #231C3A;
+    outline-offset: 3px;
+}
+@media (max-width: 900px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+}
+.logo {
+    font-size: 3.4rem;
+    line-height: 0.8;
+    height: 58px;
+    padding: 0.5rem 1.5rem 0 1.1rem;
+    box-sizing: border-box;
+    overflow: visible;
+    text-shadow: 0 0 0.6px #FFF8F3, 0 0 0.6px #FFF8F3;
+}
+@media (max-width: 900px) {
+    .logo {
+        font-size: 2.9rem;
+        height: 50px;
+    }
+}
+/* keep the Ö dots inside the orange badge */
+.logo {
+    height: 64px;
+    padding: 1.15rem 1.5rem 0 1.1rem;
+    align-items: center;
+}
+@media (max-width: 900px) {
+    .logo {
+        height: 56px;
+        padding-top: 0.95rem;
+    }
+}
