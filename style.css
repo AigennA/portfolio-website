@@ -1795,34 +1795,35 @@ button.lia-toggle-btn.active {
 }
 
 /* Only hide the portfolio info box – NOT the footer */
+/* Less empty space between the home content and the footer */
+#home {
+    padding-bottom: 3rem;
+}
+
+/* "Om min portfolio" box under the project cards (inside .home-content) */
 .portfolio-info {
-    display: none;
+    margin-top: 2rem;
+    width: 100%;
 }
 
-/* Show portfolio info ONLY when home page is active */
-#home.active ~ .portfolio-info {
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem 1rem;
-}
-
-#home.active ~ .portfolio-info .portfolio-info-code {
+.portfolio-info .portfolio-info-code {
+    margin: 0;
     background-color: #1a1209;
     color: #ffffff;
     padding: 1.2rem 1.5rem;
     border-radius: 0.75rem;
+    border: 1px solid rgba(212, 168, 71, 0.12);
     font-family: 'DM Sans', monospace;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
+    line-height: 1.6;
     white-space: pre-wrap;
     word-break: break-word;
-    max-width: 700px;
-    width: 100%;
     text-align: left;
 }
 
 @media (max-width: 700px) {
-    #home.active ~ .portfolio-info .portfolio-info-code {
+    .portfolio-info .portfolio-info-code {
         font-size: 0.85rem;
         padding: 1rem;
     }
