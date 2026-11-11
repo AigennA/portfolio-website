@@ -6,7 +6,7 @@
     <title>Portfolio – Aygen</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20261111n">
+    <link rel="stylesheet" href="style.css?v=20261111q">
     <link rel="stylesheet" href="wild-font.css">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
 <header>
     <div class="logo">Aygen</div>
 
-    <nav>
+    <nav id="main-nav" aria-label="Huvudmeny">
         <a class="active" data-page="home">Hem</a>
         <a data-page="projects">Projekt</a>
         <a data-page="skills">Kompetenser</a>
@@ -41,7 +41,7 @@
         LIA 2 från 14 dec 2026 eller 10 jan 2027
     </a>
 
-    <span id="menu-icon" aria-label="Öppna meny" title="Öppna meny">&#8230;</span>
+    <button type="button" id="menu-icon" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav" title="Öppna meny">&#8230;</button>
 </header>
 
 <section id="home" class="Home active">
@@ -183,101 +183,114 @@ Välkommen att utforska!</code></pre>
 
 </section>
 
-<section id="skills">
-    <div class="content">
+<section id="skills" class="page-section">
+    <div class="content page-wide">
+        <p class="page-eyebrow">Vad jag kan</p>
         <h1>Kompetenser</h1>
 
         <!-- Tekniska och professionella kompetenser -->
-        <h2>Tekniska kompetenser</h2>
-        <ul>
-            <li>Kommunikation och yrkesintroduktion</li>
-            <li>Git och versionshantering</li>
-            <li>Agilt arbetssätt – Azure DevOps, GitHub, Trello</li>
-            <li>Informationsarkitektur och databasutveckling</li>
-            <li>Grundläggande frontend- och backendutveckling</li>
-            <li>Programmering – fördjupning</li>
-            <li>LIA 1 – Activator AB</li>
-            <li>Claude Code / AI-assisterad utveckling</li>
-        </ul>
+        <div class="page-block">
+            <h2>Tekniska kompetenser</h2>
+            <ul class="chip-list">
+                <li>Kommunikation och yrkesintroduktion</li>
+                <li>Git och versionshantering</li>
+                <li>Agilt arbetssätt – Azure DevOps, GitHub, Trello</li>
+                <li>Informationsarkitektur och databasutveckling</li>
+                <li>Grundläggande frontend- och backendutveckling</li>
+                <li>Programmering – fördjupning</li>
+                <li>LIA 1 – Activator AB</li>
+                <li class="chip-accent">Claude Code / AI-assisterad utveckling</li>
+            </ul>
+        </div>
 
-        <h2>Claude-certifikat från Anthropic</h2>
-        <p>Jag har 14 certifikat från Anthropic Academy (2026) inom Claude, Claude Code, Model Context Protocol och AI Fluency.</p>
-        <a class="btn" data-page="certificates" data-nav="skills" style="margin-bottom:1.5rem;">Se mina Claude-certifikat</a>
+        <div class="page-block info-card info-card-peach">
+            <h2>Claude-certifikat från Anthropic</h2>
+            <p>Jag har 14 certifikat från Anthropic Academy (2026) inom Claude, Claude Code, Model Context Protocol och AI Fluency.</p>
+            <a class="btn btn-dark" data-page="certificates" data-nav="skills" href="#certificates">Se mina Claude-certifikat</a>
+        </div>
 
+        <div class="page-block">
         <!--
-            Kurstabellerna nedan fylls automatiskt av script.js utifrån dagens datum.
-            Lägg till eller ändra kurser i listan COURSES i script.js – varje kurs
-            flyttas själv mellan Färdiga / Pågående / Kommande när datumet passeras.
-        -->
+                Kurstabellerna nedan fylls automatiskt av script.js utifrån dagens datum.
+                Lägg till eller ändra kurser i listan COURSES i script.js – varje kurs
+                flyttas själv mellan Färdiga / Pågående / Kommande när datumet passeras.
+            -->
 
-        <!-- Färdiga kurser -->
-        <div class="course-group" id="course-group-done" hidden>
-            <h2>Färdiga kurser</h2>
-            <div class="course-table-wrap">
-                <table class="course-table">
-                    <thead>
-                        <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
-                    </thead>
-                    <tbody id="courses-done"></tbody>
-                </table>
+            <!-- Färdiga kurser -->
+            <div class="course-group" id="course-group-done" hidden>
+                <h2>Färdiga kurser</h2>
+                <div class="course-table-wrap">
+                    <table class="course-table">
+                        <thead>
+                            <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
+                        </thead>
+                        <tbody id="courses-done"></tbody>
+                    </table>
+                </div>
             </div>
+
+            <!-- Pågående kurser -->
+            <div class="course-group" id="course-group-ongoing" hidden>
+                <h2>Pågående kurser</h2>
+                <div class="course-table-wrap course-table-ongoing">
+                    <table class="course-table">
+                        <thead>
+                            <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
+                        </thead>
+                        <tbody id="courses-ongoing"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kommande kurser -->
+            <div class="course-group" id="course-group-upcoming" hidden>
+                <h2>Kommande kurser</h2>
+                <div class="course-table-wrap course-table-upcoming">
+                    <table class="course-table">
+                        <thead>
+                            <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
+                        </thead>
+                        <tbody id="courses-upcoming"></tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Pågående kurser -->
-        <div class="course-group" id="course-group-ongoing" hidden>
-            <h2>Pågående kurser</h2>
-            <div class="course-table-wrap course-table-ongoing">
-                <table class="course-table">
-                    <thead>
-                        <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
-                    </thead>
-                    <tbody id="courses-ongoing"></tbody>
-                </table>
+        <div class="page-block card-row">
+            <!-- Språk som används i studier och arbete -->
+            <div class="info-card">
+                <h2>Språk</h2>
+                <ul class="plain-list">
+                    <li>Svenska</li>
+                    <li>Engelska</li>
+                    <li>Turkiska</li>
+                </ul>
+            </div>
+            <!-- Kompetenser som utvecklas även på fritiden -->
+            <div class="info-card">
+                <h2>På fritiden</h2>
+                <ul class="plain-list">
+                    <li>Bygger egna projekt och testar nya idéer</li>
+                    <li>Intresserad av UI/UX och användarflöden</li>
+                    <li>Följer tekniskt innehåll och dokumentation</li>
+                    <li>Testar appar och webbplatser ur användarperspektiv</li>
+                    <li>Arbetar kreativt med AI-verktyg och lär mig promptteknik</li>
+                    <li>Skapar musik och låtar med hjälp av AI som ett kreativt verktyg</li>
+                </ul>
             </div>
         </div>
-
-        <!-- Kommande kurser -->
-        <div class="course-group" id="course-group-upcoming" hidden>
-            <h2>Kommande kurser</h2>
-            <div class="course-table-wrap course-table-upcoming">
-                <table class="course-table">
-                    <thead>
-                        <tr><th>Kurs</th><th>Löptid</th><th>Poäng</th></tr>
-                    </thead>
-                    <tbody id="courses-upcoming"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Språk som används i studier och arbete -->
-        <h2>Språk</h2>
-        <ul>
-            <li>Svenska</li>
-            <li>Engelska</li>
-            <li>Turkiska</li>
-        </ul>
-
-        <!-- Kompetenser som utvecklas även på fritiden -->
-        <h2>På fritiden</h2>
-        <ul>
-            <li>Bygger egna projekt och testar nya idéer</li>
-            <li>Intresserad av UI/UX och användarflöden</li>
-            <li>Följer tekniskt innehåll och dokumentation</li>
-            <li>Testar appar och webbplatser ur användarperspektiv</li>
-            <li>Arbetar kreativt med AI-verktyg och lär mig promptteknik</li>
-            <li>Skapar musik och låtar med hjälp av AI som ett kreativt verktyg</li>
-        </ul>
     </div>
 </section>
 
-
-<section id="certificates">
-    <div class="content">
+<section id="certificates" class="page-section">
+    <div class="content page-wide">
+        <p class="page-eyebrow">Kompetenser</p>
         <h1>Claude-certifikat från Anthropic</h1>
         <p>Kurser jag har genomfört hos Anthropic Academy under 2026.</p>
 
         <h2>Claude och Claude Code</h2>
-        <ul>
+        <ul class="cert-list">
             <li><div><strong>Claude 101</strong> – grunderna i att arbeta med Claude i studier och vardag</div></li>
             <li><div><strong>Claude Code in Action</strong> – Claude Code i ett riktigt utvecklingsflöde, från kontext till planering och granskning av ändringar</div></li>
             <li><div><strong>Introduction to subagents</strong> – dela upp större uppgifter på subagenter i Claude Code</div></li>
@@ -285,7 +298,7 @@ Välkommen att utforska!</code></pre>
         </ul>
 
         <h2>Bygga med Claude</h2>
-        <ul>
+        <ul class="cert-list">
             <li><div><strong>Claude with the Anthropic API</strong> – anropa Claude från kod, skriva promptar och använda tool use</div></li>
             <li><div><strong>Claude with Amazon Bedrock</strong> – köra Claude via AWS</div></li>
             <li><div><strong>Introduction to Model Context Protocol</strong> – bygga MCP-servrar som ger Claude tillgång till verktyg och data</div></li>
@@ -293,7 +306,7 @@ Välkommen att utforska!</code></pre>
         </ul>
 
         <h2>AI Fluency</h2>
-        <ul>
+        <ul class="cert-list">
             <li><div><strong>AI Fluency: Framework &amp; Foundations</strong> – 4D-ramverket för att arbeta med AI</div></li>
             <li><div><strong>AI Fluency: AI Capabilities &amp; Limitations</strong> – vad AI är bra på, var den gör fel och hur man granskar resultatet</div></li>
             <li><div><strong>Teaching the AI Fluency Framework</strong> – hur man lär ut ramverket till andra</div></li>
@@ -302,93 +315,107 @@ Välkommen att utforska!</code></pre>
             <li><div><strong>AI Fluency for nonprofits</strong> – AI i ideella organisationer (med GivingTuesday)</div></li>
         </ul>
 
-        <a class="btn" data-page="skills">← Tillbaka till Kompetenser</a>
+        <a class="btn btn-dark" data-page="skills" href="#skills">← Tillbaka till Kompetenser</a>
     </div>
 </section>
 
-<section id="education">
-    <div class="content">
+<section id="education" class="page-section">
+    <div class="content page-wide">
+        <p class="page-eyebrow">Min väg hit</p>
         <h1>Utbildning</h1>
 
-        <p>
-            <strong>Systemutvecklare .NET – TUC Yrkeshögskola</strong><br>
-            Pågående utbildning inom system- och webbutveckling.<br>
-            LIA 1 hos Activator – fullstack-utveckling med projektet Moverot.<br>
-            Examensarbete: 14 dec 2026 – 30 apr 2027<br>
-            LIA 2: 14 dec 2026 – 28 maj 2027
-        </p>
-
-        <p>
-            <strong>Systemutveckling – Lexicon (10 månader)</strong><br>
-            Utbildning med praktik inom frontend och backend.
-        </p>
-
-        <p>
-            <strong>Barn och fritidsprogrammet – Hermods</strong><br>
-            Utbildning inom barn och fritid på Hermods.
-        </p>
-
-        <p>
-            <strong>Gymnasieutbildning</strong>
-        </p>
-
+        <ol class="timeline">
+            <li class="timeline-item timeline-current">
+                <span class="badge badge-coral">Pågående · aug 2025 – maj 2027</span>
+                <h2>Systemutvecklare .NET – TUC Yrkeshögskola</h2>
+                <p>Pågående utbildning inom system- och webbutveckling.</p>
+                <ul class="fact-list">
+                    <li>LIA 1 hos Activator – fullstack-utveckling med projektet Moverot.</li>
+                    <li>Examensarbete: 14 dec 2026 – 30 apr 2027</li>
+                    <li>LIA 2: 14 dec 2026 – 28 maj 2027</li>
+                </ul>
+            </li>
+            <li class="timeline-item">
+                <span class="badge">10 månader</span>
+                <h2>Systemutveckling – Lexicon (10 månader)</h2>
+                <p>Utbildning med praktik inom frontend och backend.</p>
+            </li>
+            <li class="timeline-item">
+                <span class="badge">Utbildning</span>
+                <h2>Barn och fritidsprogrammet – Hermods</h2>
+                <p>Utbildning inom barn och fritid på Hermods.</p>
+            </li>
+            <li class="timeline-item">
+                <span class="badge">Gymnasiet</span>
+                <h2>Gymnasieutbildning</h2>
+            </li>
+        </ol>
     </div>
 </section>
 
-<section id="experience">
-    <div class="content">
+<section id="experience" class="page-section">
+    <div class="content page-wide">
+        <p class="page-eyebrow">Där jag har arbetat</p>
         <h1>Erfarenhet</h1>
-
-        <div class="experience-card">
-            <img src="images/activator.png" alt="LIA hos Activator – Moverot" class="experience-photo">
-            <div class="experience-info">
-                <h2>LIA – Activator, Linköping</h2>
-                <p>Under min första LIA-period arbetar jag som fullstack-utvecklare och testare hos Activator. Jag jobbar med projektet Moverot – en hälso- och aktivitetsapp tillgänglig på iOS, Android och webb. Jag arbetar med både frontend och backend med tekniker som MongoDB och ABP Framework i riktiga applikationer med riktig data.</p>
-                <p>Jag testar applikationer i staging, produktion och lokala miljöer – både som användare och kodbaserat. Jag har även testat den färdiga appen Golf4u (webb). Vi arbetar agilt med daglig Scrum och DevOps, och har påbörjat spec-driven utveckling. Claude Code är en central del av arbetsprocessen och testprocessen i teamet. Jag har även deltagit i kundmöten och varit med och firat releaser tillsammans med teamet.</p>
-                <p><a href="https://moverot.se" target="_blank" rel="noopener" class="contact-email">moverot.se</a></p>
-            </div>
-        </div>
-
-        <div class="experience-card">
-            <div class="experience-info">
-                <h2>Praktik – Lexicon, Linköping</h2>
-                <p>Jag gjorde 2 månaders praktik på Lexicon i Linköping, där jag fick arbeta praktiskt med frontend och backend-utveckling.</p>
-            </div>
-        </div>
-
-        <div class="experience-card">
-            <div class="experience-info">
-                <h2>Barnskötare – utbildning & deltidsarbete</h2>
-                <p>Jag har studerat till barnskötare i Sverige och arbetat deltid under en kort period.</p>
-            </div>
-        </div>
-
-        <div class="experience-card">
-            <img src="images/linkedinn.jpg" alt="Visual Merchandiser" class="experience-photo small">
-            <div class="experience-info">
-                <h2>Dekoratör / Butikskommunikatör</h2>
-                <p>Jag har tidigare arbetat som Visual Merchandiser. Denna erfarenhet har hjälpt mig mycket inom UI/UX, färgkoordination och visuell design. Kreativ presentation och användarcentrerat tänkande har utvecklat mina färdigheter och bidragit till mitt arbete med gränssnitt.</p>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="experience-info">
-                <h2>Kvalificerad användare</h2>
-                <p>Jag är en mycket erfaren och noggrann användare, särskilt på mobila enheter. Jag kan snabbt identifiera brister och förbättringsområden i appar och webbsidor, och bedömer alltid produktens flyt, användarvänlighet och helhetsupplevelse – inte bara genom att scrolla, utan genom att testa alla funktioner och detaljer.</p>
-            </div>
-        </div>
-
-        <p>
+        <p class="page-intro">
             Erfarenhet från utbildningsprojekt och praktik med fokus på
             kodkvalitet, struktur och samarbete.
         </p>
 
-        <p>
-            <strong>LIA-perioder:</strong><br>
-            30 mars – 5 juni 2026<br>
-            14 december 2026 – 28 maj 2027<br><br>
-            <strong>Examensarbete:</strong><br>
-            14 december 2026 – 30 april 2027
-        </p>
+        <article class="experience-card experience-feature">
+            <img src="images/activator.png" alt="LIA hos Activator – Moverot" class="experience-photo">
+            <div class="experience-info">
+                <span class="badge badge-coral">Fullstack-utvecklare &amp; testare · 30 mars – 5 juni 2026</span>
+                <h2>LIA – Activator, Linköping</h2>
+                <p>Under min första LIA-period arbetar jag som fullstack-utvecklare och testare hos Activator. Jag jobbar med projektet Moverot – en hälso- och aktivitetsapp tillgänglig på iOS, Android och webb. Jag arbetar med både frontend och backend med tekniker som MongoDB och ABP Framework i riktiga applikationer med riktig data.</p>
+                <p>Jag testar applikationer i staging, produktion och lokala miljöer – både som användare och kodbaserat. Jag har även testat den färdiga appen Golf4u (webb). Vi arbetar agilt med daglig Scrum och DevOps, och har påbörjat spec-driven utveckling. Claude Code är en central del av arbetsprocessen och testprocessen i teamet. Jag har även deltagit i kundmöten och varit med och firat releaser tillsammans med teamet.</p>
+                <p><a href="https://moverot.se" target="_blank" rel="noopener" class="text-link">moverot.se</a></p>
+            </div>
+        </article>
+
+        <div class="experience-grid">
+            <article class="experience-card">
+                <div class="experience-info">
+                    <span class="badge">Praktik · 2 månader</span>
+                    <h2>Praktik – Lexicon, Linköping</h2>
+                    <p>Jag gjorde 2 månaders praktik på Lexicon i Linköping, där jag fick arbeta praktiskt med frontend och backend-utveckling.</p>
+                </div>
+            </article>
+            <article class="experience-card">
+                <img src="images/linkedinn.jpg" alt="Visual Merchandiser" class="experience-photo small">
+                <div class="experience-info">
+                    <span class="badge">Visual Merchandiser</span>
+                    <h2>Dekoratör / Butikskommunikatör</h2>
+                    <p>Jag har tidigare arbetat som Visual Merchandiser. Denna erfarenhet har hjälpt mig mycket inom UI/UX, färgkoordination och visuell design. Kreativ presentation och användarcentrerat tänkande har utvecklat mina färdigheter och bidragit till mitt arbete med gränssnitt.</p>
+                </div>
+            </article>
+            <article class="experience-card">
+                <div class="experience-info">
+                    <span class="badge">Mobil &amp; webb</span>
+                    <h2>Kvalificerad användare</h2>
+                    <p>Jag är en mycket erfaren och noggrann användare, särskilt på mobila enheter. Jag kan snabbt identifiera brister och förbättringsområden i appar och webbsidor, och bedömer alltid produktens flyt, användarvänlighet och helhetsupplevelse – inte bara genom att scrolla, utan genom att testa alla funktioner och detaljer.</p>
+                </div>
+            </article>
+            <article class="experience-card">
+                <div class="experience-info">
+                    <span class="badge">Utbildning &amp; deltid</span>
+                    <h2>Barnskötare – utbildning &amp; deltidsarbete</h2>
+                    <p>Jag har studerat till barnskötare i Sverige och arbetat deltid under en kort period.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="info-card info-card-peach lia-dates-card">
+            <p>
+                <strong>LIA-perioder:</strong><br>
+                30 mars – 5 juni 2026<br>
+                14 december 2026 – 28 maj 2027
+            </p>
+            <p>
+                <strong>Examensarbete:</strong><br>
+                14 december 2026 – 30 april 2027
+            </p>
+        </div>
     </div>
 </section>
 
@@ -519,6 +546,6 @@ Välkommen att utforska!</code></pre>
     </div>
 </footer>
 
-<script src="script.js?v=20261111n"></script>
+<script src="script.js?v=20261111q"></script>
 </body>
 </html>

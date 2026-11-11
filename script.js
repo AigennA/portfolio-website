@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuIcon?.addEventListener("click", () => {
         nav.classList.toggle("active");
+        menuIcon.setAttribute("aria-expanded", nav.classList.contains("active") ? "true" : "false");
         menuIcon.classList.toggle("fa-xmark");
         // Add overlay for mobile menu if opening
         if (nav.classList.contains("active")) {

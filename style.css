@@ -1886,8 +1886,8 @@ button.lia-toggle-btn.active {
     box-shadow: 0 4px 24px rgba(194, 65, 42, 0.08);
 }
 
+/* Upcoming courses: dashed border only – full opacity keeps text readable (WCAG 1.4.3) */
 .course-table-upcoming {
-    opacity: 0.65;
     border-style: dashed;
 }
 
@@ -2355,5 +2355,438 @@ nav a {
 @media (max-width: 1320px) {
     .lia-pill {
         display: none;
+    }
+}
+
+
+/* =========================================================
+   Buttons: white text on darker orange (WCAG AA ≥ 4.5:1)
+   ========================================================= */
+.btn,
+.projects-overview-btn,
+.premium-submit-btn,
+.lia-toggle-btn,
+button.lia-toggle-btn.active {
+    background: linear-gradient(135deg, #C2412A, #A8361F);
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF;
+}
+.btn:hover,
+.projects-overview-btn:hover,
+.premium-submit-btn:hover,
+.lia-toggle-btn:hover {
+    background: linear-gradient(135deg, #A8361F, #8F2C18);
+    color: #FFFFFF !important;
+}
+.btn-text {
+    color: #FFFFFF;
+    -webkit-text-fill-color: #FFFFFF;
+}
+.claude-cert-btn {
+    background: linear-gradient(135deg, #B4532F, #9A3E22);
+}
+.claude-cert-btn:hover {
+    background: linear-gradient(135deg, #9A3E22, #82331C);
+}
+/* Dark variant (plum) */
+.btn.btn-dark {
+    background: #231C3A;
+}
+.btn.btn-dark:hover {
+    background: #3A3157;
+}
+/* Clear focus ring for keyboard users (WCAG 2.4.7 / 2.4.11) */
+.btn:focus-visible,
+.lia-toggle-btn:focus-visible,
+.projects-overview-btn:focus-visible,
+nav a:focus-visible,
+.lia-pill:focus-visible,
+.profile-contact:focus-visible,
+.text-link:focus-visible {
+    outline: 3px solid #231C3A;
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   Inner pages: Kompetenser, Certifikat, Utbildning, Erfarenhet
+   ========================================================= */
+.page-section.active {
+    align-items: flex-start;
+}
+.page-wide {
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+}
+.page-eyebrow {
+    margin: 0 0 0.4rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #C2412A;
+}
+.page-section h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.6rem;
+}
+.page-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #231C3A;
+    margin: 0 0 0.8rem;
+}
+.page-intro {
+    max-width: 720px;
+    font-size: 1.1rem;
+    color: #3A3150;
+    margin: -0.6rem 0 2rem;
+}
+.page-block {
+    margin-bottom: 2.5rem;
+}
+
+/* Chips for skills */
+.chip-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.chip-list li {
+    margin: 0;
+    padding: 0.6rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid #E5CFC4;
+    border-radius: 0.9rem;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: #231C3A;
+    line-height: 1.4;
+}
+.chip-list li::before,
+.plain-list li::before,
+.fact-list li::before,
+.cert-list li::before,
+.timeline li::before {
+    content: none !important;
+}
+.chip-list li.chip-accent {
+    background: #231C3A;
+    border-color: #231C3A;
+    color: #FFF8F3;
+    font-weight: 600;
+}
+
+/* Cards */
+.info-card {
+    background: #FFFFFF;
+    border: 1px solid #F1DDD3;
+    border-radius: 1.4rem;
+    padding: 1.6rem 1.8rem;
+}
+.info-card-peach {
+    background: #FFE9DF;
+    border-color: #F2C9BA;
+}
+.info-card p {
+    color: #231C3A;
+}
+.info-card .btn {
+    margin-top: 0.6rem;
+}
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+.plain-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.plain-list li {
+    margin: 0;
+    padding: 0 0 0 1.1rem;
+    position: relative;
+    color: #231C3A;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+.plain-list li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #C2412A;
+}
+
+/* Certificates */
+.cert-list {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+}
+.cert-list li {
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    background: #FFFFFF;
+    border: 1px solid #F1DDD3;
+    border-left: 4px solid #C2412A;
+    border-radius: 0.8rem;
+    color: #3A3150;
+    line-height: 1.55;
+}
+.cert-list strong {
+    color: #231C3A;
+}
+
+/* Utbildning: timeline */
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.8rem;
+    border-left: 3px solid #F2B5A6;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.timeline-item {
+    position: relative;
+    margin: 0;
+    padding: 1.4rem 1.6rem;
+    background: #FFFFFF;
+    border: 1px solid #F1DDD3;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: calc(-1.8rem - 10px);
+    top: 1.7rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #FFF8F3;
+    border: 3px solid #C2412A;
+}
+.timeline-current {
+    background: #FFE9DF;
+    border-color: #F2C9BA;
+}
+.timeline-current::after {
+    background: #C2412A;
+}
+.timeline-item h2 {
+    margin: 0;
+}
+.timeline-item p {
+    margin: 0;
+    color: #3A3150;
+}
+.fact-list {
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.fact-list li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.98rem;
+    color: #231C3A;
+}
+
+/* Badges (dates and roles) */
+.badge {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: #F3EEFA;
+    color: #231C3A;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.badge-coral {
+    background: #FFD9CE;
+}
+
+/* Erfarenhet */
+#experience .experience-card {
+    background: #FFFFFF;
+    border: 1px solid #F1DDD3;
+    border-radius: 1.4rem;
+    padding: 1.6rem;
+    margin: 0;
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+}
+#experience .experience-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 0;
+}
+#experience .experience-info h2 {
+    margin: 0;
+}
+#experience .experience-info p {
+    margin: 0;
+    color: #3A3150;
+}
+.experience-feature {
+    background: #FFE9DF !important;
+    border-color: #F2C9BA !important;
+    margin-bottom: 1.4rem !important;
+}
+.experience-feature .experience-photo {
+    width: 42%;
+    max-width: 380px;
+    margin: 0;
+    flex-shrink: 0;
+}
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.4rem;
+}
+.lia-dates-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 3rem;
+}
+.lia-dates-card p {
+    margin: 0;
+}
+.text-link {
+    color: #A8361F;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .page-section.active {
+        text-align: left;
+        align-items: stretch;
+    }
+    .experience-feature {
+        flex-direction: column;
+    }
+    .experience-feature .experience-photo {
+        width: 100%;
+        max-width: none;
+    }
+    .timeline {
+        padding-left: 1.3rem;
+    }
+    .timeline-item::after {
+        left: calc(-1.3rem - 10px);
+    }
+}
+
+/* Course tables: stronger text on the light theme */
+.course-table th {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1F7A50;
+}
+.course-table td {
+    color: #231C3A;
+}
+.course-table td:first-child {
+    font-weight: 600;
+    color: #231C3A;
+}
+.course-table td:nth-child(2) {
+    color: #3A3150;
+}
+.course-table-wrap {
+    background: #FFFFFF;
+    border: 1px solid #E5CFC4;
+}
+
+/* Hero heading never runs into the profile card */
+.hero-title {
+    font-size: clamp(2rem, 3.6vw, 3.6rem);
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+.hero-text {
+    overflow: hidden;
+    padding-right: 0.5rem;
+}
+
+/* Erfarenhet: 2 x 2 grid, small photos above the text so titles never overflow */
+.experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.experience-grid .experience-card {
+    flex-direction: column;
+}
+.experience-grid .experience-photo.small {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    object-fit: cover;
+    margin: 0;
+}
+#experience .experience-info h2 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+@media (max-width: 760px) {
+    .experience-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Mobile menu toggle is a real button (keyboard + screen reader) */
+button#menu-icon {
+    border: none;
+    font: inherit;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+button#menu-icon:focus-visible {
+    outline: 3px solid #231C3A;
+    outline-offset: 3px;
+}
+@media (max-width: 900px) {
+    /* Solid mobile menu panel so the page text never shows through */
+    nav#main-nav {
+        background: #FFF8F3 !important;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        opacity: 1;
+        border: 1px solid #F1DDD3;
+        border-radius: 0 0 0 1.2rem;
+        box-shadow: 0 16px 40px rgba(35, 28, 58, 0.18);
+        min-width: 220px;
     }
 }
