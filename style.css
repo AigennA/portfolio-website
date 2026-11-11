@@ -2270,3 +2270,90 @@ nav a.active {
         padding: 1.6rem;
     }
 }
+
+/* =========================================================
+   Project pages: stronger contrast on the light theme
+   ========================================================= */
+#projects.active {
+    align-items: flex-start;
+}
+
+#project-view .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+#project-view .project-list button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 56px;
+    margin: 0;
+    padding: 0.9rem 1.2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #231C3A;
+    background: #FFFFFF;
+    border: 1px solid #E5CFC4;
+    border-left: 4px solid #F26B4F;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(35, 28, 58, 0.06);
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+#project-view .project-list button::after {
+    content: "→";
+    color: #C2412A;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+#project-view .project-list button:hover,
+#project-view .project-list button:focus-visible {
+    background: #231C3A;
+    color: #FFF8F3;
+    border-color: #231C3A;
+    border-left-color: #F26B4F;
+    transform: translateX(4px);
+}
+#project-view .project-list button:hover::after,
+#project-view .project-list button:focus-visible::after {
+    color: #FFB4A3;
+}
+
+/* Opened galleries and project details: peach panels with dark text */
+#project-view .project-group-view h2,
+#project-view h1 {
+    color: #231C3A;
+}
+#project-view .project-group-view .video-card,
+#project-view .project-detail {
+    background: #FFE9DF;
+    border: 1px solid #F2C9BA;
+    border-radius: 1.1rem;
+    box-shadow: 0 4px 16px rgba(35, 28, 58, 0.08);
+    padding: 1.2rem 1.4rem 1.4rem;
+    margin-bottom: 1.2rem;
+}
+#project-view .project-group-view .video-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #231C3A;
+}
+#project-view .project-group-view .video-card p,
+#project-view .project-detail p {
+    color: #231C3A;
+    font-weight: 500;
+}
+
+/* Header: keep the menu on one line */
+nav a {
+    margin-left: 1.6rem;
+}
+@media (max-width: 1320px) {
+    .lia-pill {
+        display: none;
+    }
+}
