@@ -2868,3 +2868,21 @@ button#menu-icon:focus-visible {
     line-height: 1.45;
     color: #E9E4F7;
 }
+
+/* Hero heading: no hyphenation; the size follows the text column so
+   "Systemutvecklare" always fits on one line */
+.hero-text {
+    container-type: inline-size;
+}
+.hero-title {
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    overflow-wrap: normal;
+    word-break: normal;
+    font-size: clamp(1.8rem, 3.4vw, 3.6rem);
+}
+@container (min-width: 1px) {
+    .hero-title {
+        font-size: clamp(1.8rem, 10.5cqi, 3.6rem);
+    }
+}
