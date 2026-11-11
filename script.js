@@ -194,9 +194,11 @@ window.scrollTo({ top: 0, behavior: "instant" });
                         {
                             title: "Car Dealer – Hemsida",
                             type: "image",
-                            src: "images/projects/car-dealer1.png",
-                            description: "Modern bilförsäljningssida byggd med Next.js 16, React 19, TypeScript och Tailwind CSS 4. Inkluderar avancerad sökning och filtrering efter märke, modell och plats. Responsiv design med admin-panel för CRUD-hantering och RESTful API.",
+                            wide: true,
+                            src: "images/projects/car-dealer-hem.webp",
+                            description: "Plattform för en bilhandlare byggd med Next.js 16, React 19, TypeScript och Tailwind CSS 4, med ett eget backend-API i ASP.NET Core (.NET 10) och SQL Server. Senast tillagt: onlinebokning för verkstad och besiktning, boka provkörning med QR-kod, \"Min bokning\" där kunden kan se, flytta och avboka utan konto, samt statusen Såld och Reserverad på bilarna. Sidan har sökning och filter, billånekalkylator, inbyte, admin-panel och personal-inloggning med JWT. Uppfyller WCAG 2.2 AA (0 axe-fel), får 91–100 i Lighthouse och har över 300 automatiska tester.",
                             links: {
+                                live: "https://AigennA.github.io/Car-Dealer/",
                                 github: "https://github.com/AigennA/Car-Dealer"
                             }
                         },
@@ -381,6 +383,11 @@ window.scrollTo({ top: 0, behavior: "instant" });
                                             <div class="video-title">${proj.title}</div>
                                             ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" style="max-width:${proj.wide ? "100%" : "320px"};width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
                                             <p>${proj.description}</p>
+                                            ${proj.links ? `
+                                            <div class="project-links">
+                                                ${proj.links.live ? `<a href="${proj.links.live}" target="_blank" rel="noopener" class="btn">Live Demo</a>` : ""}
+                                                ${proj.links.github ? `<a href="${proj.links.github}" target="_blank" rel="noopener" class="btn">GitHub</a>` : ""}
+                                            </div>` : ""}
                                         </div>`
                                     ).join("")}
                                 </div>
