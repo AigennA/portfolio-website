@@ -2886,3 +2886,49 @@ button#menu-icon:focus-visible {
         font-size: clamp(1.8rem, 10.5cqi, 3.6rem);
     }
 }
+
+/* Skip link for keyboard users (WCAG 2.4.1) */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100px;
+    z-index: 2000;
+    padding: 0.7rem 1.1rem;
+    border-radius: 0.6rem;
+    background: #231C3A;
+    color: #FFF8F3;
+    font-weight: 600;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 1rem;
+}
+/* LIA panel heading (was h3, now h2 for a correct heading order) */
+.lia-expand-inner .lia-expand-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #C2412A;
+    margin: 0 0 0.8rem;
+}
+/* Images keep their aspect ratio now that width/height are set */
+.profile-photo,
+.lia-expand-photo,
+.experience-photo,
+.home-project-img {
+    height: auto;
+}
+.profile-photo {
+    height: 112px;
+}
+/* Eyebrow is a <p> now – keep its own look over the generic hero paragraph style */
+.hero-text .hero-eyebrow {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #C2412A;
+}
