@@ -6,7 +6,7 @@
     <title>Portfolio – Aygen</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20261111j">
+    <link rel="stylesheet" href="style.css?v=20261111m">
     <link rel="stylesheet" href="wild-font.css">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,49 +29,59 @@
 
     <nav>
         <a class="active" data-page="home">Hem</a>
+        <a data-page="projects">Projekt</a>
         <a data-page="skills">Kompetenser</a>
         <a data-page="education">Utbildning</a>
         <a data-page="experience">Erfarenhet</a>
         <a data-page="contact">Kontakt</a>
     </nav>
 
+    <a class="lia-pill" data-page="contact" href="#contact">
+        <span class="lia-pill-dot" aria-hidden="true"></span>
+        LIA 2 från 14 dec 2026 eller 10 jan 2027
+    </a>
+
     <span id="menu-icon" aria-label="Öppna meny" title="Öppna meny">&#8230;</span>
 </header>
 
 <section id="home" class="Home active">
-        <div class="lia-flag lia-flag-right">
-            <div class="lia-flag-pole"></div>
-            <div class="lia-flag-body">
-                <strong>LIA-perioder:</strong><br>
-                30 mars – 5 juni 2026<br>
-                14 dec 2026 – 28 maj 2027<br>
-                <strong>Examensarbete:</strong><br>
-                14 dec 2026 – 30 apr 2027
+    <div class="hero">
+        <div class="hero-text">
+            <h2 class="hero-eyebrow"><span class="hej-color">Hej,</span> Välkommen till min <span>portfolio</span></h2>
+            <h1 class="hero-title">Systemutvecklare .NET med fokus på fullstack och AI<span class="hero-dot">.</span></h1>
+            <div class="hero-bar" aria-hidden="true"></div>
+            <p>
+               Jag studerar till systemutvecklare med inriktning .NET på TUC Yrkeshögskola i Linköping. Jag har genomfört min LIA hos Activator som fullstack-utvecklare med projektet Moverot. Jag har 14 certifikat från Anthropic Academy, bland annat Claude Code in Action och Model Context Protocol, och arbetar aktivt med AI-assisterad utveckling.
+    
+            </p>
+
+            <div class="home-actions">
+                <button id="lia-toggle-btn" class="btn lia-toggle-btn"><i class="fa-solid fa-diamond" style="color:#ff00ff;margin-right:0.4rem;font-size:0.7em;"></i> Läs om min LIA</button>
+                <a class="btn lia-toggle-btn claude-cert-btn" data-page="certificates" data-nav="skills"><i class="fa-solid fa-award" style="margin-right:0.4rem;"></i> Se mina Claude-certifikat</a>
             </div>
         </div>
-        <div class="home-img">
-        <img src="images/cv.jpg" alt="Profilbild på Aygen">
-        <div class="home-socials">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Min LinkedIn-profil" title="LinkedIn">
-                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-            </a>
-            <a href="https://github.com/AigennA" target="_blank" rel="noopener" aria-label="Min GitHub-profil" title="GitHub">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-            </a>
-        </div>
+
+        <aside class="profile-card" aria-label="Profil">
+            <img src="images/cv.jpg" alt="Profilbild på Aygen" class="profile-photo">
+            <div class="profile-name">Aygen Ömur Mehmethan</div>
+            <div class="profile-role">Studerande systemutvecklare · TUC Yrkeshögskola</div>
+            <ul class="profile-facts">
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Linköping, Sverige</span></li>
+                <li><i class="fa-regular fa-calendar" aria-hidden="true"></i><span><strong>LIA-perioder:</strong><br>30 mars – 5 juni 2026<br>14 dec 2026 – 28 maj 2027<br><small>LIA 2 kan även börja 10 jan 2027 (efter jullovet)</small></span></li>
+                <li><i class="fa-regular fa-file-lines" aria-hidden="true"></i><span><strong>Examensarbete:</strong><br>14 dec 2026 – 30 apr 2027</span></li>
+            </ul>
+            <div class="profile-chips">
+                <span>.NET</span><span>JavaScript</span><span>MongoDB</span><span>Claude Code</span>
+            </div>
+            <div class="profile-actions">
+                <a class="profile-contact" data-page="contact" href="#contact">Kontakta mig</a>
+                <a class="profile-social" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Min LinkedIn-profil" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a class="profile-social" href="https://github.com/AigennA" target="_blank" rel="noopener" aria-label="Min GitHub-profil" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </aside>
     </div>
 
     <div class="home-content">
-        <h2><span class="hej-color">Hej,</span> Välkommen till min <span>portfolio</span></h2><br>
-       <!-- <h3>Systemutvecklare student</h3>-->
-
-        <p>
-           Jag studerar till systemutvecklare med inriktning .NET på TUC Yrkeshögskola i Linköping. Jag har genomfört min LIA hos Activator som fullstack-utvecklare med projektet Moverot. Jag har 14 certifikat från Anthropic Academy, bland annat Claude Code in Action och Model Context Protocol, och arbetar aktivt med AI-assisterad utveckling.
-
-        </p>
-
-        <button id="lia-toggle-btn" class="btn lia-toggle-btn"><i class="fa-solid fa-diamond" style="color:#ff00ff;margin-right:0.4rem;font-size:0.7em;"></i> Läs om min LIA</button>
-        <a class="btn lia-toggle-btn claude-cert-btn" data-page="certificates" data-nav="skills"><i class="fa-solid fa-award" style="margin-right:0.4rem;"></i> Se mina Claude-certifikat</a>
         <div id="lia-expand" class="lia-expand">
             <div class="lia-expand-inner">
                 <img src="images/activator.png" alt="LIA hos Activator – Moverot" class="lia-expand-photo">
@@ -170,8 +180,6 @@ Välkommen att utforska!</code></pre>
 </div>
 
 </div>
-
-    </div>
 
 </section>
 
@@ -511,6 +519,6 @@ Välkommen att utforska!</code></pre>
     </div>
 </footer>
 
-<script src="script.js?v=20261111j"></script>
+<script src="script.js?v=20261111m"></script>
 </body>
 </html>
