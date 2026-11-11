@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio – Aygen</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20261111t">
-    <link rel="stylesheet" href="wild-font.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <!-- Icons and web fonts load without blocking the first paint -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="style.css?v=20261111u">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
     <!-- Umami: cookieless visitor statistics (countries, cities, pages) -->
     <!-- Open the site once with ?notrack to stop counting your own visits in that browser, ?track to undo -->
     <script>
@@ -23,17 +29,18 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main">Hoppa till innehållet</a>
 
 <header>
-    <a class="logo" href="#" aria-label="Aygen Ömur Mehmethan – till startsidan">AÖM</a>
+    <a class="logo" href="#" aria-label="AÖM – Aygen Ömur Mehmethan, till startsidan">AÖM</a>
 
     <nav id="main-nav" aria-label="Huvudmeny">
-        <a class="active" data-page="home">Hem</a>
-        <a data-page="projects">Projekt</a>
-        <a data-page="skills">Kompetenser</a>
-        <a data-page="education">Utbildning</a>
-        <a data-page="experience">Erfarenhet</a>
-        <a data-page="contact">Kontakt</a>
+        <a class="active" href="#home" data-page="home">Hem</a>
+        <a href="#projects" data-page="projects">Projekt</a>
+        <a href="#skills" data-page="skills">Kompetenser</a>
+        <a href="#education" data-page="education">Utbildning</a>
+        <a href="#experience" data-page="experience">Erfarenhet</a>
+        <a href="#contact" data-page="contact">Kontakt</a>
     </nav>
 
     <a class="lia-pill" data-page="contact" href="#contact">
@@ -44,10 +51,12 @@
     <button type="button" id="menu-icon" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav" title="Öppna meny">&#8230;</button>
 </header>
 
+<main id="main">
+
 <section id="home" class="Home active">
     <div class="hero">
         <div class="hero-text">
-            <h2 class="hero-eyebrow"><span class="hej-color">Hej,</span> Välkommen till min <span>portfolio</span></h2>
+            <p class="hero-eyebrow"><span class="hej-color">Hej,</span> Välkommen till min <span>portfolio</span></p>
             <h1 class="hero-title">Systemutvecklare .NET med fokus på fullstack och AI<span class="hero-dot">.</span></h1>
             <div class="hero-bar" aria-hidden="true"></div>
             <p>
@@ -57,12 +66,12 @@
 
             <div class="home-actions">
                 <button id="lia-toggle-btn" class="btn lia-toggle-btn"><i class="fa-solid fa-diamond" style="color:#ff00ff;margin-right:0.4rem;font-size:0.7em;"></i> Läs om min LIA</button>
-                <a class="btn lia-toggle-btn claude-cert-btn" data-page="certificates" data-nav="skills"><i class="fa-solid fa-award" style="margin-right:0.4rem;"></i> Se mina Claude-certifikat</a>
+                <a class="btn lia-toggle-btn claude-cert-btn" href="#certificates" data-page="certificates" data-nav="skills"><i class="fa-solid fa-award" style="margin-right:0.4rem;"></i> Se mina Claude-certifikat</a>
             </div>
         </div>
 
         <aside class="profile-card" aria-label="Profil">
-            <img src="images/cv.jpg" alt="Profilbild på Aygen" class="profile-photo">
+            <img src="images/cv.webp" alt="Profilbild på Aygen" class="profile-photo" width="112" height="112" fetchpriority="high">
             <div class="profile-name">Aygen Ömur Mehmethan</div>
             <div class="profile-role">Studerande systemutvecklare · TUC Yrkeshögskola</div>
             <ul class="profile-facts">
@@ -84,8 +93,8 @@
     <div class="home-content">
         <div id="lia-expand" class="lia-expand">
             <div class="lia-expand-inner">
-                <img src="images/activator.png" alt="LIA hos Activator – Moverot" class="lia-expand-photo">
-                <h3>LIA – Activator, Linköping</h3>
+                <img src="images/activator.webp" alt="LIA hos Activator – Moverot" class="lia-expand-photo" width="1000" height="667" loading="lazy" decoding="async">
+                <h2 class="lia-expand-title">LIA – Activator, Linköping</h2>
                 <p>Under min första LIA-period arbetar jag som fullstack-utvecklare och testare hos Activator. Jag jobbar med projektet Moverot – en hälso- och aktivitetsapp tillgänglig på iOS, Android och webb. Jag arbetar med både frontend och backend med tekniker som MongoDB och ABP Framework i riktiga applikationer med riktig data.</p>
                 <p>Jag testar applikationer i staging, produktion och lokala miljöer – både som användare och kodbaserat. Vi arbetar agilt med daglig Scrum och DevOps. Jag har även deltagit i kundmöten och varit med och firat releaser tillsammans med teamet.</p>
                 <p><a href="https://moverot.se" target="_blank" rel="noopener" class="contact-email">moverot.se</a></p>
@@ -105,19 +114,19 @@
 <div class="video-card" id="moverot-home-card" style="cursor:pointer;">
     <div class="video-desc">LIA – Activator</div>
     <div class="video-title">Moverot</div>
-    <img src="images/moverot.png" alt="Moverot app" class="video-embed home-project-img">
+    <img src="images/moverot.webp" alt="Moverot app" class="video-embed home-project-img" width="900" height="629" loading="lazy" decoding="async">
 </div>
 
 <div class="video-card" id="prenumerationskollen-home-card" style="cursor:pointer;">
     <div class="video-desc">Egenarbete Mobilapp</div>
     <div class="video-title">Prenumerationskollen</div>
-    <img src="images/projects/prenumerationskollen.png" alt="Prenumerationskollen app" class="video-embed home-project-img">
+    <img src="images/projects/prenumerationskollen.png" alt="Prenumerationskollen app" class="video-embed home-project-img" width="342" height="605" loading="lazy" decoding="async">
 </div>
 
 <div class="video-card">
     <div class="video-desc">Skolarbete AI-Chatbot</div>
     <div class="video-title">Rocky</div>
-    <iframe
+    <iframe loading="lazy"
         src="https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=rocky_ukwwnt&profile=cld-default"
         width="100%"
         height="100%"
@@ -132,13 +141,13 @@
 <div class="video-card" id="cafe-blixten-home-card" style="cursor:pointer;">
     <div class="video-desc">Skolarbete Webbplats</div>
     <div class="video-title">Café Blixten</div>
-    <img src="images/projects/cafe-blixten-cover.jpg" alt="Café Blixten webbplats" class="video-embed home-project-img">
+    <img src="images/projects/cafe-blixten-cover.jpg" alt="Café Blixten webbplats" class="video-embed home-project-img" width="800" height="999" loading="lazy" decoding="async">
 </div>
 
 <div class="video-card">
     <div class="video-desc">Skolarbete (Grupp)</div>
     <div class="video-title">Gala Emporium</div>
-    <iframe
+    <iframe loading="lazy"
         src="https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=gala-emporium-housetech_tz8aqe&profile=cld-default"
         width="100%"
         height="100%"
@@ -153,7 +162,7 @@
 <div class="video-card">
     <div class="video-desc">Egenarbete E-Handel</div>
     <div class="video-title">Techvora</div>
-    <iframe
+    <iframe loading="lazy"
         src="https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=techvora_dagryt&profile=cld-default"
         width="100%"
         height="100%"
@@ -363,7 +372,7 @@ Välkommen att utforska!</code></pre>
         </p>
 
         <article class="experience-card experience-feature">
-            <img src="images/activator.png" alt="LIA hos Activator – Moverot" class="experience-photo">
+            <img src="images/activator.webp" alt="LIA hos Activator – Moverot" class="experience-photo" width="1000" height="667" loading="lazy" decoding="async">
             <div class="experience-info">
                 <span class="badge badge-coral">Fullstack-utvecklare &amp; testare · 30 mars – 5 juni 2026</span>
                 <h2>LIA – Activator, Linköping</h2>
@@ -382,7 +391,7 @@ Välkommen att utforska!</code></pre>
                 </div>
             </article>
             <article class="experience-card">
-                <img src="images/linkedinn.jpg" alt="Visual Merchandiser" class="experience-photo small">
+                <img src="images/linkedinn.jpg" alt="Visual Merchandiser" class="experience-photo small" width="64" height="64" loading="lazy" decoding="async">
                 <div class="experience-info">
                     <span class="badge">Visual Merchandiser</span>
                     <h2>Dekoratör / Butikskommunikatör</h2>
@@ -537,6 +546,8 @@ Välkommen att utforska!</code></pre>
 
 
 
+</main>
+
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-text">
@@ -546,6 +557,6 @@ Välkommen att utforska!</code></pre>
     </div>
 </footer>
 
-<script src="script.js?v=20261111t"></script>
+<script src="script.js?v=20261111u"></script>
 </body>
 </html>

@@ -166,7 +166,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 {
                     title: "LisTo",
                     type: "image",
-                    src: "images/projects/listo.png",
+                    src: "images/projects/listo.webp",
                     description: "Offline inköpslista för Android byggd med Kotlin och Jetpack Compose. Ingen backend – all data sparas lokalt med Room. Funktioner: listor med kategorier, budget, kalender med påminnelser, historik, delning och stöd för tre språk. Kommer snart till Google Play, därefter även till iOS."
                 },
                 {
@@ -178,7 +178,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 {
                     title: "Moverot (LIA Projekt)",
                     type: "image",
-                    src: "images/activator.png",
+                    src: "images/activator.webp",
                     description: "Under min LIA hos Activator arbetar jag som fullstack-utvecklare med projektet Moverot – en hälso- och aktivitetsapp för iOS, Android och webb. Jag jobbar med MongoDB, ABP Framework, frontend och backend i en agil miljö med Scrum och DevOps.",
                     links: {
                         live: "https://moverot.se",
@@ -209,7 +209,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                         {
                             title: "Våra Bilar – Galleri",
                             type: "image",
-                            src: "images/projects/varabilar1.png",
+                            src: "images/projects/varabilar1.webp",
                             description: "Bilgalleri med filtrering och sökfunktion. Användaren kan bläddra bland premium-fordon och se detaljer."
                         }
                     ]
@@ -237,14 +237,14 @@ window.scrollTo({ top: 0, behavior: "instant" });
                             title: "Aktuellt",
                             type: "image",
                             wide: true,
-                            src: "images/projects/cafe-blixten-aktuellt.png",
+                            src: "images/projects/cafe-blixten-aktuellt.webp",
                             description: "Webbplats för Café Blixten i Linköping, byggd i Umbraco CMS och SCSS som skolprojekt. Sidan Aktuellt visar nyheter, kommande evenemang och veckans fika som kort med bild, etikett och datum."
                         },
                         {
                             title: "Hitta oss",
                             type: "image",
                             wide: true,
-                            src: "images/projects/cafe-blixten-hitta-oss.png",
+                            src: "images/projects/cafe-blixten-hitta-oss.webp",
                             description: "Adress, inbäddad karta, knapp för vägbeskrivning och tips om buss, parkering och ingång."
                         },
                         {
@@ -287,7 +287,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
         {
             title: "LIA Fullstack",
             type: "image",
-            src: "images/activator.png",
+            src: "images/activator.webp",
             description: "Under min LIA hos Activator arbetar jag som fullstack-utvecklare med projektet Moverot – en hälso- och aktivitetsapp för iOS, Android och webb. Jag jobbar med MongoDB, ABP Framework, frontend och backend i en agil miljö med Scrum och DevOps.",
             links: {
                 live: "https://moverot.se",
@@ -385,7 +385,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                                     ${child.children.map(proj =>
                                         `<div class="video-card">
                                             <div class="video-title">${proj.title}</div>
-                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" style="max-width:${proj.wide ? "100%" : "320px"};width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
+                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" loading="lazy" decoding="async" style="max-width:${proj.wide ? "100%" : "320px"};width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
                                             <p>${proj.description}</p>
                                             ${proj.links ? `
                                             <div class="project-links">
@@ -415,7 +415,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
             <div class="project-detail">
                 ${
                     project.type === "image"
-                        ? `<img src="${project.src}" alt="${project.title}">`
+                        ? `<img src="${project.src}" alt="${project.title}" loading="lazy" decoding="async">`
                         : `<video controls src="${project.src}"></video>`
                 }
                 <p>${project.description}</p>
