@@ -300,7 +300,7 @@
 
 .footer-text {
     font-size: 1rem;
-    color: #d4a847;
+    color: #ede8df;
     font-family: 'Playfair Display', 'DM Sans', serif;
     font-weight: 600;
     letter-spacing: 0.01em;
@@ -578,7 +578,7 @@ p,
 li {
     font-size: 1.05rem;
     line-height: 1.75;
-    color: #cdc5b4;
+    color: #ede8df;
 }
 
 ul {
@@ -635,7 +635,7 @@ section h2 {
     line-height: 1.1;
 }
 .contact-email {
-    color: #d4a847;
+    color: #ede8df;
     text-decoration: none;
     font-style: normal;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -671,7 +671,8 @@ section h2 {
     }
 }
 
-span {
+/* Gold accent word in headings, e.g. "portfolio" on the home page */
+section h2 span {
     color: #d4a847;
 }
 
@@ -807,7 +808,7 @@ span {
 
 .project-content p {
     font-size: 1.25rem;
-    color: #cdc5b4;
+    color: #ede8df;
     line-height: 1.7;
     opacity: 0.9;
 }
@@ -1097,7 +1098,7 @@ span {
 .form-subtitle {
     font-family: 'DM Sans', sans-serif;
     font-size: 1.1rem;
-    color: #cdc5b4;
+    color: #ede8df;
     opacity: 0.85;
     line-height: 1.6;
 }
