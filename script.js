@@ -301,19 +301,23 @@ window.scrollTo({ top: 0, behavior: "instant" });
         window.scrollTo(0, 0);
     });
 
-    document.getElementById("prenumerationskollen-home-card")?.addEventListener("click", function() {
+    // Homepage cards that open a gallery inside a project category
+    function openProjectGallery(categoryTitle, childTitle) {
         sections.forEach(s => s.classList.remove("active"));
         document.getElementById("projects")?.classList.add("active");
         document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
         projectView.style.display = "block";
-        const mobilappar = projects.find(p => p.title === "Mobilappar");
-        if (mobilappar) {
-            showProject(mobilappar);
-            const idx = mobilappar.children.indexOf(prenumerationskollen);
+        const category = projects.find(p => p.title === categoryTitle);
+        if (category) {
+            showProject(category);
+            const idx = category.children.findIndex(c => c.title === childTitle);
             document.querySelector(`.project-list button[data-child-index="${idx}"]`)?.click();
         }
         window.scrollTo(0, 0);
-    });
+    }
+
+    document.getElementById("prenumerationskollen-home-card")?.addEventListener("click", () => openProjectGallery("Mobilappar", "Prenumerationskollen"));
+    document.getElementById("cafe-blixten-home-card")?.addEventListener("click", () => openProjectGallery("Skolarbete", "Café Blixten"));
 
     function showProjectsOverview() {
         projectView.style.display = "block";
