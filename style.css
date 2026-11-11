@@ -11,30 +11,30 @@
 .lia-flag-pole {
     width: 4px;
     height: 55px;
-    background: linear-gradient(180deg, #d4a847 0%, #8b6914 100%);
+    background: linear-gradient(180deg, #C2412A 0%, #D9502F 100%);
     border-radius: 2px;
     margin-right: 0.15rem;
 }
 .lia-flag-body {
     min-width: 155px;
-    background: rgba(30, 24, 16, 0.94);
+    background: #FFFFFF;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    color: #ede8df;
-    font-family: 'DM Sans', sans-serif;
+    color: #3A3150;
+    font-family: 'Inter', sans-serif;
     font-size: 0.82rem;
     font-weight: 500;
     line-height: 1.45;
     border-radius: 0 0.5rem 0.5rem 0.15rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(35, 28, 58, 0.12);
     padding: 0.5rem 0.7rem;
-    border: 1px solid rgba(212, 168, 71, 0.25);
+    border: 1px solid rgba(194, 65, 42, 0.25);
     animation: flag-wave-slow 5s ease-in-out infinite;
     transform-origin: left center;
     position: relative;
 }
 .lia-flag-body strong {
-    color: #d4a847;
+    color: #C2412A;
     font-size: 0.75rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -52,10 +52,13 @@
     100% { transform: rotateZ(-0.5deg); }
 }
 @media (max-width: 700px) {
+    /* On phones the box sits in the page flow instead of floating over content */
     .lia-flag-right {
-        top: 5.5rem;
-        right: 0.3rem;
-        max-width: 50vw;
+        position: static;
+        justify-content: center;
+        max-width: none;
+        margin: 0 auto 1.2rem;
+        pointer-events: auto;
     }
     .lia-flag-body {
         min-width: 0;
@@ -82,8 +85,8 @@
 .upcoming-courses table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(255,255,255,0.01);
-    color: #ede8df;
+    background: rgba(35, 28, 58, 0.01);
+    color: #3A3150;
     font-size: 1.08rem;
 }
 .upcoming-courses th, .upcoming-courses td {
@@ -92,7 +95,7 @@
     text-align: left;
 }
 .upcoming-courses th {
-    color: #00c853;
+    color: #1F7A50;
     font-weight: 700;
     font-size: 1.1rem;
     background: none;
@@ -128,8 +131,8 @@
 }
 .project-group-title {
     font-size: 1.3rem;
-    color: #d4a847;
-    font-family: 'DM Sans', 'Playfair Display', sans-serif;
+    color: #C2412A;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     margin-bottom: 1.1rem;
     letter-spacing: 0.02em;
@@ -144,14 +147,14 @@
 }
 .projects-overview-btn {
     font-size: 1.05rem;
-    font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(135deg, #d4a847, #8b6914);
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #C2412A, #D9502F);
     color: #0a0a0a !important;
     text-shadow: none !important;
     border: none;
     border-radius: 0.6rem;
     padding: 1rem 2.5rem;
-    box-shadow: 0 2px 12px rgba(212,168,71,0.2);
+    box-shadow: 0 2px 12px rgba(194, 65, 42, 0.2);
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 600;
@@ -162,8 +165,8 @@
 }
 .projects-overview-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(212,168,71,0.35);
-    background: linear-gradient(135deg, #d4af37, #d4a847);
+    box-shadow: 0 6px 24px rgba(194, 65, 42, 0.35);
+    background: linear-gradient(135deg, #F26B4F, #C2412A);
     color: #0a0a0a !important;
 }
 @media (max-width: 700px) {
@@ -180,7 +183,7 @@
     max-width: 480px;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+    box-shadow: 0 6px 24px rgba(35, 28, 58, 0.12);
 }
 .experience-photo.small {
     width: 56px;
@@ -193,14 +196,14 @@
     margin-bottom: 1.5rem;
     padding: 1.2rem;
     padding-bottom: 1.5rem;
-    background: rgba(30, 24, 16, 0.45);
-    border: 1px solid rgba(212, 168, 71, 0.12);
+    background: #FFFFFF;
+    border: 1px solid rgba(194, 65, 42, 0.12);
     border-radius: 0.8rem;
     transition: border-color 0.3s ease;
 }
 .experience-card:hover {
-    border-color: rgba(224, 191, 106, 0.25);
-    box-shadow: 0 4px 20px rgba(224, 191, 106, 0.06);
+    border-color: rgba(242, 107, 79, 0.25);
+    box-shadow: 0 4px 20px rgba(242, 107, 79, 0.06);
 }
 .experience-card:last-of-type {
     border-bottom: none;
@@ -210,9 +213,9 @@
    ========================= */
 .video-desc {
     font-size: 0.8rem;
-    color: #ede8df;
+    color: #3A3150;
     margin-bottom: 0.18rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.01em;
     text-align: center;
 }
@@ -225,14 +228,9 @@
    HEJ COLOR (MATCH PORTFOLIO)
    ========================= */
 .hej-color {
-    background: linear-gradient(90deg, #d4a847, #f5f0e8, #d4a847);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #C2412A;
     font-weight: 600;
     font-family: inherit;
-    animation: logoFlow 10s ease-in-out infinite;
 }
 /* =========================
    HOME VIDEO CARD TITLES
@@ -246,8 +244,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(30, 24, 16, 0.65);
-    border: 1px solid rgba(212, 168, 71, 0.12);
+    background: #FFFFFF;
+    border: 1px solid rgba(194, 65, 42, 0.12);
     border-radius: 0.6rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     padding: 0.5rem 0.4rem 0.7rem 0.4rem;
@@ -255,14 +253,14 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .video-card:hover {
-    box-shadow: 0 12px 32px rgba(212,168,71,0.12);
-    border-color: rgba(224, 191, 106, 0.2);
+    box-shadow: 0 12px 32px rgba(194, 65, 42, 0.12);
+    border-color: rgba(242, 107, 79, 0.2);
 }
 .video-title {
-    font-family: 'Playfair Display', 'DM Sans', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #d4a847;
+    color: #C2412A;
     margin-bottom: 0.5rem;
     letter-spacing: 0.02em;
     text-shadow: 0 2px 8px rgba(11,19,32,0.18);
@@ -282,11 +280,11 @@
    ========================= */
 .site-footer {
     width: 100%;
-    background: rgba(18, 16, 13, 0.92);
+    background: #231C3A;
     padding: 1.5rem 0 0.5rem 0;
     margin-top: 3rem;
-    border-top: 1px solid rgba(212,168,71,0.15);
-    font-family: 'DM Sans', system-ui, sans-serif;
+    border-top: 1px solid rgba(194, 65, 42, 0.15);
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .footer-content {
@@ -299,8 +297,8 @@
 
 .footer-text {
     font-size: 1rem;
-    color: #ede8df;
-    font-family: 'Playfair Display', 'DM Sans', serif;
+    color: #FFF8F3;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
     letter-spacing: 0.01em;
     text-align: center;
@@ -335,10 +333,10 @@ html, body {
 }
 
 body {
-    font-family: 'DM Sans', system-ui, sans-serif;
-    color: #ede8df;
-    background-color: #12100d;
-    background-image: linear-gradient(rgba(18,16,13,0.92), rgba(26,20,14,0.93)), url('images/lia.jpg');
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #3A3150;
+    background-color: #FFF8F3;
+    background-image: none;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -356,10 +354,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(18, 16, 13, 0.85);
+    background: rgba(255, 248, 243, 0.92);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(212, 168, 71, 0.06);
+    border-bottom: 1px solid rgba(194, 65, 42, 0.06);
     z-index: 1000;
 }
 
@@ -367,39 +365,28 @@ header {
    LOGO
    ========================= */
 .logo {
-    font-family: 'Monoton', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     cursor: pointer;
-    background: linear-gradient(90deg, #d4a847, #f5f0e8, #d4a847);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: logoFlow 10s ease-in-out infinite;
     position: relative;
-    padding-bottom: 0.3rem;
+    display: inline-block;
+    background: #C2412A;
+    color: #FFF8F3;
+    border-radius: 10px 26px 10px 10px;
+    padding: 0.35rem 1.2rem 0.35rem 1rem;
+    line-height: 1.15;
+    box-shadow: 0 8px 20px rgba(194, 65, 42, 0.25);
+    text-transform: uppercase;
 }
 
 .logo::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, #d4a847, #f5f0e8, #d4a847);
-    background-size: 300%;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    -webkit-text-fill-color: initial;
-    animation: logoFlow 10s ease-in-out infinite;
-    border-radius: 1px;
-    display: block;
+    content: none;
 }
 
 .logo:hover {
-    filter: drop-shadow(0 0 12px rgba(212,168,71,0.6));
+    filter: drop-shadow(0 0 12px rgba(194, 65, 42, 0.6));
     transform: scale(1.03);
     transition: 0.3s ease;
 }
@@ -421,11 +408,11 @@ nav a {
     position: relative;
     margin-left: 2.5rem;
     font-size: 1.05rem;
-    color: #a89f8f;
+    color: #5E5670;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -438,20 +425,20 @@ nav a::after {
     bottom: -6px;
     width: 0;
     height: 2px;
-    background-color: #d4a847;
+    background-color: #C2412A;
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #e0bf6a;
+    color: #F26B4F;
 }
 nav a.active {
-    color: #d4a847;
+    color: #C2412A;
 }
 
 nav a:hover::after {
     width: 100%;
-    background-color: #e0bf6a;
+    background-color: #F26B4F;
 }
 nav a.active::after {
     width: 100%;
@@ -463,7 +450,7 @@ nav a.active::after {
 #menu-icon {
     display: none;
     font-size: 2.4rem;
-    color: #d4a847;
+    color: #C2412A;
     cursor: pointer;
     background: none;
     border: none;
@@ -477,7 +464,7 @@ nav a.active::after {
 }
 
 #menu-icon:active, #menu-icon:focus, #menu-icon:hover {
-    background: rgba(212, 168, 71, 0.1);
+    background: rgba(194, 65, 42, 0.1);
 }
 
 /* =========================
@@ -521,11 +508,45 @@ section.active {
     }
 }
 
+/* LinkedIn + GitHub buttons under the home photo */
+.home-img {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.home-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.home-socials a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #231C3A;
+    color: #FFF8F3;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.home-socials a:hover,
+.home-socials a:focus-visible {
+    background: #C2412A;
+    transform: translateY(-2px);
+}
+
 .home-img img {
     width: 220px;
     border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 30px rgba(224, 191, 106, 0.08);
-    border: 2px solid rgba(212, 168, 71, 0.2);
+    box-shadow: 0 8px 32px rgba(35, 28, 58, 0.12), 0 0 30px rgba(242, 107, 79, 0.08);
+    border: 2px solid rgba(194, 65, 42, 0.2);
 }
 
 .home-content,
@@ -547,10 +568,10 @@ section.active {
    TYPOGRAPHY
    ========================= */
 section h1 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 2.4rem;
     margin-bottom: 1.4rem;
-    color: #d4a847;
+    color: #231C3A;
     letter-spacing: -0.01em;
     font-weight: 600;
 }
@@ -569,7 +590,7 @@ section h1 {
 
 .home-content h3 {
     font-size: 1.6rem;
-    color: #b0a48e;
+    color: #5E5670;
     margin-bottom: 1.4rem;
 }
 
@@ -577,7 +598,7 @@ p,
 li {
     font-size: 1.05rem;
     line-height: 1.75;
-    color: #ede8df;
+    color: #3A3150;
 }
 
 ul {
@@ -587,9 +608,9 @@ ul {
 }
 
 section h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.5rem;
-    color: #f5f0e8;
+    color: #231C3A;
     font-weight: 600;
     letter-spacing: -0.01em;
     margin-bottom: 1rem;
@@ -599,7 +620,7 @@ section h2 {
 #certificates h2 {
     padding-top: 1.5rem;
     margin-top: 1.5rem;
-    border-top: 1.5px solid rgba(212,168,71,0.4);
+    border-top: 1.5px solid rgba(194, 65, 42, 0.4);
 }
 #skills h2:first-of-type,
 #certificates h2:first-of-type {
@@ -627,14 +648,14 @@ section h2 {
     content: '—';
     display: inline-block;
     margin-right: 0.5em;
-    color: #d4a847;
+    color: #C2412A;
     font-size: 0.9em;
     vertical-align: middle;
     position: static;
     line-height: 1.1;
 }
 .contact-email {
-    color: #ede8df;
+    color: #3A3150;
     text-decoration: none;
     font-style: normal;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -643,8 +664,8 @@ section h2 {
     white-space: nowrap;
 }
 .contact-email:hover {
-    color: #e0bf6a;
-    text-shadow: 0 0 12px rgba(224, 191, 106, 0.3);
+    color: #F26B4F;
+    text-shadow: 0 0 12px rgba(242, 107, 79, 0.3);
 }
 
 @media (max-width: 700px) {
@@ -672,7 +693,7 @@ section h2 {
 
 /* Gold accent word in headings, e.g. "portfolio" on the home page */
 section h2 span {
-    color: #d4a847;
+    color: #C2412A;
 }
 
     
@@ -684,17 +705,17 @@ section h2 span {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.9rem 2.5rem;
-    background: linear-gradient(135deg, #d4a847, #8b6914);
+    background: linear-gradient(135deg, #C2412A, #D9502F);
     border: none;
     border-radius: 0.6rem;
     color: #0a0a0a;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     letter-spacing: 0.03em;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 12px rgba(212, 168, 71, 0.2);
+    box-shadow: 0 2px 12px rgba(194, 65, 42, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -710,8 +731,8 @@ section h2 span {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(212, 168, 71, 0.35);
-    background: linear-gradient(135deg, #d4af37, #d4a847);
+    box-shadow: 0 6px 24px rgba(194, 65, 42, 0.35);
+    background: linear-gradient(135deg, #F26B4F, #C2412A);
     color: #0a0a0a;
 }
 
@@ -721,7 +742,7 @@ section h2 span {
 
 .btn:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(212, 168, 71, 0.25);
+    box-shadow: 0 2px 8px rgba(194, 65, 42, 0.25);
 }
 
 /* =========================
@@ -729,7 +750,7 @@ section h2 span {
    ========================= */
 .social-icons a {
     margin-right: 1.2rem;
-    color: #d4a847;
+    color: #C2412A;
     transition: color 0.2s;
 }
 .social-icons a i.fa-brands {
@@ -737,12 +758,12 @@ section h2 span {
     transition: font-size 0.2s, color 0.2s;
 }
 .social-icons a:hover i.fa-brands {
-    color: #e0bf6a;
+    color: #F26B4F;
     font-size: 3.1rem;
 }
 
 .social-icons a:hover {
-    color: #e0bf6a;
+    color: #F26B4F;
     font-size: 2.8rem;
 }
 
@@ -760,8 +781,8 @@ section h2 span {
    PROJECT CARD
    ========================= */
 .project-card {
-    background: rgba(30, 24, 16, 0.6);
-    border: 1px solid rgba(212, 168, 71, 0.12);
+    background: #FFFFFF;
+    border: 1px solid rgba(194, 65, 42, 0.12);
     border-radius: 0.8rem;
     overflow: hidden;
     cursor: pointer;
@@ -772,7 +793,7 @@ section h2 span {
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(212,168,71,0.15);
+    box-shadow: 0 12px 30px rgba(194, 65, 42, 0.15);
 }
 
 .project-card img {
@@ -797,17 +818,17 @@ section h2 span {
 }
 
 .project-content h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.4px;
     margin-bottom: 0.4rem;
-    color: #f9fafb;
+    color: #231C3A;
 }
 
 .project-content p {
     font-size: 1.25rem;
-    color: #ede8df;
+    color: #3A3150;
     line-height: 1.7;
     opacity: 0.9;
 }
@@ -853,12 +874,12 @@ section h2 span {
     padding: 0.8rem 1rem;
     margin: 0.4rem 0;
 
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 1.05rem;
     font-weight: 500;
 
-    color: #ede8df;
-    background: rgba(30, 24, 16, 0.3);
+    color: #3A3150;
+    background: #FFFFFF;
     border-left: 2px solid transparent;
     border-radius: 0.5rem;
 
@@ -867,8 +888,8 @@ section h2 span {
 }
 
 #project-view .project-list button:hover {
-    background: rgba(30, 24, 16, 0.6);
-    border-left: 2px solid #e0bf6a;
+    background: #FFFFFF;
+    border-left: 2px solid #F26B4F;
     transform: translateX(4px);
 }
 
@@ -883,16 +904,16 @@ section h2 span {
     all: unset;
     display: inline-block;
     margin-bottom: 1.2rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
-    color: #d4a847;
+    color: #C2412A;
     cursor: pointer;
     letter-spacing: 0.03em;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 .back-btn:hover {
-    color: #f5f0e8;
+    color: #231C3A;
     transform: translateX(-3px);
 }
 
@@ -901,7 +922,7 @@ section h2 span {
    ========================= */
 .video-embed {
     border-radius: 0.6rem;
-    border: 1px solid rgba(212, 168, 71, 0.08);
+    border: 1px solid rgba(194, 65, 42, 0.08);
 }
 
 /* Flex instead of grid so an unfilled last row stays centered */
@@ -961,14 +982,14 @@ section h2 span {
     width: 100%;
     border-radius: 1rem;
     object-fit: cover;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 12px 30px rgba(35, 28, 58, 0.12);
+    border: 1px solid rgba(35, 28, 58, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .home-video-grid video:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 45px rgba(212,168,71,0.25);
+    box-shadow: 0 18px 45px rgba(194, 65, 42, 0.25);
 }
 
 /* =========================
@@ -982,14 +1003,14 @@ section h2 span {
         top: 1.2rem;
         right: 2.5rem;
         margin: 0;
-        color: #d4a847;
+        color: #C2412A;
         background: none;
         border: none;
         outline: none;
         padding: 0.2em 0.7em;
         border-radius: 1.5em;
         transition: background 0.2s;
-        box-shadow: 0 2px 8px rgba(212,168,71,0.2);
+        box-shadow: 0 2px 8px rgba(194, 65, 42, 0.2);
         line-height: 1.1;
         text-align: center;
         z-index: 1100;
@@ -999,7 +1020,7 @@ section h2 span {
         position: absolute;
         top: 100%;
         right: 0;
-        background: rgba(18, 16, 13, 0.95);
+        background: rgba(255, 248, 243, 0.98);
         padding: 2rem;
         display: none;
     }
@@ -1076,17 +1097,12 @@ section h2 span {
 }
 
 .form-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
-    background: linear-gradient(90deg, #d4a847, #f5f0e8, #d4a847);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #231C3A;
     margin-bottom: 0.8rem;
-    letter-spacing: 0.02em;
-    animation: logoFlow 10s ease-in-out infinite;
+    letter-spacing: -0.01em;
 }
 
 @keyframes gradientShift {
@@ -1095,23 +1111,23 @@ section h2 span {
 }
 
 .form-subtitle {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
-    color: #ede8df;
+    color: #3A3150;
     opacity: 0.85;
     line-height: 1.6;
 }
 
 .premium-contact-form {
-    background: rgba(30, 24, 16, 0.5);
+    background: #FFFFFF;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(212, 168, 71, 0.15);
+    border: 1px solid rgba(194, 65, 42, 0.15);
     border-radius: 0.8rem;
     padding: 1.5rem 2rem;
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(212, 168, 71, 0.05) inset;
+        0 8px 32px rgba(35, 28, 58, 0.12),
+        0 0 0 1px rgba(194, 65, 42, 0.05) inset;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -1124,7 +1140,7 @@ section h2 span {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(135deg, #d4a847, transparent, #d4a847);
+    background: linear-gradient(135deg, #C2412A, transparent, #C2412A);
     border-radius: 0.8rem;
     opacity: 0;
     z-index: -1;
@@ -1136,10 +1152,10 @@ section h2 span {
 }
 
 .premium-contact-form:hover {
-    border-color: rgba(212, 168, 71, 0.3);
+    border-color: rgba(194, 65, 42, 0.3);
     box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(212, 168, 71, 0.15);
+        0 12px 40px rgba(35, 28, 58, 0.12),
+        0 0 30px rgba(194, 65, 42, 0.15);
 }
 
 .form-row {
@@ -1158,10 +1174,10 @@ section h2 span {
 }
 
 .form-field label {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #f9fafb;
+    color: #231C3A;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1169,19 +1185,19 @@ section h2 span {
 }
 
 .form-field label i {
-    color: #d4a847;
+    color: #C2412A;
     font-size: 1rem;
 }
 
 .form-field input,
 .form-field textarea {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     padding: 0.7rem 1rem;
-    background: rgba(30, 24, 16, 0.4);
-    border: 1px solid rgba(212, 168, 71, 0.12);
+    background: #FFFFFF;
+    border: 1px solid rgba(194, 65, 42, 0.12);
     border-radius: 0.5rem;
-    color: #ede8df;
+    color: #3A3150;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
@@ -1196,11 +1212,11 @@ section h2 span {
 .form-field input:focus,
 .form-field textarea:focus {
     outline: none;
-    border-color: #d4a847;
-    background: rgba(40, 32, 20, 0.6);
+    border-color: #C2412A;
+    background: #FFFFFF;
     box-shadow:
-        0 0 0 4px rgba(212, 168, 71, 0.1),
-        0 8px 24px rgba(212, 168, 71, 0.2);
+        0 0 0 4px rgba(194, 65, 42, 0.1),
+        0 8px 24px rgba(194, 65, 42, 0.2);
     transform: translateY(-1px);
 }
 
@@ -1210,7 +1226,7 @@ section h2 span {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #d4a847, #d4af37);
+    background: linear-gradient(90deg, #C2412A, #F26B4F);
     transition: width 0.4s ease;
     border-radius: 1rem;
 }
@@ -1228,11 +1244,11 @@ section h2 span {
 
 .premium-submit-btn {
     width: 100%;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
-    background: linear-gradient(135deg, #d4a847, #8b6914);
+    background: linear-gradient(135deg, #C2412A, #D9502F);
     color: #0a0a0a;
     border: none;
     border-radius: 0.6rem;
@@ -1245,7 +1261,7 @@ section h2 span {
     margin-top: 1rem;
     letter-spacing: 0.02em;
     box-shadow:
-        0 8px 24px rgba(212, 168, 71, 0.35),
+        0 8px 24px rgba(194, 65, 42, 0.35),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
@@ -1282,9 +1298,9 @@ section h2 span {
 .premium-submit-btn:hover {
     transform: translateY(-3px);
     box-shadow:
-        0 12px 36px rgba(212, 168, 71, 0.5),
-        0 0 40px rgba(212, 168, 71, 0.3);
-    background: linear-gradient(135deg, #d4af37, #d4a847);
+        0 12px 36px rgba(194, 65, 42, 0.5),
+        0 0 40px rgba(194, 65, 42, 0.3);
+    background: linear-gradient(135deg, #F26B4F, #C2412A);
 }
 
 .premium-submit-btn:hover .btn-glow {
@@ -1297,7 +1313,7 @@ section h2 span {
 
 .premium-submit-btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(212, 168, 71, 0.4);
+    box-shadow: 0 6px 20px rgba(194, 65, 42, 0.4);
 }
 
 .premium-submit-btn:disabled {
@@ -1307,7 +1323,7 @@ section h2 span {
 }
 
 .form-status {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.05rem;
     font-weight: 500;
     padding: 1.2rem 1.5rem;
@@ -1336,10 +1352,10 @@ section h2 span {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    background: rgba(212, 168, 71, 0.15);
-    color: #d4a847;
-    border: 2px solid rgba(212, 168, 71, 0.3);
-    box-shadow: 0 4px 20px rgba(212, 168, 71, 0.2);
+    background: rgba(194, 65, 42, 0.15);
+    color: #C2412A;
+    border: 2px solid rgba(194, 65, 42, 0.3);
+    box-shadow: 0 4px 20px rgba(194, 65, 42, 0.2);
 }
 
 .form-status.success::before {
@@ -1571,7 +1587,7 @@ section h2 span {
 .form-field input:focus-visible,
 .form-field textarea:focus-visible,
 .premium-submit-btn:focus-visible {
-    outline: 3px solid rgba(212, 168, 71, 0.5);
+    outline: 3px solid rgba(194, 65, 42, 0.5);
     outline-offset: 2px;
 }
 
@@ -1668,19 +1684,19 @@ section h2 span {
    ========================= */
 .lia-toggle-btn {
     margin-top: 1.2rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     padding: 0.7rem 2rem;
     border: none;
     border-radius: 0.6rem;
     color: #0a0a0a;
-    background: linear-gradient(135deg, #d4a847, #8b6914);
+    background: linear-gradient(135deg, #C2412A, #D9502F);
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    box-shadow: 0 2px 12px rgba(212,168,71,0.2);
+    box-shadow: 0 2px 12px rgba(194, 65, 42, 0.2);
 }
 .lia-toggle-btn i {
     display: inline-block;
@@ -1694,15 +1710,15 @@ section h2 span {
     animation: btn-text-pulse 3s ease-in-out infinite;
 }
 @keyframes btn-text-pulse {
-    0%   { opacity: 0.7; box-shadow: 0 2px 12px rgba(212,168,71,0.15); }
-    50%  { opacity: 1; box-shadow: 0 4px 20px rgba(212,168,71,0.45), 0 0 15px rgba(196,134,140,0.15); }
-    100% { opacity: 0.7; box-shadow: 0 2px 12px rgba(212,168,71,0.15); }
+    0%   { opacity: 0.7; box-shadow: 0 2px 12px rgba(194, 65, 42, 0.15); }
+    50%  { opacity: 1; box-shadow: 0 4px 20px rgba(194, 65, 42, 0.45), 0 0 15px rgba(196,134,140,0.15); }
+    100% { opacity: 0.7; box-shadow: 0 2px 12px rgba(194, 65, 42, 0.15); }
 }
 .lia-toggle-btn:hover {
-    background: linear-gradient(135deg, #d4af37, #d4a847);
+    background: linear-gradient(135deg, #F26B4F, #C2412A);
     color: #0a0a0a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(212,168,71,0.35);
+    box-shadow: 0 6px 24px rgba(194, 65, 42, 0.35);
 }
 /* Claude-orange variant av knappen, används för certifikaten på startsidan */
 .claude-cert-btn {
@@ -1731,21 +1747,21 @@ section h2 span {
     box-shadow: 0 6px 24px rgba(217,119,87,0.4);
 }
 button.lia-toggle-btn.active {
-    background: linear-gradient(135deg, #d4af37, #d4a847);
+    background: linear-gradient(135deg, #F26B4F, #C2412A);
     color: #0a0a0a !important;
     -webkit-text-fill-color: #0a0a0a;
 }
 /* "Läs om min LIA": dark button with white text and a thin gold border */
 #lia-toggle-btn,
 #lia-toggle-btn.active {
-    background: #1a1209;
-    color: #f5f0e8 !important;
-    -webkit-text-fill-color: #f5f0e8;
-    border: 1px solid rgba(212, 168, 71, 0.5);
+    background: #231C3A;
+    color: #FFF8F3 !important;
+    -webkit-text-fill-color: #FFF8F3;
+    border: 1px solid rgba(194, 65, 42, 0.5);
 }
 #lia-toggle-btn:hover {
     background: #261b0e;
-    border-color: rgba(212, 168, 71, 0.9);
+    border-color: rgba(194, 65, 42, 0.9);
 }
 .lia-expand {
     max-height: 0;
@@ -1760,26 +1776,26 @@ button.lia-toggle-btn.active {
     margin-top: 1.5rem;
 }
 .lia-expand-inner {
-    background: rgba(30, 24, 16, 0.5);
-    border: 1px solid rgba(212,168,71,0.2);
+    background: #FFFFFF;
+    border: 1px solid rgba(194, 65, 42, 0.2);
     border-radius: 1.2rem;
     padding: 1.5rem;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 32px rgba(35, 28, 58, 0.12);
 }
 .lia-expand-inner h3 {
-    font-family: 'Playfair Display', 'DM Sans', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #d4a847;
+    color: #C2412A;
     margin-bottom: 0.8rem;
     font-style: normal;
 }
 .lia-expand-inner p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #ede8df;
+    color: #3A3150;
     margin-bottom: 0.6rem;
 }
 .lia-expand-photo {
@@ -1787,7 +1803,7 @@ button.lia-toggle-btn.active {
     max-width: 420px;
     border-radius: 0.8rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    box-shadow: 0 4px 20px rgba(35, 28, 58, 0.12);
 }
 @media (max-width: 700px) {
     .lia-toggle-btn {
@@ -1819,12 +1835,12 @@ button.lia-toggle-btn.active {
 
 .portfolio-info .portfolio-info-code {
     margin: 0;
-    background-color: #1a1209;
+    background-color: #231C3A;
     color: #ffffff;
     padding: 1.2rem 1.5rem;
     border-radius: 0.75rem;
-    border: 1px solid rgba(212, 168, 71, 0.12);
-    font-family: 'DM Sans', monospace;
+    border: 1px solid rgba(194, 65, 42, 0.12);
+    font-family: 'Inter', monospace;
     font-size: 0.95rem;
     font-weight: 600;
     line-height: 1.6;
@@ -1849,14 +1865,14 @@ button.lia-toggle-btn.active {
     -webkit-overflow-scrolling: touch;
     margin: 1rem 0;
     border-radius: 0.8rem;
-    background: rgba(30, 24, 16, 0.45);
-    border: 1px solid rgba(212, 168, 71, 0.12);
+    background: #FFFFFF;
+    border: 1px solid rgba(194, 65, 42, 0.12);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .course-table-ongoing {
-    border-color: rgba(212, 168, 71, 0.3);
-    box-shadow: 0 4px 24px rgba(212, 168, 71, 0.08);
+    border-color: rgba(194, 65, 42, 0.3);
+    box-shadow: 0 4px 24px rgba(194, 65, 42, 0.08);
 }
 
 .course-table-upcoming {
@@ -1880,25 +1896,25 @@ button.lia-toggle-btn.active {
 .course-table th {
     text-align: left;
     padding: 0.9rem 1rem;
-    color: #00ff88;
+    color: #1F7A50;
     font-weight: 700;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background: rgba(0, 0, 0, 0.4);
-    border-bottom: 2px solid rgba(212, 168, 71, 0.2);
+    background: #FFE9DF;
+    border-bottom: 2px solid rgba(194, 65, 42, 0.2);
 }
 
 .course-table td {
     text-align: left;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid rgba(35, 28, 58, 0.05);
+    color: #3A3150;
     transition: background 0.2s;
 }
 
 .course-table tbody tr:hover {
-    background: rgba(212, 168, 71, 0.05);
+    background: rgba(194, 65, 42, 0.05);
 }
 
 .course-table tbody tr:last-child td {
@@ -1907,15 +1923,15 @@ button.lia-toggle-btn.active {
 
 .course-table td:first-child {
     font-weight: 500;
-    color: #fff;
+    color: #231C3A;
     min-width: 180px;
     white-space: normal;
 }
 
 .course-table td:nth-child(2) {
-    font-family: 'DM Sans', monospace;
+    font-family: 'Inter', monospace;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #5E5670;
     white-space: nowrap;
 }
 
@@ -1923,7 +1939,7 @@ button.lia-toggle-btn.active {
 .course-table th:last-child {
     text-align: center;
     font-weight: 600;
-    color: #00ff88;
+    color: #1F7A50;
 }
 
 @media (max-width: 600px) {
@@ -1943,8 +1959,8 @@ button.lia-toggle-btn.active {
         display: none;
     }
     .course-table tr {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(35, 28, 58, 0.03);
+        border: 1px solid rgba(35, 28, 58, 0.08);
         border-radius: 8px;
         padding: 0.75rem 0.9rem;
         margin-bottom: 0.6rem;
@@ -1957,7 +1973,7 @@ button.lia-toggle-btn.active {
         text-align: left;
     }
     .course-table td:first-child {
-        color: #00ff88;
+        color: #1F7A50;
         font-weight: 600;
         font-size: 0.95rem;
         margin-bottom: 0.3rem;
@@ -1965,14 +1981,14 @@ button.lia-toggle-btn.active {
     }
     .course-table td:nth-child(2)::before {
         content: "Löptid: ";
-        color: rgba(255, 255, 255, 0.55);
+        color: #5E5670;
     }
     .course-table td:last-child {
         text-align: left;
     }
     .course-table td:last-child::before {
         content: "Poäng: ";
-        color: rgba(255, 255, 255, 0.55);
+        color: #5E5670;
     }
 }
 
