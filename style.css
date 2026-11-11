@@ -1735,6 +1735,18 @@ button.lia-toggle-btn.active {
     color: #0a0a0a !important;
     -webkit-text-fill-color: #0a0a0a;
 }
+/* "Läs om min LIA": dark button with white text and a thin gold border */
+#lia-toggle-btn,
+#lia-toggle-btn.active {
+    background: #1a1209;
+    color: #f5f0e8 !important;
+    -webkit-text-fill-color: #f5f0e8;
+    border: 1px solid rgba(212, 168, 71, 0.5);
+}
+#lia-toggle-btn:hover {
+    background: #261b0e;
+    border-color: rgba(212, 168, 71, 0.9);
+}
 .lia-expand {
     max-height: 0;
     overflow: hidden;
