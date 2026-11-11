@@ -2857,3 +2857,14 @@ button#menu-icon:focus-visible {
         padding-top: 0.95rem;
     }
 }
+
+/* Short explanations of Swedish terms (LIA, exjobb) in the profile card */
+.profile-facts .term-note {
+    display: block;
+    margin-top: 0.35rem;
+    padding-left: 0.6rem;
+    border-left: 2px solid #FFB4A3;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: #E9E4F7;
+}
