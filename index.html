@@ -12,7 +12,7 @@
     <!-- Icons and web fonts load without blocking the first paint -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="style.css?v=20261111x">
+    <link rel="stylesheet" href="style.css?v=20261111y">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
@@ -47,6 +47,26 @@
         <span class="lia-pill-dot" aria-hidden="true"></span>
         LIA 2 från 14 dec 2026 eller 10 jan 2027
     </a>
+
+    <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch to English" title="English" lang="en">
+        <svg class="flag flag-en" viewBox="0 0 60 30" width="26" height="13" aria-hidden="true" focusable="false">
+            <clipPath id="uk-clip"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+            <clipPath id="uk-diag"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+            <g clip-path="url(#uk-clip)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-diag)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </g>
+        </svg>
+        <svg class="flag flag-sv" viewBox="0 0 16 10" width="21" height="13" aria-hidden="true" focusable="false" hidden>
+            <rect width="16" height="10" fill="#006AA7"/>
+            <rect x="5" width="2" height="10" fill="#FECC02"/>
+            <rect y="4" width="16" height="2" fill="#FECC02"/>
+        </svg>
+        <span class="lang-code" aria-hidden="true">EN</span>
+    </button>
 
     <button type="button" id="menu-icon" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav" title="Öppna meny">&#8230;</button>
 </header>
@@ -479,6 +499,7 @@ Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag ka
     </div>
 </footer>
 
-<script src="script.js?v=20261111x"></script>
+<script src="script.js?v=20261111y"></script>
+<script src="i18n.js?v=20261111y"></script>
 </body>
 </html>

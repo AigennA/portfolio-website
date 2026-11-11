@@ -3362,3 +3362,63 @@ button#menu-icon:focus-visible {
         padding: 1.4rem;
     }
 }
+
+
+/* =========================================================
+   Language switch (flag button in the header)
+   ========================================================= */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0 0.8rem;
+    margin-left: 1.2rem;
+    border-radius: 999px;
+    border: 1px solid #E5CFC4;
+    background: #FFFFFF;
+    color: #231C3A;
+    font: 700 0.8rem 'Inter', sans-serif;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.lang-toggle:hover {
+    border-color: #C2412A;
+    transform: translateY(-1px);
+}
+.lang-toggle:focus-visible {
+    outline: 3px solid #231C3A;
+    outline-offset: 3px;
+}
+.lang-toggle .flag {
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(35, 28, 58, 0.15);
+}
+.lang-toggle .flag[hidden] {
+    display: none;
+}
+@media (max-width: 900px) {
+    .lang-toggle {
+        margin-left: auto;
+        margin-right: 0.6rem;
+    }
+}
+@media (max-width: 900px) {
+    /* Flag and menu button sit side by side on the right of the header */
+    header {
+        display: flex;
+        align-items: center;
+    }
+    #menu-icon {
+        position: static;
+        flex-shrink: 0;
+    }
+    .lang-toggle {
+        margin-left: auto;
+        margin-right: 0.6rem;
+    }
+}
