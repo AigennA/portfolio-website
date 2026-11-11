@@ -234,7 +234,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                             type: "image",
                             wide: true,
                             src: "images/projects/cafe-blixten-aktuellt.png",
-                            description: "Webbplats för Café Blixten i Linköping, byggd som skolprojekt. Sidan Aktuellt visar nyheter, kommande evenemang och veckans fika som kort med bild, etikett och datum."
+                            description: "Webbplats för Café Blixten i Linköping, byggd i Umbraco CMS som skolprojekt. Sidan Aktuellt visar nyheter, kommande evenemang och veckans fika som kort med bild, etikett och datum."
                         },
                         {
                             title: "Hitta oss",
