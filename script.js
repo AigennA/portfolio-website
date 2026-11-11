@@ -224,6 +224,47 @@ window.scrollTo({ top: 0, behavior: "instant" });
             title: "Skolarbete",
             children: [
                 {
+                    title: "Café Blixten",
+                    type: "group",
+                    children: [
+                        {
+                            title: "Aktuellt",
+                            type: "image",
+                            wide: true,
+                            src: "images/projects/cafe-blixten-aktuellt.png",
+                            description: "Webbplats för Café Blixten i Linköping, byggd som skolprojekt. Sidan Aktuellt visar nyheter, kommande evenemang och veckans fika som kort med bild, etikett och datum."
+                        },
+                        {
+                            title: "Hitta oss",
+                            type: "image",
+                            wide: true,
+                            src: "images/projects/cafe-blixten-hitta-oss.png",
+                            description: "Adress, inbäddad karta, knapp för vägbeskrivning och tips om buss, parkering och ingång."
+                        },
+                        {
+                            title: "Galleri",
+                            type: "image",
+                            wide: true,
+                            src: "images/projects/cafe-blixten-galleri.webp",
+                            description: "Bildgalleri med en stor bild och mindre bilder bredvid."
+                        },
+                        {
+                            title: "Sökfunktion",
+                            type: "image",
+                            wide: true,
+                            src: "images/projects/cafe-blixten-sok.png",
+                            description: "Sökfält som visar träffar direkt medan man skriver."
+                        },
+                        {
+                            title: "Sidfot",
+                            type: "image",
+                            wide: true,
+                            src: "images/projects/cafe-blixten-footer.png",
+                            description: "Sidfot med öppettider, en indikator som visar om kaféet är öppet just nu, kontaktuppgifter, länkar och sociala medier."
+                        }
+                    ]
+                },
+                {
                     title: "Gala Emporium",
                     type: "video",
                     src: "https://res.cloudinary.com/dciixwu6v/video/upload/gala-emporium-housetech_tz8aqe.mp4",
@@ -334,7 +375,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                                     ${child.children.map(proj =>
                                         `<div class="video-card">
                                             <div class="video-title">${proj.title}</div>
-                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" style="max-width:320px;width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
+                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" style="max-width:${proj.wide ? "100%" : "320px"};width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
                                             <p>${proj.description}</p>
                                         </div>`
                                     ).join("")}
