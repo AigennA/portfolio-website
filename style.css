@@ -199,8 +199,8 @@
     transition: border-color 0.3s ease;
 }
 .experience-card:hover {
-    border-color: rgba(196, 134, 140, 0.25);
-    box-shadow: 0 4px 20px rgba(196, 134, 140, 0.06);
+    border-color: rgba(224, 191, 106, 0.25);
+    box-shadow: 0 4px 20px rgba(224, 191, 106, 0.06);
 }
 .experience-card:last-of-type {
     border-bottom: none;
@@ -210,7 +210,7 @@
    ========================= */
 .video-desc {
     font-size: 0.8rem;
-    color: #8899aa;
+    color: #a89f8f;
     opacity: 0.85;
     margin-bottom: 0.18rem;
     font-family: 'DM Sans', sans-serif;
@@ -257,7 +257,7 @@
 }
 .video-card:hover {
     box-shadow: 0 12px 32px rgba(212,168,71,0.12);
-    border-color: rgba(196, 134, 140, 0.2);
+    border-color: rgba(224, 191, 106, 0.2);
 }
 .video-title {
     font-family: 'Playfair Display', 'DM Sans', serif;
@@ -444,7 +444,7 @@ nav a::after {
 }
 
 nav a:hover {
-    color: #c4868c;
+    color: #e0bf6a;
 }
 nav a.active {
     color: #d4a847;
@@ -452,7 +452,7 @@ nav a.active {
 
 nav a:hover::after {
     width: 100%;
-    background-color: #c4868c;
+    background-color: #e0bf6a;
 }
 nav a.active::after {
     width: 100%;
@@ -525,7 +525,7 @@ section.active {
 .home-img img {
     width: 220px;
     border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 30px rgba(196, 134, 140, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 30px rgba(224, 191, 106, 0.08);
     border: 2px solid rgba(212, 168, 71, 0.2);
 }
 
@@ -644,8 +644,8 @@ section h2 {
     white-space: nowrap;
 }
 .contact-email:hover {
-    color: #c4868c;
-    text-shadow: 0 0 12px rgba(196, 134, 140, 0.3);
+    color: #e0bf6a;
+    text-shadow: 0 0 12px rgba(224, 191, 106, 0.3);
 }
 
 @media (max-width: 700px) {
@@ -738,12 +738,12 @@ section h2 span {
     transition: font-size 0.2s, color 0.2s;
 }
 .social-icons a:hover i.fa-brands {
-    color: #c4868c;
+    color: #e0bf6a;
     font-size: 3.1rem;
 }
 
 .social-icons a:hover {
-    color: #c4868c;
+    color: #e0bf6a;
     font-size: 2.8rem;
 }
 
@@ -869,7 +869,7 @@ section h2 span {
 
 #project-view .project-list button:hover {
     background: rgba(30, 24, 16, 0.6);
-    border-left: 2px solid #c4868c;
+    border-left: 2px solid #e0bf6a;
     transform: translateX(4px);
 }
 
@@ -1190,7 +1190,7 @@ section h2 span {
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-    color: rgba(203, 213, 245, 0.4);
+    color: rgba(168, 159, 143, 0.75);
     font-size: 1rem;
 }
 
