@@ -2932,3 +2932,433 @@ button#menu-icon:focus-visible {
     text-transform: uppercase;
     color: #C2412A;
 }
+
+/* =========================================================
+   Mockup parts: stats, project cards, filters, LIA block,
+   code box colours, footer, contact layout
+   ========================================================= */
+
+/* Stats strip */
+.stats-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.8rem 2.2rem;
+    background: #FFE9DF;
+    border-radius: 1.5rem;
+}
+.stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+.stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #231C3A;
+}
+.stat-label {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #3A3150;
+}
+
+/* Section heading on Hem */
+.section-head {
+    margin-bottom: 1.6rem;
+}
+.section-title {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #231C3A;
+}
+
+/* Project cards */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.6rem;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #F1DDD3;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    color: #231C3A;
+    text-decoration: none;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover,
+.project-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(35, 28, 58, 0.12);
+    color: #231C3A;
+}
+.project-card:focus-visible {
+    outline: 3px solid #231C3A;
+    outline-offset: 3px;
+}
+.project-card-media {
+    aspect-ratio: 4 / 3;
+    background: #231C3A;
+    overflow: hidden;
+}
+.project-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+.project-card-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: #E9E4F7;
+}
+.project-card-placeholder i {
+    font-size: 2.4rem;
+    color: #B9A8F4;
+}
+.project-card-body {
+    padding: 1.3rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+}
+.project-card-body h3 {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #231C3A;
+}
+.project-card-body p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #3A3150;
+}
+.project-card-tech {
+    margin-top: auto;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #231C3A;
+}
+.badge-peach { background: #FFE9DF; }
+.badge-mint { background: #D6F2E4; }
+.badge-lavender { background: #E3DBFF; }
+
+#home .projects-overview-btn-wrap {
+    margin: 2rem 0 0;
+}
+
+/* Projekt page: heading + filter tabs */
+.projects-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+.projects-head h1 {
+    margin: 0;
+}
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.filter-tab {
+    min-height: 44px;
+    padding: 0 1.1rem;
+    border-radius: 999px;
+    border: 1px solid #E5CFC4;
+    background: #FFFFFF;
+    color: #231C3A;
+    font: 500 0.95rem 'Inter', sans-serif;
+    cursor: pointer;
+}
+.filter-tab[aria-pressed="true"] {
+    background: #231C3A;
+    border-color: #231C3A;
+    color: #FFF8F3;
+    font-weight: 600;
+}
+.filter-tab:focus-visible {
+    outline: 3px solid #C2412A;
+    outline-offset: 2px;
+}
+#project-view {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* LIA block on Hem (always visible) */
+.lia-expand.lia-feature {
+    max-height: none;
+    opacity: 1;
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    background: #231C3A;
+    border-radius: 2rem;
+    overflow: hidden;
+    scroll-margin-top: 6rem;
+}
+.lia-feature-text {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    color: #FFF8F3;
+}
+.lia-feature-eyebrow {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFB4A3;
+}
+.lia-feature .lia-expand-title {
+    margin: 0;
+    font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+    color: #FFF8F3;
+}
+.lia-feature-text p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #E9E4F7;
+}
+.lia-feature-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 0.4rem;
+}
+.lia-link-outline {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 1.3rem;
+    border-radius: 0.8rem;
+    border: 1px solid #5B5277;
+    color: #FFF8F3;
+    font-weight: 600;
+    text-decoration: none;
+}
+.lia-link-outline:hover,
+.lia-link-outline:focus-visible {
+    border-color: #FFB4A3;
+    color: #FFF8F3;
+}
+.lia-feature-media {
+    background: #FFE2D3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+.lia-feature-media .lia-expand-photo {
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    border-radius: 1.2rem;
+}
+
+/* "Om min portfolio" box colours */
+.portfolio-info .portfolio-info-code {
+    font-family: 'Space Grotesk', ui-monospace, monospace;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    padding: 1.8rem 2rem;
+}
+.code-comment {
+    color: #B9A8F4;
+}
+.code-accent {
+    color: #FFB4A3;
+}
+
+/* Footer: name left, copyright right */
+.site-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.4rem 8% 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem 2rem;
+}
+.footer-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #FFF8F3;
+}
+.site-footer .footer-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #D9D2EE;
+}
+
+/* Kontakt: info left, form card right */
+#contact.active {
+    align-items: flex-start;
+}
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 3rem;
+    align-items: start;
+    text-align: left;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#contact .contact-info h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+#contact .contact-lead {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3A3150;
+}
+#contact .contact-email-line {
+    margin: 0;
+}
+#contact .contact-email {
+    color: #231C3A;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    word-break: break-all;
+}
+.contact-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+.contact-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 1.3rem;
+    border-radius: 0.9rem;
+    border: 1px solid #E5CFC4;
+    background: #FFFFFF;
+    color: #231C3A;
+    font-weight: 600;
+    text-decoration: none;
+}
+.contact-socials a:hover,
+.contact-socials a:focus-visible {
+    background: #231C3A;
+    color: #FFF8F3;
+}
+.contact-form-card {
+    background: #FFFFFF;
+    border: 1px solid #F1DDD3;
+    border-radius: 1.8rem;
+    padding: 2rem;
+}
+.contact-form-card .form-title {
+    text-align: left;
+    margin: 0 0 1rem;
+}
+.contact-form-card .premium-contact-form {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+.contact-form-card .premium-submit-btn {
+    background: #231C3A;
+}
+.contact-form-card .premium-submit-btn:hover {
+    background: #3A3157;
+}
+
+@media (max-width: 900px) {
+    .lia-expand.lia-feature,
+    .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .lia-feature-text {
+        padding: 2rem 1.5rem;
+    }
+    .stats-strip {
+        padding: 1.4rem;
+    }
+    .site-footer .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Kontakt: undo the old 560px centred column so the two-column layout fits */
+#contact.active .content.contact-layout {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+#contact.active {
+    align-items: flex-start;
+    padding-top: 7rem;
+}
+#contact .contact-lead,
+#contact .contact-info p {
+    text-align: left;
+    padding: 0;
+}
+#contact .contact-email {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+#contact .contact-socials a {
+    align-self: flex-start;
+}
+.contact-form-card .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+.contact-form-card .form-field input,
+.contact-form-card .form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (max-width: 600px) {
+    .contact-form-card .form-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .contact-form-card {
+        padding: 1.4rem;
+    }
+}

@@ -10,11 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
             showProjectsOverview();
             window.scrollTo(0, 0);
         });
+    // "Läs om min LIA" scrolls to the LIA block further down on Hem
     document.getElementById("lia-toggle-btn")?.addEventListener("click", function() {
-        const expand = document.getElementById("lia-expand");
-        expand.classList.toggle("open");
-        this.classList.toggle("active");
-        this.innerHTML = expand.classList.contains("open") ? "✕ Stäng" : '<span class="lia-btn-icon">👉</span> Läs om min LIA';
+        document.getElementById("lia-expand")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     const menuIcon = document.getElementById("menu-icon");
@@ -88,11 +86,6 @@ window.scrollTo({ top: 0, behavior: "instant" });
             nav.classList.remove("active");
             menuIcon.classList.remove("fa-xmark");
             document.getElementById("nav-overlay")?.remove();
-
-            const liaExpand = document.getElementById("lia-expand");
-            const liaBtn = document.getElementById("lia-toggle-btn");
-            if (liaExpand) { liaExpand.classList.remove("open"); }
-            if (liaBtn) { liaBtn.classList.remove("active"); liaBtn.innerHTML = '<span class="lia-btn-icon">👉</span> Läs om min LIA'; }
 
             projectView.innerHTML = "";
             projectView.style.display = "none";
@@ -322,23 +315,101 @@ window.scrollTo({ top: 0, behavior: "instant" });
         window.scrollTo(0, 0);
     }
 
+    // =========================================
+    // PROJECT CARDS (Hem + Projekt page)
+    // =========================================
+    // open: [category, project] opens that gallery/detail; ["LIA Fullstack"] opens the LIA page
+    const projectCards = [
+        { title: "Prenumerationskollen", cat: "Mobilappar", tag: "Egenarbete · Mobilapp", tone: "coral", img: "images/projects/prenumerationskollen.png", w: 342, h: 605,
+          desc: "Håll koll på dina prenumerationer: status, månadskostnad, betyg och totalt betalt. Kopplad till ett eget REST-API.", tech: "React Native · Expo · REST-API", open: ["Mobilappar", "Prenumerationskollen"], featured: true },
+        { title: "LisTo", cat: "Mobilappar", tag: "Mobilapp · Snart på Google Play", tone: "coral", img: "images/projects/listo.webp", w: 1200, h: 798,
+          desc: "Offline inköpslista med kategorier, budget, kalender med påminnelser, historik, delning och tre språk. Kommer snart till Google Play, därefter iOS.", tech: "Kotlin · Jetpack Compose · Room", open: ["Mobilappar", "LisTo"] },
+        { title: "Daily Affirmations", cat: "Mobilappar", tag: "Mobilapp", tone: "coral", img: "images/data.webp", w: 640, h: 360,
+          desc: "Dagliga positiva affirmationer med animationer. Under testning inför publicering på Google Play.", tech: "Expo · React Native · TypeScript", open: ["Mobilappar", "Daily Affirmations"] },
+        { title: "Moverot", cat: "LIA", tag: "LIA – Activator", tone: "mint", img: "images/moverot.webp", w: 900, h: 629,
+          desc: "Hälso- och aktivitetsapp för iOS, Android och webb. Fullstack-utveckling och testning i ett agilt team.", tech: "MongoDB · ABP Framework · Scrum", open: ["LIA Fullstack"], featured: true },
+        { title: "Car Dealer", cat: "AI-projekt", tag: "AI-projekt", tone: "lavender", img: "images/projects/car-dealer-hem.webp", w: 1500, h: 660,
+          desc: "Plattform för en bilhandlare med eget API. Senast: bokning av verkstad och besiktning, provkörning med QR-kod, Min bokning och status Såld/Reserverad. WCAG 2.2 AA och 300+ tester.", tech: "Next.js 16 · React 19 · .NET 10 Web API · SQL Server", open: ["AI-Projekt", "Car Dealer"], featured: true },
+        { title: "TechVora", cat: "AI-projekt", tag: "AI-projekt · E-handel", tone: "lavender", img: "images/projects/techvora.webp", w: 1000, h: 463,
+          desc: "E-handelsprojekt byggt med AI-verktyget Lovable.", tech: "Lovable · Live demo · GitHub", open: ["AI-Projekt", "E-Commerce TechVora"], featured: true },
+        { title: "Café Blixten", cat: "Skolarbete", tag: "Skolarbete · Webbplats", tone: "peach", img: "images/projects/cafe-blixten-cover.jpg", w: 800, h: 999,
+          desc: "Webbplats för ett kafé i Linköping byggd i Umbraco CMS och SCSS: aktuellt, galleri, karta, sökfunktion och öppettider.", tech: "Umbraco CMS · SCSS · .NET · Skolprojekt", open: ["Skolarbete", "Café Blixten"], featured: true },
+        { title: "Gala Emporium", cat: "Skolarbete", tag: "Skolarbete · Grupp", tone: "peach", img: "images/projects/house-tech.webp", w: 1000, h: 473,
+          desc: "Skolprojekt byggt i grupp – en SPA-sajt för evenemang och klubbar.", tech: "HTML · CSS · JavaScript · SPA", open: ["Skolarbete", "Gala Emporium"], featured: true },
+        { title: "Rocky", cat: "Skolarbete", tag: "Skolarbete · AI-chatbot", tone: "peach", img: "",
+          desc: "Skolarbete: AI-chatbot, visas som videodemo.", tech: "Videodemo", open: ["Skolarbete", "Rocky"] }
+    ];
+
+    function projectCardHTML(card, index) {
+        const media = card.img
+            ? `<img src="${card.img}" alt="Skärmbild av ${card.title}" width="${card.w}" height="${card.h}" loading="lazy" decoding="async">`
+            : `<div class="project-card-placeholder"><i class="fa-regular fa-circle-play" aria-hidden="true"></i><span>Videodemo</span></div>`;
+        return `<a href="#projects" class="project-card" data-card="${index}">
+                    <div class="project-card-media">${media}</div>
+                    <div class="project-card-body">
+                        <span class="badge badge-${card.tone}">${card.tag}</span>
+                        <h3>${card.title}</h3>
+                        <p>${card.desc}</p>
+                        <span class="project-card-tech">${card.tech}</span>
+                    </div>
+                </a>`;
+    }
+
+    function openProjectCard(card) {
+        if (card.open.length === 2) {
+            openProjectGallery(card.open[0], card.open[1]);
+        } else {
+            sections.forEach(s => s.classList.remove("active"));
+            document.getElementById("projects")?.classList.add("active");
+            document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+            projectView.style.display = "block";
+            const category = projects.find(p => p.title === card.open[0]);
+            if (category) showProject(category);
+            window.scrollTo(0, 0);
+        }
+        document.querySelector('nav a[data-page="projects"]')?.classList.add("active");
+    }
+
+    function renderProjectCards(container, list) {
+        if (!container) return;
+        container.innerHTML = list.map(card => projectCardHTML(card, projectCards.indexOf(card))).join("");
+        container.querySelectorAll(".project-card").forEach(el => {
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                openProjectCard(projectCards[el.dataset.card]);
+            });
+        });
+    }
+
+    renderProjectCards(document.getElementById("home-project-cards"), projectCards.filter(c => c.featured));
+
     document.getElementById("prenumerationskollen-home-card")?.addEventListener("click", () => openProjectGallery("Mobilappar", "Prenumerationskollen"));
     document.getElementById("cafe-blixten-home-card")?.addEventListener("click", () => openProjectGallery("Skolarbete", "Café Blixten"));
 
     function showProjectsOverview() {
         projectView.style.display = "block";
-        let fromHome = window.location.hash === "#fromHome";
+        const filters = ["Alla", "Mobilappar", "AI-projekt", "Skolarbete", "LIA"];
+        const count = f => f === "Alla" ? projectCards.length : projectCards.filter(c => c.cat === f).length;
         projectView.innerHTML = `
             <button class="back-btn" id="projects-back">← Tillbaka</button>
-            <h1>Projekt</h1>
-            <div class="project-list">
-                ${projects.map((p, i) =>
-                    `<button data-index="${i}">${p.title}</button>`
-                ).join("")}
+            <p class="page-eyebrow">Utvalda arbeten</p>
+            <div class="projects-head">
+                <h1>Projekt</h1>
+                <div class="filter-tabs" role="group" aria-label="Filtrera projekt">
+                    ${filters.map(f => `<button type="button" class="filter-tab" data-filter="${f}" aria-pressed="${f === "Alla"}">${f} (${count(f)})</button>`).join("")}
+                </div>
             </div>
+            <div id="all-project-cards" class="project-cards"></div>
         `;
-        document.querySelectorAll(".project-list button").forEach(btn => {
-            btn.onclick = () => showProject(projects[btn.dataset.index]);
+        const grid = document.getElementById("all-project-cards");
+        renderProjectCards(grid, projectCards);
+        projectView.querySelectorAll(".filter-tab").forEach(btn => {
+            btn.addEventListener("click", () => {
+                projectView.querySelectorAll(".filter-tab").forEach(b => b.setAttribute("aria-pressed", "false"));
+                btn.setAttribute("aria-pressed", "true");
+                const f = btn.dataset.filter;
+                renderProjectCards(grid, f === "Alla" ? projectCards : projectCards.filter(c => c.cat === f));
+            });
         });
         document.getElementById("projects-back").onclick = () => {
             sections.forEach(s => s.classList.remove("active"));

@@ -12,7 +12,7 @@
     <!-- Icons and web fonts load without blocking the first paint -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="style.css?v=20261111u">
+    <link rel="stylesheet" href="style.css?v=20261111v">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
@@ -90,105 +90,50 @@
         </aside>
     </div>
 
+    <div class="stats-strip" aria-label="Kort om mig">
+        <div class="stat"><span class="stat-num">14</span><span class="stat-label">Claude-certifikat från Anthropic Academy</span></div>
+        <div class="stat"><span class="stat-num">9</span><span class="stat-label">projekt – appar, webb och AI</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">LIA-perioder: Activator + LIA 2</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">språk – svenska, engelska, turkiska</span></div>
+    </div>
+
     <div class="home-content">
-        <div id="lia-expand" class="lia-expand">
-            <div class="lia-expand-inner">
-                <img src="images/activator.webp" alt="LIA hos Activator – Moverot" class="lia-expand-photo" width="1000" height="667" loading="lazy" decoding="async">
+        <div class="section-head">
+            <p class="page-eyebrow">Utvalda arbeten</p>
+            <h2 class="section-title">Projekt</h2>
+        </div>
+        <!-- Filled by script.js from the same project list as the Projekt page -->
+        <div id="home-project-cards" class="project-cards"></div>
+
+        <div class="projects-overview-btn-wrap">
+            <button id="projects-overview-btn" class="btn projects-overview-btn">Klicka för att se alla projekt</button>
+        </div>
+
+        <div id="lia-expand" class="lia-expand open lia-feature">
+            <div class="lia-feature-text">
+                <p class="lia-feature-eyebrow">LIA 1 · 30 mars – 5 juni 2026</p>
                 <h2 class="lia-expand-title">LIA – Activator, Linköping</h2>
                 <p>Under min första LIA-period arbetar jag som fullstack-utvecklare och testare hos Activator. Jag jobbar med projektet Moverot – en hälso- och aktivitetsapp tillgänglig på iOS, Android och webb. Jag arbetar med både frontend och backend med tekniker som MongoDB och ABP Framework i riktiga applikationer med riktig data.</p>
                 <p>Jag testar applikationer i staging, produktion och lokala miljöer – både som användare och kodbaserat. Vi arbetar agilt med daglig Scrum och DevOps. Jag har även deltagit i kundmöten och varit med och firat releaser tillsammans med teamet.</p>
-                <p><a href="https://moverot.se" target="_blank" rel="noopener" class="contact-email">moverot.se</a></p>
+                <div class="lia-feature-links">
+                    <a href="https://moverot.se" target="_blank" rel="noopener" class="btn">moverot.se</a>
+                    <a href="https://apps.apple.com/se/app/moverot/id6479749564" target="_blank" rel="noopener" class="lia-link-outline">iOS</a>
+                    <a href="https://play.google.com/store/apps/details?id=se.morotsverige.app" target="_blank" rel="noopener" class="lia-link-outline">Android</a>
+                </div>
+            </div>
+            <div class="lia-feature-media">
+                <img src="images/activator.webp" alt="LIA hos Activator – Moverot" class="lia-expand-photo" width="1000" height="667" loading="lazy" decoding="async">
             </div>
         </div>
 
-       <!--
-<a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
-   class="btn home-mail-btn">
-   Kontakta mig
-</a>
--->
-
-     <div class="home-video-grid">
-
-
-<div class="video-card" id="moverot-home-card" style="cursor:pointer;">
-    <div class="video-desc">LIA – Activator</div>
-    <div class="video-title">Moverot</div>
-    <img src="images/moverot.webp" alt="Moverot app" class="video-embed home-project-img" width="900" height="629" loading="lazy" decoding="async">
-</div>
-
-<div class="video-card" id="prenumerationskollen-home-card" style="cursor:pointer;">
-    <div class="video-desc">Egenarbete Mobilapp</div>
-    <div class="video-title">Prenumerationskollen</div>
-    <img src="images/projects/prenumerationskollen.png" alt="Prenumerationskollen app" class="video-embed home-project-img" width="342" height="605" loading="lazy" decoding="async">
-</div>
-
-<div class="video-card">
-    <div class="video-desc">Skolarbete AI-Chatbot</div>
-    <div class="video-title">Rocky</div>
-    <iframe loading="lazy"
-        src="https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=rocky_ukwwnt&profile=cld-default"
-        width="100%"
-        height="100%"
-        class="video-embed"
-        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-        allowfullscreen
-        frameborder="0"
-        title="Rocky video">
-    </iframe>
-</div>
-
-<div class="video-card" id="cafe-blixten-home-card" style="cursor:pointer;">
-    <div class="video-desc">Skolarbete Webbplats</div>
-    <div class="video-title">Café Blixten</div>
-    <img src="images/projects/cafe-blixten-cover.jpg" alt="Café Blixten webbplats" class="video-embed home-project-img" width="800" height="999" loading="lazy" decoding="async">
-</div>
-
-<div class="video-card">
-    <div class="video-desc">Skolarbete (Grupp)</div>
-    <div class="video-title">Gala Emporium</div>
-    <iframe loading="lazy"
-        src="https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=gala-emporium-housetech_tz8aqe&profile=cld-default"
-        width="100%"
-        height="100%"
-        class="video-embed"
-        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-        allowfullscreen
-        frameborder="0"
-        title="Gala Emporium video">
-    </iframe>
-</div>
-
-<div class="video-card">
-    <div class="video-desc">Egenarbete E-Handel</div>
-    <div class="video-title">Techvora</div>
-    <iframe loading="lazy"
-        src="https://player.cloudinary.com/embed/?cloud_name=dciixwu6v&public_id=techvora_dagryt&profile=cld-default"
-        width="100%"
-        height="100%"
-        class="video-embed"
-        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-        allowfullscreen
-        frameborder="0"
-        title="Techvora video">
-    </iframe>
-</div>
-
-</div>
-
-<div class="projects-overview-btn-wrap">
-    <button id="projects-overview-btn" class="btn projects-overview-btn">Klicka för att se alla projekt</button>
-</div>
-
-<!-- Portfolio Info: same column as the project cards so everything lines up -->
-<div class="portfolio-info">
-    <pre class="portfolio-info-code"><code>&lt;!-- Om min portfolio --&gt;
+        <!-- Portfolio Info -->
+        <div class="portfolio-info">
+            <pre class="portfolio-info-code"><code><span class="code-comment">&lt;!-- Om min portfolio --&gt;</span>
 Här kan du se ett urval av mina projekt, erfarenheter och kompetenser som systemutvecklare.
 Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag kan och vad jag har arbetat med.
-Välkommen att utforska!</code></pre>
-</div>
-
-</div>
+<span class="code-accent">Välkommen att utforska!</span></code></pre>
+        </div>
+    </div>
 
 </section>
 
@@ -440,107 +385,91 @@ Välkommen att utforska!</code></pre>
 </section>
 
 
-<section id="contact">
-    <div class="content">
-        <h1>Kontakt</h1>
-
-    
-
-        <div class="contact-form-wrapper">
-    <div class="form-header">
-            <p>
-            Kontakta mig gärna för LIA, praktik eller framtida möjligheter.
-        </p>
-
+<section id="contact" class="page-section">
+    <div class="content page-wide contact-layout">
+        <div class="contact-info">
+            <h1>Kontakt<span class="hero-dot">.</span></h1>
+            <p class="contact-lead">
+                Kontakta mig gärna för LIA, praktik eller framtida möjligheter.
+            </p>
         <p class="contact-email-line">
-            <a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
-                    aria-label="Skicka e-post till Aygen"
-                    title="Skicka e-post"
-                    class="contact-email">
-                    <span class="email-full">aygen.omur.mehmethan.syne25lin@edu.tucsweden.se</span>
-                    <span class="email-short">Skicka e-post</span>
+                <a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
+                        aria-label="Skicka e-post till Aygen"
+                        title="Skicka e-post"
+                        class="contact-email">
+                        <span class="email-full">aygen.omur.mehmethan.syne25lin@edu.tucsweden.se</span>
+                        <span class="email-short">Skicka e-post</span>
+                    </a>
+            </p>
+            <div class="contact-socials">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Besök min LinkedIn-profil" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
                 </a>
-        </p>
-        <h2 class="form-title">Skicka meddelande</h2>
-        <!-- <p class="form-subtitle">Kontakta mig gärna, jag återkommer så snart som möjligt.</p> -->
-    </div>
-    
-    <form id="contact-form" class="premium-contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="7869b5a3-2df8-43d8-84bd-dd07ce83b460">
-        <input type="hidden" name="subject" value="Nytt meddelande - Portfolio Website">
-        <input type="hidden" name="from_name" value="Portfolio Kontaktformulär">
-        
-        <div class="form-row">
-            <div class="form-field">
-                <label for="name">
-                    <i class="fa-solid fa-user"></i>
-                    Namn
-                </label>
-                <input type="text" id="name" name="name" required placeholder="Ditt namn" autocomplete="name">
-                <span class="field-focus-border"></span>
+                <a href="https://github.com/AigennA" target="_blank" rel="noopener" aria-label="Besök min GitHub-profil" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                </a>
             </div>
-            
-            <div class="form-field">
-                <label for="email">
-                    <i class="fa-solid fa-envelope"></i>
-                    E-post
-                </label>
-                <input type="email" id="email" name="email" required placeholder="din@email.se" autocomplete="email">
-                <span class="field-focus-border"></span>
-            </div>
-        </div>
-        
-        <div class="form-field">
-            <label for="subject">
-                <i class="fa-solid fa-tag"></i>
-                Ämne
-            </label>
-            <input type="text" id="subject" name="message_subject" placeholder="LIA, Jobbförslag, Fråga etc.">
-            <span class="field-focus-border"></span>
-        </div>
-        
-        <div class="form-field">
-            <label for="message">
-                <i class="fa-solid fa-message"></i>
-                Ditt meddelande
-            </label>
-            <textarea id="message" name="message" rows="4" required placeholder="Skriv ditt meddelande här..."></textarea>
-            <span class="field-focus-border"></span>
-        </div>
-        
-        <button type="submit" class="premium-submit-btn">
-            <span class="btn-text">
-                <i class="fa-solid fa-paper-plane"></i>
-                Skicka meddelande
-            </span>
-            <span class="btn-glow"></span>
-        </button>
-        
-        <div id="form-status" class="form-status"></div>
-    </form>
-</div>
-
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/"
-               target="_blank"
-               rel="noopener"
-               aria-label="Besök min LinkedIn-profil"
-               title="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-
-            <a href="https://github.com/AigennA"
-               target="_blank"
-               rel="noopener"
-               aria-label="Besök min GitHub-profil"
-               title="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
         <p class="contact-email-mobile">
-            <a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
-               class="contact-email">aygen.omur.mehmethan.syne25lin@edu.tucsweden.se</a>
-        </p>
+                <a href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se"
+                   class="contact-email">aygen.omur.mehmethan.syne25lin@edu.tucsweden.se</a>
+            </p>
+        </div>
+        <div class="contact-form-card">
+            <h2 class="form-title">Skicka meddelande</h2>
+            <form id="contact-form" class="premium-contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="7869b5a3-2df8-43d8-84bd-dd07ce83b460">
+                <input type="hidden" name="subject" value="Nytt meddelande - Portfolio Website">
+                <input type="hidden" name="from_name" value="Portfolio Kontaktformulär">
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name">
+                            <i class="fa-solid fa-user"></i>
+                            Namn
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="Ditt namn" autocomplete="name">
+                        <span class="field-focus-border"></span>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            E-post
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="din@email.se" autocomplete="email">
+                        <span class="field-focus-border"></span>
+                    </div>
+                </div>
+                
+                <div class="form-field">
+                    <label for="subject">
+                        <i class="fa-solid fa-tag"></i>
+                        Ämne
+                    </label>
+                    <input type="text" id="subject" name="message_subject" placeholder="LIA, Jobbförslag, Fråga etc.">
+                    <span class="field-focus-border"></span>
+                </div>
+                
+                <div class="form-field">
+                    <label for="message">
+                        <i class="fa-solid fa-message"></i>
+                        Ditt meddelande
+                    </label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Skriv ditt meddelande här..."></textarea>
+                    <span class="field-focus-border"></span>
+                </div>
+                
+                <button type="submit" class="premium-submit-btn">
+                    <span class="btn-text">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Skicka meddelande
+                    </span>
+                    <span class="btn-glow"></span>
+                </button>
+                
+                <div id="form-status" class="form-status"></div>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -550,13 +479,13 @@ Välkommen att utforska!</code></pre>
 
 <footer class="site-footer">
     <div class="footer-content">
+        <span class="footer-name">AYGEN ÖMUR MEHMETHAN</span>
         <div class="footer-text">
-            &copy; 2026 
-           <br> Allt innehåll är skyddat och får inte användas utan tillstånd.
+            &copy; 2026 · Allt innehåll är skyddat och får inte användas utan tillstånd.
         </div>
     </div>
 </footer>
 
-<script src="script.js?v=20261111u"></script>
+<script src="script.js?v=20261111v"></script>
 </body>
 </html>
