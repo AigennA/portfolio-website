@@ -3422,3 +3422,47 @@ button#menu-icon:focus-visible {
         margin-right: 0.6rem;
     }
 }
+
+
+/* Mobile identity row above the hero text (desktop shows the profile card beside it) */
+.mobile-id {
+    display: none;
+}
+@media (max-width: 900px) {
+    .mobile-id {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        padding: 0.7rem 0.9rem;
+        margin-bottom: 0.2rem;
+        background: #FFFFFF;
+        border: 1px solid #F1DDD3;
+        border-radius: 1.1rem;
+    }
+    .mobile-id-photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #F26B4F;
+        flex-shrink: 0;
+    }
+    .mobile-id-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        min-width: 0;
+    }
+    .mobile-id-name {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #231C3A;
+    }
+    .mobile-id-role {
+        font-size: 0.85rem;
+        line-height: 1.35;
+        color: #3A3150;
+    }
+}
