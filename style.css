@@ -3466,3 +3466,40 @@ button#menu-icon:focus-visible {
         color: #3A3150;
     }
 }
+
+/* Mobile: calmer type sizes in the hero */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: clamp(1.6rem, 7.6cqi, 2rem);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+    }
+    .hero-text .hero-eyebrow {
+        font-size: 0.8rem;
+    }
+    .hero-text p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+    .hero-bar {
+        width: 56px;
+        height: 5px;
+    }
+    .hero-text {
+        gap: 1.1rem;
+    }
+    .mobile-id-name {
+        font-size: 1.05rem;
+    }
+    .mobile-id-role {
+        font-size: 0.8rem;
+    }
+    .mobile-id-photo {
+        width: 56px;
+        height: 56px;
+    }
+    .home-actions .btn,
+    .home-actions .lia-toggle-btn {
+        font-size: 0.85rem;
+    }
+}
