@@ -12,7 +12,7 @@
     <!-- Icons and web fonts load without blocking the first paint -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="style.css?v=20261111y">
+    <link rel="stylesheet" href="style.css?v=20261113a">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"></noscript>
@@ -76,6 +76,14 @@
 <section id="home" class="Home active">
     <div class="hero">
         <div class="hero-text">
+            <!-- Mobile only: photo, name and role at the top (the full profile card sits below) -->
+            <div class="mobile-id" aria-hidden="true">
+                <img src="images/cv.webp" alt="" class="mobile-id-photo" width="64" height="64">
+                <div class="mobile-id-text">
+                    <span class="mobile-id-name">Aygen Ömur Mehmethan</span>
+                    <span class="mobile-id-role">Studerande systemutvecklare · TUC Yrkeshögskola</span>
+                </div>
+            </div>
             <p class="hero-eyebrow"><span class="hej-color">Hej,</span> Välkommen till min <span>portfolio</span></p>
             <h1 class="hero-title">Systemutvecklare .NET med fokus på fullstack och AI<span class="hero-dot">.</span></h1>
             <div class="hero-bar" aria-hidden="true"></div>
@@ -499,7 +507,7 @@ Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag ka
     </div>
 </footer>
 
-<script src="script.js?v=20261111y"></script>
-<script src="i18n.js?v=20261111y"></script>
+<script src="script.js?v=20261113a"></script>
+<script src="i18n.js?v=20261113a"></script>
 </body>
 </html>
