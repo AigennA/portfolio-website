@@ -3503,3 +3503,45 @@ button#menu-icon:focus-visible {
         font-size: 0.85rem;
     }
 }
+
+/* =========================================================
+   Home buttons: pulse by colour (light-dark -> very dark),
+   never by opacity, so the text stays fully readable
+   ========================================================= */
+#lia-toggle-btn {
+    background-image: none;
+    background-color: #3E3560;
+    opacity: 1;
+    animation: lia-btn-pulse 3s ease-in-out infinite;
+}
+@keyframes lia-btn-pulse {
+    0%, 100% { background-color: #3E3560; box-shadow: 0 2px 10px rgba(35, 28, 58, 0.15); }
+    50%      { background-color: #160F2B; box-shadow: 0 6px 20px rgba(35, 28, 58, 0.35); }
+}
+.claude-cert-btn {
+    background-image: none;
+    background-color: #C2502E;
+    opacity: 1;
+    animation: cert-btn-pulse 3s ease-in-out infinite;
+}
+@keyframes cert-btn-pulse {
+    0%, 100% { background-color: #C2502E; box-shadow: 0 2px 10px rgba(194, 80, 46, 0.18); }
+    50%      { background-color: #8A3219; box-shadow: 0 6px 20px rgba(138, 50, 25, 0.38); }
+}
+#lia-toggle-btn:hover,
+#lia-toggle-btn:focus-visible {
+    animation-play-state: paused;
+    background-color: #160F2B;
+}
+.claude-cert-btn:hover,
+.claude-cert-btn:focus-visible {
+    animation-play-state: paused;
+    background-color: #8A3219;
+}
+/* No pulsing for people who turned off animations in their system */
+@media (prefers-reduced-motion: reduce) {
+    #lia-toggle-btn,
+    .claude-cert-btn {
+        animation: none;
+    }
+}
