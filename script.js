@@ -158,9 +158,52 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 prenumerationskollen,
                 {
                     title: "LisTo",
-                    type: "image",
-                    src: "images/projects/listo.webp",
-                    description: "Offline inköpslista för Android byggd med Kotlin och Jetpack Compose. Ingen backend – all data sparas lokalt med Room. Funktioner: listor med kategorier, budget, kalender med påminnelser, historik, delning och stöd för tre språk. Kommer snart till Google Play, därefter även till iOS."
+                    type: "group",
+                    children: [
+                        {
+                            title: "Översikt",
+                            type: "image",
+                            wide: true,
+                            src: "images/projects/listo-banner.webp",
+                            description: "Listo – en snabb inköpslista för Android som fungerar helt offline. Varje vara hamnar automatiskt under rätt avdelning, så listan redan är sorterad när du kommer till butiken. Byggd med Kotlin och Jetpack Compose (Material 3), all data sparas lokalt med Room – inget konto, ingen server. Tre språk (svenska, engelska, turkiska), ljust och mörkt tema och tolv accentfärger som uppfyller WCAG AA. Kommer snart till Google Play, därefter även till iOS."
+                        },
+                        {
+                            title: "Mina listor",
+                            type: "image",
+                            src: "images/projects/listo-lists.webp",
+                            description: "Alla listor med framsteg, summa, datum och påminnelse. Byt namn, dela, kopiera eller ta bort en lista – en kopia kommer tillbaka med alla varor avbockade."
+                        },
+                        {
+                            title: "Sorteras automatiskt",
+                            type: "image",
+                            src: "images/projects/listo-sorted.webp",
+                            description: "Skriv en vara så hamnar den under rätt avdelning. Avbockade varor flyttas till Köpt och en förloppsindikator visar hur mycket som är kvar."
+                        },
+                        {
+                            title: "Budget",
+                            type: "image",
+                            src: "images/projects/listo-budget.webp",
+                            description: "Ge varorna ett pris och listan en budget – Listo visar hur mycket som är kvar eller hur mycket du är över, i telefonens valuta."
+                        },
+                        {
+                            title: "Kategorier",
+                            type: "image",
+                            src: "images/projects/listo-categories.webp",
+                            description: "Avdelningar som frukt och grönt, mejeri, bröd, kött och fisk, dryck, skafferi, städ, frukost och snacks."
+                        },
+                        {
+                            title: "Kalender",
+                            type: "image",
+                            src: "images/projects/listo-calendar.webp",
+                            description: "Planera en lista till ett datum med valfri påminnelse och se hela månaden i den inbyggda kalendern."
+                        },
+                        {
+                            title: "Accentfärger",
+                            type: "image",
+                            src: "images/projects/listo-colours.webp",
+                            description: "Ljust, mörkt eller systemtema och tolv accentfärger, alla anpassade för WCAG AA-kontrast och färgväljaren fungerar med TalkBack."
+                        }
+                    ]
                 },
                 {
                     title: "Daily Affirmations",
@@ -322,8 +365,8 @@ window.scrollTo({ top: 0, behavior: "instant" });
     const projectCards = [
         { title: "Prenumerationskollen", cat: "Mobilappar", tag: "Egenarbete · Mobilapp", tone: "coral", img: "images/projects/prenumerationskollen.png", w: 342, h: 605,
           desc: "Håll koll på dina prenumerationer: status, månadskostnad, betyg och totalt betalt. Kopplad till ett eget REST-API.", tech: "React Native · Expo · REST-API", open: ["Mobilappar", "Prenumerationskollen"], featured: true },
-        { title: "LisTo", cat: "Mobilappar", tag: "Mobilapp · Snart på Google Play", tone: "coral", img: "images/projects/listo.webp", w: 1200, h: 798,
-          desc: "Offline inköpslista med kategorier, budget, kalender med påminnelser, historik, delning och tre språk. Kommer snart till Google Play, därefter iOS.", tech: "Kotlin · Jetpack Compose · Room", open: ["Mobilappar", "LisTo"] },
+        { title: "LisTo", cat: "Mobilappar", tag: "Mobilapp · Snart på Google Play", tone: "coral", img: "images/projects/listo-cover.webp", w: 1200, h: 900,
+          desc: "Offline inköpslista som sorterar varorna efter avdelning, med budget, kalender och påminnelser, tolv accentfärger och tre språk. Kommer snart till Google Play, därefter iOS.", tech: "Kotlin · Jetpack Compose · Material 3 · Room", open: ["Mobilappar", "LisTo"] },
         { title: "Daily Affirmations", cat: "Mobilappar", tag: "Mobilapp", tone: "coral", img: "images/data.webp", w: 640, h: 360,
           desc: "Dagliga positiva affirmationer med animationer. Under testning inför publicering på Google Play.", tech: "Expo · React Native · TypeScript", open: ["Mobilappar", "Daily Affirmations"] },
         { title: "Moverot", cat: "LIA", tag: "LIA – Activator", tone: "mint", img: "images/moverot.webp", w: 900, h: 629,
