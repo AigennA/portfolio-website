@@ -464,7 +464,8 @@ nav a::after {
 }
 
 nav a:hover {
-    color: #F26B4F;
+    /* #C2412A: 4.5:1+ on the ivory header (coral #F26B4F was only 2.85:1) */
+    color: #C2412A;
 }
 nav a.active {
     color: #C2412A;
@@ -698,7 +699,7 @@ section h2 {
     white-space: nowrap;
 }
 .contact-email:hover {
-    color: #F26B4F;
+    color: #C2412A;
     text-shadow: 0 0 12px rgba(242, 107, 79, 0.3);
 }
 
