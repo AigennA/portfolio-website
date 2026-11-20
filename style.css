@@ -3631,3 +3631,8 @@ button#menu-icon:focus-visible {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+@media (min-width: 761px) {
+    .privacy-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
