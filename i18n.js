@@ -359,7 +359,7 @@
         btn.querySelector(".lang-code").textContent = toEnglish ? "EN" : "SV";
     }
 
-    function setLanguage(next, remember) {
+    function setLanguage(next) {
         lang = next === "en" ? "en" : "sv";
         document.documentElement.lang = lang;
         document.title = TITLES[lang];
@@ -376,9 +376,7 @@
             restoreTree(document.body);
         }
         updateToggle();
-        if (remember) {
-            try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-        }
+
     }
 
     function initialLanguage() {
@@ -386,19 +384,18 @@
             const param = new URLSearchParams(location.search).get("lang");
             if (param === "en" || param === "sv") return param;
         } catch (e) {}
-        try {
-            const saved = localStorage.getItem(STORAGE_KEY);
-            if (saved === "en" || saved === "sv") return saved;
-        } catch (e) {}
+        // The site always starts in Swedish; English only when chosen or linked with ?lang=en
         return "sv";
     }
 
     function init() {
+        // Earlier versions remembered the language; clear that old setting
+        try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
         const btn = document.getElementById("lang-toggle");
         if (btn) {
-            btn.addEventListener("click", () => setLanguage(lang === "sv" ? "en" : "sv", true));
+            btn.addEventListener("click", () => setLanguage(lang === "sv" ? "en" : "sv"));
         }
-        setLanguage(initialLanguage(), false);
+        setLanguage(initialLanguage());
     }
 
     if (document.readyState === "loading") {

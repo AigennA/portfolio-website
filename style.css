@@ -3631,3 +3631,63 @@ button#menu-icon:focus-visible {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+@media (min-width: 761px) {
+    .privacy-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   Menu button: three centred lines, long -> short (funnel),
+   turning into an X while the menu is open
+   ========================================================= */
+#menu-icon {
+    width: 52px;
+    height: 44px;
+    padding: 0;
+    font-size: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 900px) {
+    #menu-icon {
+        display: inline-flex;
+    }
+}
+.menu-lines {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 26px;
+}
+.menu-lines span {
+    display: block;
+    height: 3px;
+    border-radius: 3px;
+    background: #C2412A;
+    transition: transform 0.25s ease, width 0.25s ease, opacity 0.2s ease;
+}
+.menu-lines span:nth-child(1) { width: 26px; }
+.menu-lines span:nth-child(2) { width: 18px; }
+.menu-lines span:nth-child(3) { width: 10px; }
+#menu-icon.fa-xmark .menu-lines span:nth-child(1) {
+    width: 24px;
+    transform: translateY(8px) rotate(45deg);
+}
+#menu-icon.fa-xmark .menu-lines span:nth-child(2) {
+    opacity: 0;
+}
+#menu-icon.fa-xmark .menu-lines span:nth-child(3) {
+    width: 24px;
+    transform: translateY(-8px) rotate(-45deg);
+}
+#menu-icon.fa-xmark::before {
+    content: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .menu-lines span { transition: none; }
+}
