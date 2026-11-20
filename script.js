@@ -366,10 +366,10 @@ window.scrollTo({ top: 0, behavior: "instant" });
     // =========================================
     // open: [category, project] opens that gallery/detail; ["LIA Fullstack"] opens the LIA page
     const projectCards = [
-        { title: "Prenumerationskollen", cat: "Mobilappar", tag: "Egenarbete · Mobilapp", tone: "coral", img: "images/projects/prenumerationskollen.png", w: 342, h: 605,
-          desc: "Håll koll på dina prenumerationer: status, månadskostnad, betyg och totalt betalt. Kopplad till ett eget REST-API.", tech: "React Native · Expo · REST-API", open: ["Mobilappar", "Prenumerationskollen"], featured: true },
         { title: "LisTo", cat: "Mobilappar", tag: "Mobilapp · Snart på Google Play", tone: "coral", img: "images/projects/listo-cover.webp", w: 1200, h: 900,
           desc: "Offline inköpslista som sorterar varorna efter avdelning, med budget, kalender och påminnelser, tolv accentfärger och tre språk. Kommer snart till Google Play, därefter iOS.", tech: "Kotlin · Jetpack Compose · Material 3 · Room", open: ["Mobilappar", "LisTo"], featured: true },
+        { title: "Prenumerationskollen", cat: "Mobilappar", tag: "Egenarbete · Mobilapp", tone: "coral", img: "images/projects/prenumerationskollen.png", w: 342, h: 605,
+          desc: "Håll koll på dina prenumerationer: status, månadskostnad, betyg och totalt betalt. Kopplad till ett eget REST-API.", tech: "React Native · Expo · REST-API", open: ["Mobilappar", "Prenumerationskollen"], featured: true },
         { title: "Daily Affirmations", cat: "Mobilappar", tag: "Mobilapp", tone: "coral", img: "images/data.webp", w: 640, h: 360,
           desc: "Dagliga positiva affirmationer med animationer. Under testning inför publicering på Google Play.", tech: "Expo · React Native · TypeScript", open: ["Mobilappar", "Daily Affirmations"] },
         { title: "Moverot", cat: "LIA", tag: "LIA – Activator", tone: "mint", img: "images/moverot.webp", w: 900, h: 629,
