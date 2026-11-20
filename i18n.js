@@ -199,7 +199,7 @@
         "Språkval": "Language choice",
         "Om du byter språk sparas ditt val (svenska eller engelska) i din webbläsare, så att sidan öppnas på samma språk nästa gång. Valet skickas inte någonstans.": "If you switch language, your choice (Swedish or English) is saved in your browser so the site opens in the same language next time. The choice is not sent anywhere.",
         "Externa tjänster": "External services",
-        "Ikoner hämtas från cdnjs (Cloudflare) och videodemos visas med Cloudinarys videospelare. Då tar de tjänsterna emot din IP-adress, precis som alla webbservrar gör. Typsnitten ligger på den här webbplatsen och hämtas inte från Google.": "Icons are loaded from cdnjs (Cloudflare) and video demos use Cloudinary's video player. These services receive your IP address, as every web server does. The fonts are hosted on this website and are not loaded from Google.",
+        "Videodemos visas med Cloudinarys videospelare. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.": "Video demos use Cloudinary's video player. Cloudinary then receives your IP address, as every web server does. Fonts and icons are hosted on this website and are not loaded from Google or any other service.",
         "Dina rättigheter": "Your rights",
         "Du har rätt att få veta vilka uppgifter jag har om dig och att få dem rättade eller raderade. Kontakta mig via e-post:": "You have the right to know what data I hold about you and to have it corrected or deleted. Contact me by email:",
         "Du kan också lämna klagomål till Integritetsskyddsmyndigheten (IMY).": "You can also file a complaint with the Swedish Authority for Privacy Protection (IMY).",
@@ -350,7 +350,7 @@
         const btn = document.getElementById("lang-toggle");
         if (!btn) return;
         const toEnglish = lang === "sv";
-        btn.setAttribute("aria-label", toEnglish ? "Switch to English" : "Byt till svenska");
+        btn.setAttribute("aria-label", toEnglish ? "EN – Switch to English" : "SV – Byt till svenska");
         btn.setAttribute("title", toEnglish ? "English" : "Svenska");
         btn.setAttribute("lang", toEnglish ? "en" : "sv");
         // SVG elements have no .hidden property – toggle the attribute instead
