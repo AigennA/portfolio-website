@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 overlay.addEventListener("click", () => {
                     nav.classList.remove("active");
                     menuIcon.classList.remove("fa-xmark");
+            menuIcon.setAttribute("aria-expanded", "false");
                     overlay.remove();
                 });
                 document.body.appendChild(overlay);
@@ -85,6 +86,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
             nav.classList.remove("active");
             menuIcon.classList.remove("fa-xmark");
+            menuIcon.setAttribute("aria-expanded", "false");
             document.getElementById("nav-overlay")?.remove();
 
             projectView.innerHTML = "";
@@ -106,6 +108,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
 
         nav.classList.remove("active");
         menuIcon.classList.remove("fa-xmark");
+            menuIcon.setAttribute("aria-expanded", "false");
         document.getElementById("nav-overlay")?.remove();
 
         projectView.innerHTML = "";
