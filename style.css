@@ -3968,3 +3968,15 @@ button#menu-icon:focus-visible {
         padding: 1.5rem;
     }
 }
+
+/* Visitors who ask their system for less motion get no fades, slides or pulses */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
