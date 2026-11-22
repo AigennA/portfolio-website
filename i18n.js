@@ -199,14 +199,30 @@
         "Språkval": "Language choice",
         "Om du byter språk sparas ditt val (svenska eller engelska) i din webbläsare, så att sidan öppnas på samma språk nästa gång. Valet skickas inte någonstans.": "If you switch language, your choice (Swedish or English) is saved in your browser so the site opens in the same language next time. The choice is not sent anywhere.",
         "Externa tjänster": "External services",
-        "Videodemos visas med Cloudinarys videospelare. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.": "Video demos use Cloudinary's video player. Cloudinary then receives your IP address, as every web server does. Fonts and icons are hosted on this website and are not loaded from Google or any other service.",
+        "Videodemos hämtas från Cloudinary först när du trycker på play. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.": "Video demos are loaded from Cloudinary only when you press play. Cloudinary then receives your IP address, as every web server does. Fonts and icons are hosted on this website and are not loaded from Google or any other service.",
         "Dina rättigheter": "Your rights",
         "Du har rätt att få veta vilka uppgifter jag har om dig och att få dem rättade eller raderade. Kontakta mig via e-post:": "You have the right to know what data I hold about you and to have it corrected or deleted. Contact me by email:",
         "Du kan också lämna klagomål till Integritetsskyddsmyndigheten (IMY).": "You can also file a complaint with the Swedish Authority for Privacy Protection (IMY).",
-        "Personuppgiftsansvarig: Aygen Ömur Mehmethan · Senast uppdaterad 20 november 2026": "Data controller: Aygen Ömur Mehmethan · Last updated 20 November 2026",
+        "Personuppgiftsansvarig: Aygen Ömur Mehmethan · Senast uppdaterad 22 november 2026": "Data controller: Aygen Ömur Mehmethan · Last updated 22 November 2026",
         "Mobilapp": "Mobile app",
         "Dagliga positiva affirmationer med animationer. Under testning inför publicering på Google Play.": "Daily positive affirmations with animations. In testing before release on Google Play.",
         "Videodemo": "Video demo",
+        "Mörkt läge": "Dark mode",
+        "Väljer du mörkt läge sparas bara det valet i din webbläsare, så att sidan visas likadant nästa gång. Det skickas inte någonstans.": "If you choose dark mode, only that choice is saved in your browser so the site looks the same next time. It is not sent anywhere.",
+        "Två sidor av samma arbete": "Two sides of the same work",
+        "Designer": "Designer",
+        "Utvecklare": "Developer",
+        "<utvecklare>": "<developer>",
+        "Jag tänker på hur något ser ut och känns för den som använder det.": "I think about how something looks and feels for the person using it.",
+        "Bakgrund som Visual Merchandiser: färgkoordination och visuell design": "Background as a Visual Merchandiser: colour coordination and visual design",
+        "UI/UX och användarflöden": "UI/UX and user flows",
+        "Tillgänglighet enligt WCAG 2.2 AA, till exempel i Car Dealer": "Accessibility according to WCAG 2.2 AA, for example in Car Dealer",
+        "Kursen Publiceringsverktyg och UX": "The course Publishing tools and UX",
+        "Jag bygger det, från databas och API till gränssnitt och tester.": "I build it, from database and API to interface and tests.",
+        ".NET, Web API och ABP Framework": ".NET, Web API and ABP Framework",
+        "React, Next.js, React Native och JavaScript": "React, Next.js, React Native and JavaScript",
+        "MongoDB och SQL Server": "MongoDB and SQL Server",
+        "Testning i staging, produktion och kod, till exempel 300+ tester i Car Dealer": "Testing in staging, production and code, for example 300+ tests in Car Dealer",
         "Skolarbete · AI-chatbot": "School project · AI chatbot",
         "Skolarbete: AI-chatbot, visas som videodemo.": "School project: AI chatbot, shown as a video demo.",
         "Mobilappar": "Mobile apps",
@@ -264,7 +280,8 @@
     // Texts that follow a pattern
     const PATTERNS = [
         [/^Skärmbild av (.+)$/, "Screenshot of $1"],
-        [/^(\d+) p$/, "$1 credits"]
+        [/^(\d+) p$/, "$1 credits"],
+        [/^Videodemo: (.+)$/, "Video demo: $1"]
     ];
 
     const ATTRS = ["placeholder", "aria-label", "title", "alt"];

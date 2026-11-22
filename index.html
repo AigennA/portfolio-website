@@ -9,8 +9,8 @@
     <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Icons: self-hosted Font Awesome subset (only the icons the site uses) -->
-    <link rel="stylesheet" href="icons.css?v=20261120g">
-    <link rel="stylesheet" href="style.css?v=20261120g">
+    <link rel="stylesheet" href="icons.css?v=20261122b">
+    <link rel="stylesheet" href="style.css?v=20261122b">
     <meta name="description" content="Portfolio av Aygen – systemutvecklare .NET, fullstack-utvecklare med erfarenhet från LIA hos Activator.">
     <!-- Umami: cookieless visitor statistics (countries, cities, pages) -->
     <!-- Open the site once with ?notrack to stop counting your own visits in that browser, ?track to undo -->
@@ -19,6 +19,13 @@
             const params = new URLSearchParams(location.search);
             if (params.has("notrack")) localStorage.setItem("umami.disabled", "1");
             if (params.has("track")) localStorage.removeItem("umami.disabled");
+        } catch (e) {}
+    </script>
+    <!-- Dark mode: applied before the page paints, so there is no light flash.
+         The choice is only stored in this browser (localStorage) and never sent anywhere. -->
+    <script>
+        try {
+            if (localStorage.getItem("portfolio-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");
         } catch (e) {}
     </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="3f79190e-e7c3-4ce6-bbfd-4328e0346d98"></script>
@@ -44,6 +51,7 @@
         LIA 2 från 14 dec 2026 eller 10 jan 2027
     </a>
 
+    <div class="header-tools">
     <button type="button" id="lang-toggle" class="lang-toggle" aria-label="EN – Switch to English" title="English" lang="en">
         <svg class="flag flag-en" viewBox="0 0 60 30" width="26" height="13" aria-hidden="true" focusable="false">
             <clipPath id="uk-clip"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
@@ -63,6 +71,19 @@
         </svg>
         <span class="lang-code" aria-hidden="true">EN</span>
     </button>
+
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Mörkt läge" title="Mörkt läge">
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z" fill="currentColor"/>
+        </svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>
+            </g>
+        </svg>
+    </button>
+    </div>
 
     <button type="button" id="menu-icon" aria-label="Öppna meny" aria-expanded="false" aria-controls="main-nav" title="Öppna meny"><span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
 </header>
@@ -140,6 +161,36 @@
             </div>
             <div class="lia-feature-media">
                 <img src="images/activator.webp" alt="LIA hos Activator – Moverot" class="lia-expand-photo" width="1000" height="667" loading="lazy" decoding="async">
+            </div>
+        </div>
+
+        <!-- Designer | utvecklare: both sides of how I work (facts from Erfarenhet, Kompetenser and Projekt) -->
+        <div class="dual-role" aria-labelledby="dual-role-title">
+            <div class="section-head">
+                <p class="page-eyebrow">Två sidor av samma arbete</p>
+                <h2 id="dual-role-title" class="section-title dual-role-title">Designer <span class="dual-role-bar" aria-hidden="true">|</span> <span class="dual-role-code">&lt;utvecklare&gt;</span></h2>
+            </div>
+            <div class="dual-role-grid">
+                <div class="dual-role-card dual-role-design">
+                    <h3>Designer</h3>
+                    <p>Jag tänker på hur något ser ut och känns för den som använder det.</p>
+                    <ul>
+                        <li>Bakgrund som Visual Merchandiser: färgkoordination och visuell design</li>
+                        <li>UI/UX och användarflöden</li>
+                        <li>Tillgänglighet enligt WCAG 2.2 AA, till exempel i Car Dealer</li>
+                        <li>Kursen Publiceringsverktyg och UX</li>
+                    </ul>
+                </div>
+                <div class="dual-role-card dual-role-dev">
+                    <h3><span aria-hidden="true">&lt;</span>Utvecklare<span aria-hidden="true">&gt;</span></h3>
+                    <p>Jag bygger det, från databas och API till gränssnitt och tester.</p>
+                    <ul>
+                        <li>.NET, Web API och ABP Framework</li>
+                        <li>React, Next.js, React Native och JavaScript</li>
+                        <li>MongoDB och SQL Server</li>
+                        <li>Testning i staging, produktion och kod, till exempel 300+ tester i Car Dealer</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -497,6 +548,7 @@ Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag ka
         <p class="page-eyebrow">Integritet</p>
         <h1>Så hanterar jag dina uppgifter</h1>
         <p class="page-intro">Webbplatsen använder inga cookies för spårning eller marknadsföring. Därför finns det ingen cookie-banner.</p>
+        <p class="page-intro">Väljer du mörkt läge sparas bara det valet i din webbläsare, så att sidan visas likadant nästa gång. Det skickas inte någonstans.</p>
 
         <div class="privacy-grid">
             <div class="info-card">
@@ -511,7 +563,7 @@ Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag ka
             </div>
             <div class="info-card">
                 <h2>Externa tjänster</h2>
-                <p>Videodemos visas med Cloudinarys videospelare. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.</p>
+                <p>Videodemos hämtas från Cloudinary först när du trycker på play. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.</p>
             </div>
         </div>
 
@@ -520,7 +572,7 @@ Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag ka
             <p>Du har rätt att få veta vilka uppgifter jag har om dig och att få dem rättade eller raderade. Kontakta mig via e-post:</p>
             <p><a class="text-link" href="mailto:aygen.omur.mehmethan.syne25lin@edu.tucsweden.se">aygen.omur.mehmethan.syne25lin@edu.tucsweden.se</a></p>
             <p>Du kan också lämna klagomål till Integritetsskyddsmyndigheten (IMY).</p>
-            <p class="privacy-meta">Personuppgiftsansvarig: Aygen Ömur Mehmethan · Senast uppdaterad 20 november 2026</p>
+            <p class="privacy-meta">Personuppgiftsansvarig: Aygen Ömur Mehmethan · Senast uppdaterad 22 november 2026</p>
         </div>
     </div>
 </section>
@@ -537,7 +589,7 @@ Portfolion är byggd för att ge en tydlig och enkel överblick över vad jag ka
     </div>
 </footer>
 
-<script src="script.js?v=20261120g"></script>
-<script src="i18n.js?v=20261120g"></script>
+<script src="script.js?v=20261122b"></script>
+<script src="i18n.js?v=20261122b"></script>
 </body>
 </html>
