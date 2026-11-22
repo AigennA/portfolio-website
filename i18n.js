@@ -209,7 +209,6 @@
         "Videodemo": "Video demo",
         "Mörkt läge": "Dark mode",
         "Väljer du mörkt läge sparas bara det valet i din webbläsare, så att sidan visas likadant nästa gång. Det skickas inte någonstans.": "If you choose dark mode, only that choice is saved in your browser so the site looks the same next time. It is not sent anywhere.",
-        "Två sidor av samma arbete": "Two sides of the same work",
         "Visual Merchandiser": "Visual Merchandiser",
         "Utvecklare": "Developer",
         "<utvecklare>": "<developer>",
