@@ -3980,3 +3980,27 @@ button#menu-icon:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+
+/* Mobile: the photo and name are already in the row at the top of the page,
+   so the profile card further down does not repeat them visually.
+   The name stays available to screen readers (the top row is aria-hidden). */
+@media (max-width: 900px) {
+    .profile-card .profile-photo {
+        display: none;
+    }
+    .profile-card .profile-name {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    .profile-card .profile-role {
+        margin-top: 0;
+        font-weight: 600;
+    }
+}
