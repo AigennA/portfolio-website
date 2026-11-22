@@ -257,6 +257,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                     title: "E-Commerce TechVora",
                     type: "video",
                     src: "https://res.cloudinary.com/dciixwu6v/video/upload/techvora_dagryt.mp4",
+                    poster: "images/projects/techvora.webp",
                     description: "E-handelsprojekt byggt med AI-verktyget Lovable.",
                     links: {
                         live: "https://lovable.dev/projects/f5c87ca7-608c-4e0f-9f4b-e4e0a2de4099?permissionView=main",
@@ -313,6 +314,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                     title: "Gala Emporium",
                     type: "video",
                     src: "https://res.cloudinary.com/dciixwu6v/video/upload/gala-emporium-housetech_tz8aqe.mp4",
+                    poster: "images/projects/house-tech.webp",
                     description: "Ett Skolprojekt som byggdes med gruppen. Html,Css,Js och en SPA site."
                 },
                 {
@@ -502,7 +504,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                                     ${child.children.map(proj =>
                                         `<div class="video-card">
                                             <div class="video-title">${proj.title}</div>
-                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" loading="lazy" decoding="async" style="max-width:${proj.wide ? "100%" : "320px"};width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
+                                            ${proj.type === "image" ? `<img src="${proj.src}" alt="${proj.title}" loading="lazy" decoding="async" style="max-width:${proj.wide ? "100%" : "320px"};width:100%;margin:0.5rem 0;">` : `<video src="${proj.src}" controls preload="none"${proj.poster ? ` poster="${proj.poster}"` : ""} aria-label="Videodemo: ${proj.title}" style="max-width:320px;width:100%;margin:0.5rem 0;"></video>`}
                                             <p>${proj.description}</p>
                                             ${proj.links ? `
                                             <div class="project-links">
@@ -533,7 +535,7 @@ window.scrollTo({ top: 0, behavior: "instant" });
                 ${
                     project.type === "image"
                         ? `<img src="${project.src}" alt="${project.title}" loading="lazy" decoding="async">`
-                        : `<video controls src="${project.src}"></video>`
+                        : `<video controls preload="none" src="${project.src}"${project.poster ? ` poster="${project.poster}"` : ""} aria-label="Videodemo: ${project.title}"></video>`
                 }
                 <p>${project.description}</p>
 

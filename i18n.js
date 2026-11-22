@@ -199,7 +199,7 @@
         "Språkval": "Language choice",
         "Om du byter språk sparas ditt val (svenska eller engelska) i din webbläsare, så att sidan öppnas på samma språk nästa gång. Valet skickas inte någonstans.": "If you switch language, your choice (Swedish or English) is saved in your browser so the site opens in the same language next time. The choice is not sent anywhere.",
         "Externa tjänster": "External services",
-        "Videodemos visas med Cloudinarys videospelare. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.": "Video demos use Cloudinary's video player. Cloudinary then receives your IP address, as every web server does. Fonts and icons are hosted on this website and are not loaded from Google or any other service.",
+        "Videodemos hämtas från Cloudinary först när du trycker på play. Då tar Cloudinary emot din IP-adress, precis som alla webbservrar gör. Typsnitt och ikoner ligger på den här webbplatsen och hämtas inte från Google eller andra tjänster.": "Video demos are loaded from Cloudinary only when you press play. Cloudinary then receives your IP address, as every web server does. Fonts and icons are hosted on this website and are not loaded from Google or any other service.",
         "Dina rättigheter": "Your rights",
         "Du har rätt att få veta vilka uppgifter jag har om dig och att få dem rättade eller raderade. Kontakta mig via e-post:": "You have the right to know what data I hold about you and to have it corrected or deleted. Contact me by email:",
         "Du kan också lämna klagomål till Integritetsskyddsmyndigheten (IMY).": "You can also file a complaint with the Swedish Authority for Privacy Protection (IMY).",
@@ -264,7 +264,8 @@
     // Texts that follow a pattern
     const PATTERNS = [
         [/^Skärmbild av (.+)$/, "Screenshot of $1"],
-        [/^(\d+) p$/, "$1 credits"]
+        [/^(\d+) p$/, "$1 credits"],
+        [/^Videodemo: (.+)$/, "Video demo: $1"]
     ];
 
     const ATTRS = ["placeholder", "aria-label", "title", "alt"];
