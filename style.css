@@ -3929,3 +3929,128 @@ button#menu-icon:focus-visible {
         max-width: none;
     }
 }
+
+
+/* =========================================================
+   Course tables: easier to read, and each group has its own look
+   ========================================================= */
+/* Larger, clearer text in all course tables */
+.course-table {
+    font-size: 1rem;
+}
+.course-table th {
+    font-size: 0.8rem;
+}
+.course-table td {
+    padding: 0.95rem 1.1rem;
+    vertical-align: top;
+}
+.course-table td:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+.course-table td:nth-child(2) {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-2);
+}
+.course-table td:last-child {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.course-table tbody tr + tr td {
+    border-top: 1px solid var(--line);
+}
+
+/* More air between the three groups */
+.course-group + .course-group {
+    margin-top: 2.6rem;
+}
+.course-heading-row {
+    margin-bottom: 0.2rem;
+}
+#course-group-ongoing .course-heading-row {
+    margin-top: 0;
+}
+
+/* Kommande kurser: lavender and plum */
+.course-table-wrap.course-table-upcoming {
+    border: 2px solid #B9A8F4;
+    border-style: solid;
+    background: linear-gradient(135deg, #F3EEFA, var(--surface) 70%);
+    box-shadow: 0 10px 30px rgba(58, 49, 87, 0.12);
+}
+.course-table-upcoming .course-table th {
+    background: #3A3157;
+    color: #FFFFFF;
+    border-bottom: none;
+}
+.course-table-upcoming .course-table td:last-child {
+    color: #3A3157;
+}
+.course-countdown {
+    display: table;
+    margin-top: 0.45rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background: #E9E4F7;
+    color: #3A3157;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* Färdiga kurser: a green check before each course, and a summary badge */
+.course-done td:first-child::before {
+    content: "✓";
+    display: inline-block;
+    width: 1.4rem;
+    color: var(--ok-ink);
+    font-weight: 800;
+}
+.done-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: #D6F2E4;
+    color: #145A3A;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.done-badge:empty {
+    display: none;
+}
+
+/* Dark mode versions */
+:root[data-theme="dark"] .course-table-wrap.course-table-upcoming {
+    border-color: #7E6FC0;
+    background: linear-gradient(135deg, #2A2440, var(--surface) 70%);
+}
+:root[data-theme="dark"] .course-table-upcoming .course-table td:last-child {
+    color: #CFC4FF;
+}
+:root[data-theme="dark"] .course-countdown {
+    background: #382F5A;
+    color: #E3DBFF;
+}
+:root[data-theme="dark"] .done-badge {
+    background: #1F3C32;
+    color: #8BE3B6;
+}
+
+@media (max-width: 600px) {
+    .course-table td {
+        padding: 0.15rem 0;
+    }
+    .course-table tbody tr + tr td {
+        border-top: none;
+    }
+    .course-table td:first-child {
+        margin-bottom: 0.35rem;
+    }
+    .course-table-upcoming .course-table tr {
+        background: transparent;
+        border-color: #D9D2EE;
+    }
+}

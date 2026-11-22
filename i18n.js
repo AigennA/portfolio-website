@@ -209,6 +209,7 @@
         "Videodemo": "Video demo",
         "Mörkt läge": "Dark mode",
         "Pågår nu": "In progress",
+        "Startar i morgon": "Starts tomorrow",
         "Väljer du mörkt läge sparas bara det valet i din webbläsare, så att sidan visas likadant nästa gång. Det skickas inte någonstans.": "If you choose dark mode, only that choice is saved in your browser so the site looks the same next time. It is not sent anywhere.",
         "Skolarbete · AI-chatbot": "School project · AI chatbot",
         "Skolarbete: AI-chatbot, visas som videodemo.": "School project: AI chatbot, shown as a video demo.",
@@ -270,7 +271,9 @@
         [/^(\d+) p$/, "$1 credits"],
         [/^Videodemo: (.+)$/, "Video demo: $1"],
         [/^(\d+) % avklarat$/, "$1 % completed"],
-        [/^slutar (.+)$/, "ends $1"]
+        [/^slutar (.+)$/, "ends $1"],
+        [/^Startar om (\d+) dagar$/, "Starts in $1 days"],
+        [/^(\d+) kurser · (\d+) p$/, "$1 courses · $2 credits"]
     ];
 
     const ATTRS = ["placeholder", "aria-label", "title", "alt"];
