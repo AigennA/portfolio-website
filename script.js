@@ -838,3 +838,29 @@ document.addEventListener("DOMContentLoaded", function () {
     ritaRader(tbodyOngoing, grupper.ongoing);
     ritaRader(tbodyUpcoming, grupper.upcoming);
 });
+
+// ===== Dark mode =====
+// The header button switches between the light design (default) and dark mode.
+// The choice is kept in this browser only (localStorage "portfolio-theme").
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    const root = document.documentElement;
+
+    function apply(dark) {
+        if (dark) root.setAttribute("data-theme", "dark");
+        else root.removeAttribute("data-theme");
+        btn.setAttribute("aria-pressed", dark ? "true" : "false");
+    }
+
+    apply(root.getAttribute("data-theme") === "dark");
+
+    btn.addEventListener("click", function () {
+        const dark = root.getAttribute("data-theme") !== "dark";
+        apply(dark);
+        try {
+            if (dark) localStorage.setItem("portfolio-theme", "dark");
+            else localStorage.removeItem("portfolio-theme");
+        } catch (e) {}
+    });
+});
