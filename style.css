@@ -3815,3 +3815,117 @@ button#menu-icon:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* =========================================================
+   Ongoing courses stand out from finished and upcoming ones
+   ========================================================= */
+.course-heading-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.9rem;
+}
+.course-heading-row h2 {
+    margin: 0;
+}
+#course-group-ongoing .course-heading-row {
+    margin-top: 1.6rem;
+}
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: #D6F2E4;
+    color: #145A3A;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.live-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: #1F9D63;
+    box-shadow: 0 0 0 0 rgba(31, 157, 99, 0.6);
+    animation: live-pulse 1.8s ease-out infinite;
+}
+@keyframes live-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(31, 157, 99, 0.55); }
+    70% { box-shadow: 0 0 0 0.5rem rgba(31, 157, 99, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(31, 157, 99, 0); }
+}
+
+.course-table-wrap.course-table-ongoing {
+    border: 2px solid #F26B4F;
+    background: linear-gradient(135deg, var(--peach), var(--surface) 70%);
+    box-shadow: 0 10px 30px rgba(194, 65, 42, 0.16);
+}
+.course-table-ongoing .course-table th {
+    background: #C2412A;
+    color: #FFFFFF;
+    border-bottom: none;
+}
+.course-table-ongoing .course-table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: top;
+}
+.course-table-ongoing .course-table td:first-child {
+    font-size: 1.02rem;
+}
+.course-table-ongoing .course-table td:last-child {
+    color: var(--accent-ink);
+}
+
+.course-progress {
+    margin-top: 0.6rem;
+    max-width: 360px;
+}
+.course-progress-bar {
+    height: 8px;
+    border-radius: 999px;
+    background: var(--line-2);
+    overflow: hidden;
+}
+.course-progress-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #C2412A, #F26B4F);
+}
+.course-progress-text {
+    margin-top: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-2);
+}
+
+:root[data-theme="dark"] .live-badge {
+    background: #1F3C32;
+    color: #8BE3B6;
+}
+:root[data-theme="dark"] .course-table-ongoing .course-table th {
+    background: #8F2C18;
+}
+
+@media (max-width: 600px) {
+    .course-table-ongoing .course-table tr {
+        background: transparent;
+        border: none;
+        padding: 0.4rem 0.2rem;
+    }
+    .course-table-ongoing .course-table td {
+        padding-top: 0.15rem;
+        padding-bottom: 0.15rem;
+    }
+    .course-table-ongoing .course-table td:first-child {
+        color: var(--ink);
+        margin-bottom: 0.6rem;
+    }
+    .course-progress {
+        max-width: none;
+    }
+}

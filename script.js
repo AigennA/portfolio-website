@@ -815,7 +815,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    function ritaRader(tbody, kurser) {
+    // Hur stor del av kursen som har gått, i hela procent (räknar in både start- och slutdag).
+    function andelKlar(kurs) {
+        const start = tillDatum(kurs.start);
+        const slut = tillDatum(kurs.slut);
+        const dagar = Math.round((slut - start) / 86400000) + 1;
+        const gatt = Math.round((idag - start) / 86400000) + 1;
+        return Math.max(0, Math.min(100, Math.round((gatt / dagar) * 100)));
+    }
+
+    function ritaRader(tbody, kurser, visaFramsteg) {
         kurser
             .slice()
             .sort((a, b) => a.start.localeCompare(b.start))
@@ -826,6 +835,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     cell.textContent = text;
                     rad.appendChild(cell);
                 });
+
+                // Pågående kurser: förloppsindikator under kursnamnet
+                if (visaFramsteg) {
+                    const procent = andelKlar(kurs);
+                    const namnCell = rad.firstChild;
+                    const framsteg = document.createElement("div");
+                    framsteg.className = "course-progress";
+                    framsteg.innerHTML =
+                        `<div class="course-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${procent}" aria-label="${kurs.namn}"><span style="width:${procent}%"></span></div>` +
+                        `<div class="course-progress-text"><span>${procent} % avklarat</span> · <span>slutar ${kurs.slut}</span></div>`;
+                    namnCell.appendChild(framsteg);
+                }
                 tbody.appendChild(rad);
             });
 
@@ -835,7 +856,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     ritaRader(tbodyDone, grupper.done);
-    ritaRader(tbodyOngoing, grupper.ongoing);
+    ritaRader(tbodyOngoing, grupper.ongoing, true);
     ritaRader(tbodyUpcoming, grupper.upcoming);
 });
 
