@@ -824,7 +824,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.max(0, Math.min(100, Math.round((gatt / dagar) * 100)));
     }
 
-    function ritaRader(tbody, kurser, visaFramsteg) {
+    function ritaRader(tbody, kurser, typ) {
         kurser
             .slice()
             .sort((a, b) => a.start.localeCompare(b.start))
@@ -837,7 +837,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 // Pågående kurser: förloppsindikator under kursnamnet
-                if (visaFramsteg) {
+                if (typ === "ongoing") {
                     const procent = andelKlar(kurs);
                     const namnCell = rad.firstChild;
                     const framsteg = document.createElement("div");
@@ -847,6 +847,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         `<div class="course-progress-text"><span>${procent} % avklarat</span> · <span>slutar ${kurs.slut}</span></div>`;
                     namnCell.appendChild(framsteg);
                 }
+
+                // Kommande kurser: hur många dagar det är kvar till start
+                if (typ === "upcoming") {
+                    const dagarKvar = Math.round((tillDatum(kurs.start) - idag) / 86400000);
+                    const nedrakning = document.createElement("span");
+                    nedrakning.className = "course-countdown";
+                    nedrakning.textContent = dagarKvar === 1 ? "Startar i morgon" : `Startar om ${dagarKvar} dagar`;
+                    rad.firstChild.appendChild(nedrakning);
+                }
+
+                if (typ === "done") rad.classList.add("course-done");
                 tbody.appendChild(rad);
             });
 
@@ -855,9 +866,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (grupp) grupp.hidden = kurser.length === 0;
     }
 
-    ritaRader(tbodyDone, grupper.done);
-    ritaRader(tbodyOngoing, grupper.ongoing, true);
-    ritaRader(tbodyUpcoming, grupper.upcoming);
+    ritaRader(tbodyDone, grupper.done, "done");
+
+    // Sammanfattning bredvid rubriken "Färdiga kurser", t.ex. "10 kurser · 280 p"
+    const sammanfattning = document.getElementById("courses-done-summary");
+    if (sammanfattning) {
+        const poang = grupper.done.reduce((summa, kurs) => summa + kurs.poang, 0);
+        sammanfattning.textContent = `${grupper.done.length} kurser · ${poang} p`;
+    }
+    ritaRader(tbodyOngoing, grupper.ongoing, "ongoing");
+    ritaRader(tbodyUpcoming, grupper.upcoming, "upcoming");
 });
 
 // ===== Dark mode =====
